@@ -7,7 +7,7 @@ part 'profile_type.g.dart';
 @JsonSerializable()
 class ApplicationProfileTypeModel extends ApplicationProfileTypeEntity {
   ApplicationProfileTypeModel({
-    required super.applicationConsumerProfileTypeID,
+    required super.applicationProfileTypeID,
     required super.description,
   });
 

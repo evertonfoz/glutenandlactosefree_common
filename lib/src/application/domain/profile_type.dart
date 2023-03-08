@@ -1,14 +1,14 @@
 import 'package:equatable/equatable.dart';
 
 class ApplicationProfileTypeEntity extends Equatable {
-  final int applicationConsumerProfileTypeID;
+  final int applicationProfileTypeID;
   final String description;
 
   ApplicationProfileTypeEntity({
-    required this.applicationConsumerProfileTypeID,
+    required this.applicationProfileTypeID,
     required this.description,
   });
 
   @override
-  List<Object?> get props => [applicationConsumerProfileTypeID];
+  List<Object?> get props => [applicationProfileTypeID];
 }
