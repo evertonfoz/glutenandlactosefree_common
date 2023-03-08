@@ -9,7 +9,7 @@ part of 'application_provider.dart';
 ApplicationProviderModel _$ApplicationProviderModelFromJson(
         Map<String, dynamic> json) =>
     ApplicationProviderModel(
-      applicationConsumerID: json['applicationConsumerID'] as int?,
+      applicationProviderID: json['applicationProviderID'] as int?,
       fullName: json['fullName'] as String,
       stateAndCity: json['stateAndCity'] as String,
       phoneNumber: json['phoneNumber'] as String,
@@ -31,7 +31,7 @@ ApplicationProviderModel _$ApplicationProviderModelFromJson(
 Map<String, dynamic> _$ApplicationProviderModelToJson(
         ApplicationProviderModel instance) =>
     <String, dynamic>{
-      'applicationConsumerID': instance.applicationConsumerID,
+      'applicationProviderID': instance.applicationProviderID,
       'fullName': instance.fullName,
       'stateAndCity': instance.stateAndCity,
       'phoneNumber': instance.phoneNumber,

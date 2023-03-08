@@ -3,8 +3,6 @@
 import 'package:common/common.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-import '../domain/application_provider.dart';
-
 part 'application_provider.g.dart';
 
 @JsonSerializable(explicitToJson: true)
@@ -12,7 +10,7 @@ class ApplicationProviderModel extends ApplicationProviderEntity {
   final List<ApplicationProfileTypeModel> modelProfilesType;
 
   ApplicationProviderModel({
-    super.applicationConsumerID,
+    super.applicationProviderID,
     required super.fullName,
     required super.stateAndCity,
     required super.phoneNumber,

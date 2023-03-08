@@ -3,7 +3,7 @@ import 'package:equatable/equatable.dart';
 import '../../../common.dart';
 
 class ApplicationProviderEntity extends Equatable {
-  final int? applicationConsumerID;
+  final int? applicationProviderID;
   final String fullName;
   final String stateAndCity;
   final String phoneNumber;
@@ -19,7 +19,7 @@ class ApplicationProviderEntity extends Equatable {
   final String comments;
 
   ApplicationProviderEntity({
-    this.applicationConsumerID,
+    this.applicationProviderID,
     required this.fullName,
     required this.stateAndCity,
     required this.phoneNumber,
@@ -36,5 +36,5 @@ class ApplicationProviderEntity extends Equatable {
   });
 
   @override
-  List<Object?> get props => [applicationConsumerID];
+  List<Object?> get props => [applicationProviderID];
 }
