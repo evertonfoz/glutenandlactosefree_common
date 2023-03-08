@@ -5,18 +5,15 @@ import '../domain/profile_type.dart';
 part 'profile_type.g.dart';
 
 @JsonSerializable()
-class ApplicationConsumerProfileTypeModel
-    extends ApplicationConsumerProfileTypeEntity {
-  ApplicationConsumerProfileTypeModel({
+class ApplicationProfileTypeModel extends ApplicationProfileTypeEntity {
+  ApplicationProfileTypeModel({
     required super.applicationConsumerProfileTypeID,
     required super.description,
   });
 
-  factory ApplicationConsumerProfileTypeModel.fromJson(
-          Map<String, dynamic> json) =>
-      _$ApplicationConsumerProfileTypeModelFromJson(json);
+  factory ApplicationProfileTypeModel.fromJson(Map<String, dynamic> json) =>
+      _$ApplicationProfileTypeModelFromJson(json);
 
   /// Connect the generated [_$ApplicationConsumerProfileTypeModelToJson] function to the `toJson` method.
-  Map<String, dynamic> toJson() =>
-      _$ApplicationConsumerProfileTypeModelToJson(this);
+  Map<String, dynamic> toJson() => _$ApplicationProfileTypeModelToJson(this);
 }

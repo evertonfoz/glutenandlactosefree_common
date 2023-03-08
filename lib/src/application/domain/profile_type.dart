@@ -1,10 +1,10 @@
 import 'package:equatable/equatable.dart';
 
-class ApplicationConsumerProfileTypeEntity extends Equatable {
+class ApplicationProfileTypeEntity extends Equatable {
   final int applicationConsumerProfileTypeID;
   final String description;
 
-  ApplicationConsumerProfileTypeEntity({
+  ApplicationProfileTypeEntity({
     required this.applicationConsumerProfileTypeID,
     required this.description,
   });
