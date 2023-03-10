@@ -12,7 +12,7 @@ class ProviderModel extends ProviderEntity {
     required super.email,
     required super.brandName,
     required super.responsibleName,
-    required super.brandImageURL,
+    super.brandImageURL,
     required super.howKnowsAboutUs,
   });
 

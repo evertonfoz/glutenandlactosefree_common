@@ -5,7 +5,7 @@ class ProviderEntity extends Equatable {
   final String email;
   final String brandName;
   final String responsibleName;
-  final String brandImageURL;
+  final String? brandImageURL;
   final String howKnowsAboutUs;
 
   ProviderEntity({
@@ -13,7 +13,7 @@ class ProviderEntity extends Equatable {
     required this.email,
     required this.brandName,
     required this.responsibleName,
-    required this.brandImageURL,
+    this.brandImageURL,
     required this.howKnowsAboutUs,
   });
 

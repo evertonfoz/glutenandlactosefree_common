@@ -12,7 +12,7 @@ ProviderModel _$ProviderModelFromJson(Map<String, dynamic> json) =>
       email: json['email'] as String,
       brandName: json['brandName'] as String,
       responsibleName: json['responsibleName'] as String,
-      brandImageURL: json['brandImageURL'] as String,
+      brandImageURL: json['brandImageURL'] as String?,
       howKnowsAboutUs: json['howKnowsAboutUs'] as String,
     );
 
