@@ -1,15 +1,15 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'application_provider.dart';
+part of 'consumer.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-ApplicationProviderModel _$ApplicationProviderModelFromJson(
+ApplicationConsumerModel _$ApplicationConsumerModelFromJson(
         Map<String, dynamic> json) =>
-    ApplicationProviderModel(
-      applicationProviderID: json['applicationProviderID'] as int?,
+    ApplicationConsumerModel(
+      applicationConsumerID: json['applicationConsumerID'] as int?,
       fullName: json['fullName'] as String,
       stateAndCity: json['stateAndCity'] as String,
       phoneNumber: json['phoneNumber'] as String,
@@ -19,30 +19,28 @@ ApplicationProviderModel _$ApplicationProviderModelFromJson(
               ApplicationProfileTypeModel.fromJson(e as Map<String, dynamic>))
           .toList(),
       profileTypeOther: json['profileTypeOther'] as String,
-      placeToDisclose: json['placeToDisclose'] as String,
-      placeToDiscloseNames: json['placeToDiscloseNames'] as String,
+      placeToGoEasyToFind: json['placeToGoEasyToFind'] as String,
+      placeToGoNames: json['placeToGoNames'] as String,
       appUse: json['appUse'] as String,
       appFeatures: json['appFeatures'] as String,
       appDontUse: json['appDontUse'] as String,
-      appAngel: json['appAngel'] as String,
       comments: json['comments'] as String,
     );
 
-Map<String, dynamic> _$ApplicationProviderModelToJson(
-        ApplicationProviderModel instance) =>
+Map<String, dynamic> _$ApplicationConsumerModelToJson(
+        ApplicationConsumerModel instance) =>
     <String, dynamic>{
-      'applicationProviderID': instance.applicationProviderID,
+      'applicationConsumerID': instance.applicationConsumerID,
       'fullName': instance.fullName,
       'stateAndCity': instance.stateAndCity,
       'phoneNumber': instance.phoneNumber,
       'email': instance.email,
       'profileTypeOther': instance.profileTypeOther,
-      'placeToDisclose': instance.placeToDisclose,
-      'placeToDiscloseNames': instance.placeToDiscloseNames,
+      'placeToGoEasyToFind': instance.placeToGoEasyToFind,
+      'placeToGoNames': instance.placeToGoNames,
       'appUse': instance.appUse,
       'appFeatures': instance.appFeatures,
       'appDontUse': instance.appDontUse,
-      'appAngel': instance.appAngel,
       'comments': instance.comments,
       'modelProfilesType':
           instance.modelProfilesType.map((e) => e.toJson()).toList(),

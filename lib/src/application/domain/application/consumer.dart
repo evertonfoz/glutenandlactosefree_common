@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-import '../../../common.dart';
+import '../../../../common.dart';
 
 class ApplicationConsumerEntity extends Equatable {
   final int? applicationConsumerID;

@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../domain/profile_type.dart';
+import '../../../common.dart';
 
 part 'profile_type.g.dart';
 
