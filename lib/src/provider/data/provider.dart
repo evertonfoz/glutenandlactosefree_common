@@ -8,6 +8,7 @@ part 'provider.g.dart';
 @JsonSerializable(explicitToJson: true)
 class ProviderModel extends ProviderEntity {
   ProviderModel({
+    super.providerPlanID,
     super.providerID,
     required super.email,
     required super.brandName,
