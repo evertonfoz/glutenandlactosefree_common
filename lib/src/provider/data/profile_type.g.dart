@@ -8,12 +8,12 @@ part of 'profile_type.dart';
 
 ProfileTypeModel _$ProfileTypeModelFromJson(Map<String, dynamic> json) =>
     ProfileTypeModel(
-      applicationProfileTypeID: json['applicationProfileTypeID'] as int,
+      profileTypeID: json['profileTypeID'] as int,
       description: json['description'] as String,
     );
 
 Map<String, dynamic> _$ProfileTypeModelToJson(ProfileTypeModel instance) =>
     <String, dynamic>{
-      'applicationProfileTypeID': instance.applicationProfileTypeID,
+      'profileTypeID': instance.profileTypeID,
       'description': instance.description,
     };
