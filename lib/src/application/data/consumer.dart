@@ -7,7 +7,7 @@ part 'consumer.g.dart';
 
 @JsonSerializable(explicitToJson: true)
 class ApplicationConsumerModel extends ApplicationConsumerEntity {
-  final List<ApplicationProfileTypeModel> modelProfilesType;
+  final List<ProfileTypeModel> modelProfilesType;
 
   ApplicationConsumerModel({
     super.applicationConsumerID,
