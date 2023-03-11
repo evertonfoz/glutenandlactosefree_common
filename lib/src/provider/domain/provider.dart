@@ -8,8 +8,10 @@ class ProviderEntity extends Equatable {
   final String? brandImageURL;
   final String howKnowsAboutUs;
   final int? providerPlanID;
+  final String aboutServices;
 
   ProviderEntity({
+    required this.aboutServices,
     this.providerPlanID,
     this.providerID,
     required this.email,

@@ -15,6 +15,7 @@ class ProviderModel extends ProviderEntity {
     required super.responsibleName,
     super.brandImageURL,
     required super.howKnowsAboutUs,
+    required super.aboutServices,
   });
 
   factory ProviderModel.fromJson(Map<String, dynamic> json) =>

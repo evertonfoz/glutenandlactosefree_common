@@ -15,6 +15,7 @@ ProviderModel _$ProviderModelFromJson(Map<String, dynamic> json) =>
       responsibleName: json['responsibleName'] as String,
       brandImageURL: json['brandImageURL'] as String?,
       howKnowsAboutUs: json['howKnowsAboutUs'] as String,
+      aboutServices: json['aboutServices'] as String,
     );
 
 Map<String, dynamic> _$ProviderModelToJson(ProviderModel instance) =>
@@ -26,4 +27,5 @@ Map<String, dynamic> _$ProviderModelToJson(ProviderModel instance) =>
       'brandImageURL': instance.brandImageURL,
       'howKnowsAboutUs': instance.howKnowsAboutUs,
       'providerPlanID': instance.providerPlanID,
+      'aboutServices': instance.aboutServices,
     };
