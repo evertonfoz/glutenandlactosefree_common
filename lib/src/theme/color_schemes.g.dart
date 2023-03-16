@@ -10,7 +10,7 @@ const lightColorScheme = ColorScheme(
   onSecondary: Color(0xFFFFFFFF),
   secondaryContainer: Color(0xFFFFDEA7),
   onSecondaryContainer: Color(0xFF271900),
-  onTertiary: Color(0xFF00344A),
+  onTertiary: Color(0xFFFFFFFF),
   tertiaryContainer: Color(0xFFC1E8FF),
   onTertiaryContainer: Color(0xFF001E2B),
   error: Color(0xFFBA1A1A),
@@ -31,6 +31,7 @@ const lightColorScheme = ColorScheme(
   surfaceTint: Color(0xFF845400),
   outlineVariant: Color(0xFFD3C4B4),
   scrim: Color(0xFF000000),
+  tertiary: Color(0xFF00344A),
 );
 
 const darkColorScheme = ColorScheme(
