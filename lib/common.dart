@@ -15,5 +15,6 @@ export 'src/provider/domain/profile_type.dart';
 export 'src/provider/domain/provider.dart';
 export 'src/testimony/domain/testimony.dart';
 export 'src/testimony/data/testimony.dart';
+export 'src/theme/color_schemes.g.dart';
 
 // TODO: Export any libraries intended for clients of this package.
