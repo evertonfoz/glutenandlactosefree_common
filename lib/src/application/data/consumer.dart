@@ -31,5 +31,8 @@ class ApplicationConsumerModel extends ApplicationConsumerEntity {
   }
 
   /// Connect the generated [_$ApplicationConsumerModelToJson] function to the `toJson` method.
-  Map<String, dynamic> toJson() => _$ApplicationConsumerModelToJson(this);
+  Map<String, dynamic> toJson() {
+    var teste = _$ApplicationConsumerModelToJson(this);
+    return teste;
+  }
 }
