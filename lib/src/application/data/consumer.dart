@@ -19,7 +19,7 @@ class ApplicationConsumerModel extends ApplicationConsumerEntity {
     required super.profileTypeOther,
     required super.placeToGoEasyToFind,
     required super.placeToGoNames,
-    required super.appUse,
+    required super.typeOfProductsAndServicesLookingFor,
     required super.appFeatures,
     required super.appDontUse,
     required super.comments,

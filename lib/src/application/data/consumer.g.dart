@@ -20,7 +20,8 @@ ApplicationConsumerModel _$ApplicationConsumerModelFromJson(
       profileTypeOther: json['profileTypeOther'] as String,
       placeToGoEasyToFind: json['placeToGoEasyToFind'] as String,
       placeToGoNames: json['placeToGoNames'] as String,
-      appUse: json['appUse'] as String,
+      typeOfProductsAndServicesLookingFor:
+          json['typeOfProductsAndServicesLookingFor'] as String,
       appFeatures: json['appFeatures'] as String,
       appDontUse: json['appDontUse'] as String,
       comments: json['comments'] as String,
@@ -37,7 +38,8 @@ Map<String, dynamic> _$ApplicationConsumerModelToJson(
       'profileTypeOther': instance.profileTypeOther,
       'placeToGoEasyToFind': instance.placeToGoEasyToFind,
       'placeToGoNames': instance.placeToGoNames,
-      'appUse': instance.appUse,
+      'typeOfProductsAndServicesLookingFor':
+          instance.typeOfProductsAndServicesLookingFor,
       'appFeatures': instance.appFeatures,
       'appDontUse': instance.appDontUse,
       'comments': instance.comments,

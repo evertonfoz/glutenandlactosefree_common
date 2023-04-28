@@ -12,7 +12,7 @@ class ApplicationConsumerEntity extends Equatable {
   final String profileTypeOther;
   final String placeToGoEasyToFind;
   final String placeToGoNames;
-  final String appUse;
+  final String typeOfProductsAndServicesLookingFor;
   final String appFeatures;
   final String appDontUse;
   final String comments;
@@ -27,7 +27,7 @@ class ApplicationConsumerEntity extends Equatable {
     required this.profileTypeOther,
     required this.placeToGoEasyToFind,
     required this.placeToGoNames,
-    required this.appUse,
+    required this.typeOfProductsAndServicesLookingFor,
     required this.appFeatures,
     required this.appDontUse,
     required this.comments,
