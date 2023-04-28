@@ -12,7 +12,7 @@ class ApplicationProviderEntity extends Equatable {
   final String profileTypeOther;
   final String placeToDisclose;
   final String placeToDiscloseNames;
-  final String appUse;
+  final String typeOfProductsAndServicesToOffers;
   final String appFeatures;
   final String appDontUse;
   final String appAngel;
@@ -28,7 +28,7 @@ class ApplicationProviderEntity extends Equatable {
     required this.profileTypeOther,
     required this.placeToDisclose,
     required this.placeToDiscloseNames,
-    required this.appUse,
+    required this.typeOfProductsAndServicesToOffers,
     required this.appFeatures,
     required this.appDontUse,
     required this.appAngel,

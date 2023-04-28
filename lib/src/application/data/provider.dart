@@ -19,7 +19,7 @@ class ApplicationProviderModel extends ApplicationProviderEntity {
     required super.profileTypeOther,
     required super.placeToDisclose,
     required super.placeToDiscloseNames,
-    required super.appUse,
+    required super.typeOfProductsAndServicesToOffers,
     required super.appFeatures,
     required super.appDontUse,
     required super.appAngel,

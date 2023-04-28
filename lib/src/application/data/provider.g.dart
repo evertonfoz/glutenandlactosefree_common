@@ -20,7 +20,8 @@ ApplicationProviderModel _$ApplicationProviderModelFromJson(
       profileTypeOther: json['profileTypeOther'] as String,
       placeToDisclose: json['placeToDisclose'] as String,
       placeToDiscloseNames: json['placeToDiscloseNames'] as String,
-      appUse: json['appUse'] as String,
+      typeOfProductsAndServicesToOffers:
+          json['typeOfProductsAndServicesToOffers'] as String,
       appFeatures: json['appFeatures'] as String,
       appDontUse: json['appDontUse'] as String,
       appAngel: json['appAngel'] as String,
@@ -38,7 +39,8 @@ Map<String, dynamic> _$ApplicationProviderModelToJson(
       'profileTypeOther': instance.profileTypeOther,
       'placeToDisclose': instance.placeToDisclose,
       'placeToDiscloseNames': instance.placeToDiscloseNames,
-      'appUse': instance.appUse,
+      'typeOfProductsAndServicesToOffers':
+          instance.typeOfProductsAndServicesToOffers,
       'appFeatures': instance.appFeatures,
       'appDontUse': instance.appDontUse,
       'appAngel': instance.appAngel,
