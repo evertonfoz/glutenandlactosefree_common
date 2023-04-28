@@ -4,6 +4,8 @@ export 'src/application/data/consumer.dart';
 export 'src/application/data/provider.dart';
 export 'src/application/domain/consumer.dart';
 export 'src/application/domain/provider.dart';
+export 'src/categories/data/category.dart';
+export 'src/categories/domain/category.dart';
 export 'src/provider/data/plan.dart';
 export 'src/provider/data/provider.dart';
 export 'src/provider/data/profile_type.dart';
