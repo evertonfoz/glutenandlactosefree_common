@@ -1,4 +1,5 @@
 // flutter packages pub run build_runner build --delete-conflicting-outputs
+import 'package:common/common.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import '../domain/provider.dart';
@@ -7,6 +8,8 @@ part 'provider.g.dart';
 
 @JsonSerializable(explicitToJson: true)
 class ProviderModel extends ProviderEntity {
+  final AddressModel? addressModel;
+
   ProviderModel({
     super.providerPlanID,
     super.providerID,
@@ -19,7 +22,8 @@ class ProviderModel extends ProviderEntity {
     super.responsibleImageURL,
     super.advertiseImageURL,
     super.rating,
-  });
+    this.addressModel,
+  }) : super(address: addressModel);
 
   factory ProviderModel.fromJson(Map<String, dynamic> json) =>
       _$ProviderModelFromJson(json);

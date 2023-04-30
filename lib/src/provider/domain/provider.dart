@@ -1,3 +1,4 @@
+import 'package:common/common.dart';
 import 'package:equatable/equatable.dart';
 
 class ProviderEntity extends Equatable {
@@ -13,6 +14,7 @@ class ProviderEntity extends Equatable {
   final String? advertiseImageURL;
   final String? rating;
   final String? balloonText;
+  final AddressEntity? address;
 
   ProviderEntity({
     required this.aboutServices,
@@ -27,6 +29,7 @@ class ProviderEntity extends Equatable {
     this.advertiseImageURL,
     this.rating,
     this.balloonText,
+    this.address,
   });
 
   @override

@@ -26,8 +26,7 @@ class ApplicationConsumerModel extends ApplicationConsumerEntity {
   }) : super(profilesType: modelProfilesType);
 
   factory ApplicationConsumerModel.fromJson(Map<String, dynamic> json) {
-    var teste = _$ApplicationConsumerModelFromJson(json);
-    return teste;
+    return _$ApplicationConsumerModelFromJson(json);
   }
 
   /// Connect the generated [_$ApplicationConsumerModelToJson] function to the `toJson` method.
