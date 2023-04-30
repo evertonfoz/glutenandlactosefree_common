@@ -12,5 +12,7 @@ export 'src/provider/data/profile_type.dart';
 export 'src/provider/domain/plan.dart';
 export 'src/provider/domain/profile_type.dart';
 export 'src/provider/domain/provider.dart';
+export 'src/shared/domain/address.dart';
+export 'src/shared/data/address.dart';
 export 'src/testimony/domain/testimony.dart';
 export 'src/testimony/data/testimony.dart';
