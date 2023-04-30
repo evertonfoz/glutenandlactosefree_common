@@ -10,6 +10,8 @@ class ProviderEntity extends Equatable {
   final String howKnowsAboutUs;
   final int? providerPlanID;
   final String aboutServices;
+  final String? advertiseImageURL;
+  final String? rating;
 
   ProviderEntity({
     required this.aboutServices,
@@ -21,6 +23,8 @@ class ProviderEntity extends Equatable {
     this.brandImageURL,
     required this.howKnowsAboutUs,
     this.responsibleImageURL,
+    this.advertiseImageURL,
+    this.rating,
   });
 
   @override
