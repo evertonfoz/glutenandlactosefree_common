@@ -12,6 +12,7 @@ class ProviderEntity extends Equatable {
   final String aboutServices;
   final String? advertiseImageURL;
   final String? rating;
+  final String? balloonText;
 
   ProviderEntity({
     required this.aboutServices,
@@ -25,6 +26,7 @@ class ProviderEntity extends Equatable {
     this.responsibleImageURL,
     this.advertiseImageURL,
     this.rating,
+    this.balloonText,
   });
 
   @override
