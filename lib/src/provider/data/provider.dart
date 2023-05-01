@@ -11,12 +11,12 @@ class ProviderModel extends ProviderEntity {
   ProviderModel({
     super.providerPlanID,
     super.providerID,
-    required super.email,
-    required super.brandName,
-    required super.responsibleName,
+    super.email,
+    super.brandName,
+    super.responsibleName,
     super.brandImageURL,
-    required super.howKnowsAboutUs,
-    required super.aboutServices,
+    super.howKnowsAboutUs,
+    super.aboutServices,
     super.responsibleImageURL,
     super.advertiseImageURL,
     super.rating,
@@ -24,8 +24,19 @@ class ProviderModel extends ProviderEntity {
     super.balloonText,
   }) : super(address: addressModel);
 
-  factory ProviderModel.fromJson(Map<String, dynamic> json) =>
-      _$ProviderModelFromJson(json);
+  factory ProviderModel.fromJson(Map<String, dynamic> json) {
+    final addressModel = AddressModel(
+      street: json['street'] ?? '',
+      number: json['number'] ?? '',
+      complement: json['complement'] ?? '',
+      district: json['district'] ?? '',
+      city: json['city'] ?? '',
+      state: json['state'] ?? '',
+      zipCode: json['zipCode'] ?? '',
+    );
+    json['addressModel'] = addressModel;
+    return _$ProviderModelFromJson(json);
+  }
 
   /// Connect the generated [_$ProviderModelToJson] function to the `toJson` method.
   Map<String, dynamic> toJson() => _$ProviderModelToJson(this);
