@@ -8,13 +8,13 @@ part 'address.g.dart';
 class AddressModel extends AddressEntity {
   const AddressModel({
     addressID,
-    required street,
-    required number,
-    required complement,
-    required district,
-    required city,
-    required state,
-    required zipCode,
+    street,
+    number,
+    complement,
+    district,
+    city,
+    state,
+    zipCode,
   }) : super(
           addressID: addressID,
           street: street,
