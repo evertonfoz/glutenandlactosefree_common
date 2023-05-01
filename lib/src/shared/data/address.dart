@@ -26,8 +26,9 @@ class AddressModel extends AddressEntity {
           zipCode: zipCode,
         );
 
-  factory AddressModel.fromJson(Map<String, dynamic> json) =>
-      _$AddressModelFromJson(json);
+  factory AddressModel.fromJson(Map<String, dynamic> json) {
+    return _$AddressModelFromJson(json);
+  }
 
   /// Connect the generated [_$ProviderModelToJson] function to the `toJson` method.
   Map<String, dynamic> toJson() => _$AddressModelToJson(this);
