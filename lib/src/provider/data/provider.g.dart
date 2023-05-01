@@ -22,6 +22,7 @@ ProviderModel _$ProviderModelFromJson(Map<String, dynamic> json) =>
       addressModel: json['addressModel'] == null
           ? null
           : AddressModel.fromJson(json['addressModel'] as Map<String, dynamic>),
+      balloonText: json['balloonText'] as String?,
     );
 
 Map<String, dynamic> _$ProviderModelToJson(ProviderModel instance) =>
@@ -37,5 +38,6 @@ Map<String, dynamic> _$ProviderModelToJson(ProviderModel instance) =>
       'aboutServices': instance.aboutServices,
       'advertiseImageURL': instance.advertiseImageURL,
       'rating': instance.rating,
+      'balloonText': instance.balloonText,
       'addressModel': instance.addressModel?.toJson(),
     };
