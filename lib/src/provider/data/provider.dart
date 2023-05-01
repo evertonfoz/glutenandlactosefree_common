@@ -2,8 +2,6 @@
 import 'package:common/common.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-import '../domain/provider.dart';
-
 part 'provider.g.dart';
 
 @JsonSerializable(explicitToJson: true)

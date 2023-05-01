@@ -12,7 +12,7 @@ class ProviderEntity extends Equatable {
   final int? providerPlanID;
   final String aboutServices;
   final String? advertiseImageURL;
-  final String? rating;
+  final double? rating;
   final String? balloonText;
   final AddressEntity? address;
 

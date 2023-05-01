@@ -18,7 +18,7 @@ ProviderModel _$ProviderModelFromJson(Map<String, dynamic> json) =>
       aboutServices: json['aboutServices'] as String,
       responsibleImageURL: json['responsibleImageURL'] as String?,
       advertiseImageURL: json['advertiseImageURL'] as String?,
-      rating: json['rating'] as String?,
+      rating: (json['rating'] as num?)?.toDouble(),
       addressModel: json['addressModel'] == null
           ? null
           : AddressModel.fromJson(json['addressModel'] as Map<String, dynamic>),
