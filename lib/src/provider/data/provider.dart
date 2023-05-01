@@ -34,7 +34,7 @@ class ProviderModel extends ProviderEntity {
       state: json['state'] ?? '',
       zipCode: json['zipCode'] ?? '',
     );
-    json['addressModel'] = addressModel;
+    json['addressModel'] = addressModel.toJson();
     return _$ProviderModelFromJson(json);
   }
 
