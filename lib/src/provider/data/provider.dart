@@ -19,7 +19,7 @@ class ProviderModel extends ProviderEntity {
     super.aboutServices,
     super.responsibleImageURL,
     super.advertiseImageURL,
-    super.rating,
+    super.ratting,
     this.addressModel,
     super.balloonText,
     super.advertiseText,

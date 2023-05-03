@@ -12,7 +12,7 @@ class ProviderEntity extends Equatable {
   final int? providerPlanID;
   final String? aboutServices;
   final String? advertiseImageURL;
-  final double? rating;
+  final double? ratting;
   final String? balloonText;
   final AddressEntity? address;
   final String? advertiseText;
@@ -28,7 +28,7 @@ class ProviderEntity extends Equatable {
     this.howKnowsAboutUs,
     this.responsibleImageURL,
     this.advertiseImageURL,
-    this.rating,
+    this.ratting,
     this.balloonText,
     this.address,
     this.advertiseText,
