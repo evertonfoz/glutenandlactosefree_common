@@ -23,6 +23,7 @@ class ProviderModel extends ProviderEntity {
     this.addressModel,
     super.balloonText,
     super.advertiseText,
+    super.phoneNumber,
   }) : super(address: addressModel);
 
   factory ProviderModel.fromJson(Map<String, dynamic> json) {

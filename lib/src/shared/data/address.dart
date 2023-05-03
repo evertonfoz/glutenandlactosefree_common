@@ -32,4 +32,9 @@ class AddressModel extends AddressEntity {
 
   /// Connect the generated [_$ProviderModelToJson] function to the `toJson` method.
   Map<String, dynamic> toJson() => _$AddressModelToJson(this);
+
+  // @override
+  // String toString() {
+  //   return '$street, $number,';
+  // }
 }

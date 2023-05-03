@@ -24,6 +24,7 @@ ProviderModel _$ProviderModelFromJson(Map<String, dynamic> json) =>
           : AddressModel.fromJson(json['addressModel'] as Map<String, dynamic>),
       balloonText: json['balloonText'] as String?,
       advertiseText: json['advertiseText'] as String?,
+      phoneNumber: json['phoneNumber'] as String?,
     );
 
 Map<String, dynamic> _$ProviderModelToJson(ProviderModel instance) =>
@@ -41,5 +42,6 @@ Map<String, dynamic> _$ProviderModelToJson(ProviderModel instance) =>
       'ratting': instance.ratting,
       'balloonText': instance.balloonText,
       'advertiseText': instance.advertiseText,
+      'phoneNumber': instance.phoneNumber,
       'addressModel': instance.addressModel?.toJson(),
     };

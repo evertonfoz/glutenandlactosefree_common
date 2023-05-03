@@ -16,6 +16,7 @@ class ProviderEntity extends Equatable {
   final String? balloonText;
   final AddressEntity? address;
   final String? advertiseText;
+  final String? phoneNumber;
 
   ProviderEntity({
     this.aboutServices,
@@ -32,6 +33,7 @@ class ProviderEntity extends Equatable {
     this.balloonText,
     this.address,
     this.advertiseText,
+    this.phoneNumber,
   });
 
   @override
