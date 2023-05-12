@@ -3,7 +3,7 @@ import 'package:equatable/equatable.dart';
 
 // ignore: must_be_immutable
 class UserEntity extends Equatable {
-  late String _email;
+  late String? _email;
   late UserProfileTypeEntity? _userProfileTypeEntity;
 
   UserEntity({
@@ -21,7 +21,7 @@ class UserEntity extends Equatable {
     _userProfileTypeEntity = userProfileTypeEntity;
   }
 
-  String get email => _email;
+  String? get email => _email;
   UserProfileTypeEntity? get userProfileEntity => _userProfileTypeEntity;
 
   @override
