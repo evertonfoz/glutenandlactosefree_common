@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-import '../../../common.dart';
+import '../../consumer/domain/consumer_profile_type.dart';
 
 class ApplicationConsumerEntity extends Equatable {
   final int? applicationConsumerID;
@@ -8,7 +8,7 @@ class ApplicationConsumerEntity extends Equatable {
   final String stateAndCity;
   final String phoneNumber;
   final String email;
-  final List<ProfileTypeEntity> profilesType;
+  final List<ConsumerProfileTypeEntity> profilesType;
   final String profileTypeOther;
   final String placeToGoEasyToFind;
   final String placeToGoNames;

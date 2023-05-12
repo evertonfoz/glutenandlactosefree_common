@@ -3,11 +3,13 @@
 import 'package:common/common.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import '../../consumer/data/consumer_profile_type.dart';
+
 part 'consumer.g.dart';
 
 @JsonSerializable(explicitToJson: true)
 class ApplicationConsumerModel extends ApplicationConsumerEntity {
-  final List<ProfileTypeModel> modelProfilesType;
+  final List<ConsumerProfileTypeModel> modelProfilesType;
 
   ApplicationConsumerModel({
     super.applicationConsumerID,

@@ -1,8 +1,8 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../domain/plan.dart';
+import '../../../common.dart';
 
-part 'plan.g.dart';
+part 'provider_plan.g.dart';
 
 @JsonSerializable()
 class ProviderPlanModel extends ProviderPlanEntity {

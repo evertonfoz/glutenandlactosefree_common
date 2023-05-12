@@ -7,7 +7,7 @@ part 'provider.g.dart';
 
 @JsonSerializable(explicitToJson: true)
 class ApplicationProviderModel extends ApplicationProviderEntity {
-  final List<ProfileTypeModel> modelProfilesType;
+  final List<ProviderProfileTypeModel> modelProfilesType;
 
   ApplicationProviderModel({
     super.applicationProviderID,

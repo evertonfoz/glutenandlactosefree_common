@@ -1,19 +1,19 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'profile_type.dart';
+part of 'provider_plan.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-ProfileTypeModel _$ProfileTypeModelFromJson(Map<String, dynamic> json) =>
-    ProfileTypeModel(
-      profileTypeID: json['profileTypeID'] as int,
+ProviderPlanModel _$ProviderPlanModelFromJson(Map<String, dynamic> json) =>
+    ProviderPlanModel(
+      providerPlanID: json['providerPlanID'] as int,
       description: json['description'] as String,
     );
 
-Map<String, dynamic> _$ProfileTypeModelToJson(ProfileTypeModel instance) =>
+Map<String, dynamic> _$ProviderPlanModelToJson(ProviderPlanModel instance) =>
     <String, dynamic>{
-      'profileTypeID': instance.profileTypeID,
+      'providerPlanID': instance.providerPlanID,
       'description': instance.description,
     };

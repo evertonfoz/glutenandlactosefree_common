@@ -15,7 +15,8 @@ ApplicationConsumerModel _$ApplicationConsumerModelFromJson(
       phoneNumber: json['phoneNumber'] as String,
       email: json['email'] as String,
       modelProfilesType: (json['modelProfilesType'] as List<dynamic>)
-          .map((e) => ProfileTypeModel.fromJson(e as Map<String, dynamic>))
+          .map((e) =>
+              ConsumerProfileTypeModel.fromJson(e as Map<String, dynamic>))
           .toList(),
       profileTypeOther: json['profileTypeOther'] as String,
       placeToGoEasyToFind: json['placeToGoEasyToFind'] as String,

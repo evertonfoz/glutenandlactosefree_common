@@ -2,13 +2,13 @@
 import 'package:common/common.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-part 'provider.g.dart';
+part 'consumer.g.dart';
 
 @JsonSerializable(explicitToJson: true)
-class ProviderModel extends ConsumerEntity {
+class ConsumerModel extends ConsumerEntity {
   final AddressModel? addressModel;
 
-  ProviderModel({
+  ConsumerModel({
     super.providerPlanID,
     super.providerID,
     super.email,
@@ -26,7 +26,7 @@ class ProviderModel extends ConsumerEntity {
     super.phoneNumber,
   }) : super(address: addressModel);
 
-  factory ProviderModel.fromJson(Map<String, dynamic> json) {
+  factory ConsumerModel.fromJson(Map<String, dynamic> json) {
     final addressModel = AddressModel(
       street: json['street'] ?? '',
       number: json['number'] ?? '',
@@ -37,9 +37,8 @@ class ProviderModel extends ConsumerEntity {
       zipCode: json['zipCode'] ?? '',
     );
     json['addressModel'] = addressModel.toJson();
-    return _$ProviderModelFromJson(json);
+    return _$ConsumerModelFromJson(json);
   }
 
-  /// Connect the generated [_$ProviderModelToJson] function to the `toJson` method.
-  Map<String, dynamic> toJson() => _$ProviderModelToJson(this);
+  Map<String, dynamic> toJson() => _$ConsumerModelToJson(this);
 }

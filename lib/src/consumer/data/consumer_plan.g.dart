@@ -1,19 +1,19 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'plan.dart';
+part of 'consumer_plan.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-ProviderPlanModel _$ProviderPlanModelFromJson(Map<String, dynamic> json) =>
-    ProviderPlanModel(
-      providerPlanID: json['providerPlanID'] as int,
+ConsumerPlanModel _$ConsumerPlanModelFromJson(Map<String, dynamic> json) =>
+    ConsumerPlanModel(
+      consumerPlanID: json['consumerPlanID'] as int,
       description: json['description'] as String,
     );
 
-Map<String, dynamic> _$ProviderPlanModelToJson(ProviderPlanModel instance) =>
+Map<String, dynamic> _$ConsumerPlanModelToJson(ConsumerPlanModel instance) =>
     <String, dynamic>{
-      'providerPlanID': instance.providerPlanID,
+      'consumerPlanID': instance.consumerPlanID,
       'description': instance.description,
     };
