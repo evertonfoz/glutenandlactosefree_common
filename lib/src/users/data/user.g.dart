@@ -12,9 +12,14 @@ UserModel _$UserModelFromJson(Map<String, dynamic> json) => UserModel(
           ? null
           : UserProfileTypeModel.fromJson(
               json['userProfileTypeModel'] as Map<String, dynamic>),
+      consumerModel: json['consumerModel'] == null
+          ? null
+          : ConsumerModel.fromJson(
+              json['consumerModel'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$UserModelToJson(UserModel instance) => <String, dynamic>{
       'email': instance.email,
       'userProfileTypeModel': instance.userProfileTypeModel?.toJson(),
+      'consumerModel': instance.consumerModel?.toJson(),
     };

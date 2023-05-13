@@ -5,6 +5,7 @@ import '../../consumer/domain/consumer_profile_type.dart';
 class ApplicationConsumerEntity extends Equatable {
   final int? applicationConsumerID;
   final String fullName;
+  final String imageURL;
   final String stateAndCity;
   final String phoneNumber;
   final String email;
@@ -20,6 +21,7 @@ class ApplicationConsumerEntity extends Equatable {
   ApplicationConsumerEntity({
     this.applicationConsumerID,
     required this.fullName,
+    required this.imageURL,
     required this.stateAndCity,
     required this.phoneNumber,
     required this.email,

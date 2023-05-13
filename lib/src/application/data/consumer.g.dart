@@ -11,6 +11,7 @@ ApplicationConsumerModel _$ApplicationConsumerModelFromJson(
     ApplicationConsumerModel(
       applicationConsumerID: json['applicationConsumerID'] as int?,
       fullName: json['fullName'] as String,
+      imageURL: json['imageURL'] as String,
       stateAndCity: json['stateAndCity'] as String,
       phoneNumber: json['phoneNumber'] as String,
       email: json['email'] as String,
@@ -33,6 +34,7 @@ Map<String, dynamic> _$ApplicationConsumerModelToJson(
     <String, dynamic>{
       'applicationConsumerID': instance.applicationConsumerID,
       'fullName': instance.fullName,
+      'imageURL': instance.imageURL,
       'stateAndCity': instance.stateAndCity,
       'phoneNumber': instance.phoneNumber,
       'email': instance.email,

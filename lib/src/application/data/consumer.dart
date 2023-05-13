@@ -12,6 +12,7 @@ class ApplicationConsumerModel extends ApplicationConsumerEntity {
   ApplicationConsumerModel({
     super.applicationConsumerID,
     required super.fullName,
+    required super.imageURL,
     required super.stateAndCity,
     required super.phoneNumber,
     required super.email,
