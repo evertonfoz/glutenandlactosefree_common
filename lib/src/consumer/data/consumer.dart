@@ -9,20 +9,16 @@ class ConsumerModel extends ConsumerEntity {
   final AddressModel? addressModel;
 
   ConsumerModel({
-    super.providerPlanID,
-    super.providerID,
+    super.consumerPlanID,
+    super.consumerID,
     super.email,
     super.fullName,
     super.imageURL,
     super.howKnowsAboutUs,
-    super.aboutServices,
-    super.responsibleImageURL,
-    super.advertiseImageURL,
     super.ratting,
     this.addressModel,
-    super.balloonText,
-    super.advertiseText,
     super.phoneNumber,
+    super.aboutMe,
   }) : super(address: addressModel);
 
   factory ConsumerModel.fromJson(Map<String, dynamic> json) {
