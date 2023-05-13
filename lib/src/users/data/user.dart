@@ -2,10 +2,7 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:common/common.dart';
-import 'package:common/src/users/data/user_profile_type.dart';
 import 'package:json_annotation/json_annotation.dart';
-
-import '../domain/user.dart';
 
 part 'user.g.dart';
 

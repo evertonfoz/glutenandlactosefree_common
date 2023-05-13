@@ -1,5 +1,4 @@
-import 'package:common/src/consumer/domain/consumer.dart';
-import 'package:common/src/users/domain/user_profile_type.dart';
+import 'package:common/common.dart';
 import 'package:equatable/equatable.dart';
 
 // ignore: must_be_immutable
@@ -30,6 +29,8 @@ class UserEntity extends Equatable {
 
   String? get email => _email;
   UserProfileTypeEntity? get userProfileEntity => _userProfileTypeEntity;
+
+  ConsumerEntity? get consumerEntity => _consumerEntity;
 
   @override
   List<Object?> get props => [_email];
