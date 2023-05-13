@@ -5,7 +5,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'provider.g.dart';
 
 @JsonSerializable(explicitToJson: true)
-class ProviderModel extends ConsumerEntity {
+class ProviderModel extends ProviderEntity {
   final AddressModel? addressModel;
 
   ProviderModel({

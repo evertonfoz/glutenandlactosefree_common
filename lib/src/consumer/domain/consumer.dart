@@ -4,9 +4,8 @@ import 'package:equatable/equatable.dart';
 class ConsumerEntity extends Equatable {
   final int? providerID;
   final String? email;
-  final String? brandName;
-  final String? responsibleName;
-  final String? brandImageURL;
+  final String? fullName;
+  final String? imageURL;
   final String? responsibleImageURL;
   final String? howKnowsAboutUs;
   final int? providerPlanID;
@@ -23,9 +22,8 @@ class ConsumerEntity extends Equatable {
     this.providerPlanID,
     this.providerID,
     this.email,
-    this.brandName,
-    this.responsibleName,
-    this.brandImageURL,
+    this.fullName,
+    this.imageURL,
     this.howKnowsAboutUs,
     this.responsibleImageURL,
     this.advertiseImageURL,
