@@ -10,14 +10,17 @@ part 'user.g.dart';
 class UserModel extends UserEntity {
   final UserProfileTypeModel? userProfileTypeModel;
   final ConsumerModel? consumerModel;
+  final ProviderModel? providerModel;
 
   UserModel({
     super.email,
     this.userProfileTypeModel,
     this.consumerModel,
+    this.providerModel,
   }) : super(
           userProfileTypeEntity: userProfileTypeModel,
           consumerEntity: consumerModel,
+          providerEntity: providerModel,
         );
 
   factory UserModel.fromJson(Map<String, dynamic> json) {
