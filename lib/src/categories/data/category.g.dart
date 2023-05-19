@@ -11,6 +11,7 @@ CategoryModel _$CategoryModelFromJson(Map<String, dynamic> json) =>
       categoryID: json['categoryID'] as int?,
       name: json['name'] as String,
       imageURL: json['imageURL'] as String,
+      providersCount: json['providersCount'] as int?,
     );
 
 Map<String, dynamic> _$CategoryModelToJson(CategoryModel instance) =>
@@ -18,4 +19,5 @@ Map<String, dynamic> _$CategoryModelToJson(CategoryModel instance) =>
       'categoryID': instance.categoryID,
       'name': instance.name,
       'imageURL': instance.imageURL,
+      'providersCount': instance.providersCount,
     };

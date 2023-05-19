@@ -16,10 +16,15 @@ UserModel _$UserModelFromJson(Map<String, dynamic> json) => UserModel(
           ? null
           : ConsumerModel.fromJson(
               json['consumerModel'] as Map<String, dynamic>),
+      providerModel: json['providerModel'] == null
+          ? null
+          : ProviderModel.fromJson(
+              json['providerModel'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$UserModelToJson(UserModel instance) => <String, dynamic>{
       'email': instance.email,
       'userProfileTypeModel': instance.userProfileTypeModel?.toJson(),
       'consumerModel': instance.consumerModel?.toJson(),
+      'providerModel': instance.providerModel?.toJson(),
     };

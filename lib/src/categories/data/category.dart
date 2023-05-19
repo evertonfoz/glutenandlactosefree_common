@@ -7,8 +7,12 @@ part 'category.g.dart';
 
 @JsonSerializable(explicitToJson: true)
 class CategoryModel extends CategoryEntity {
-  CategoryModel(
-      {super.categoryID, required super.name, required super.imageURL});
+  CategoryModel({
+    super.categoryID,
+    required super.name,
+    required super.imageURL,
+    super.providersCount,
+  });
 
   factory CategoryModel.fromJson(Map<String, dynamic> json) {
     return _$CategoryModelFromJson(json);
