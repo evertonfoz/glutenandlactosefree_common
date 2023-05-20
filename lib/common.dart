@@ -12,11 +12,17 @@ export 'src/consumer/domain/consumer_plan.dart';
 export 'src/consumer/domain/consumer_profile_type.dart';
 export 'src/consumer/domain/consumer.dart';
 
+export 'src/products/data/product.dart';
+export 'src/products/domain/product.dart';
+
 export 'src/product_categories/data/product_category.dart';
 export 'src/product_categories/domain/product_category.dart';
 
-export 'src/product_storage/data/product_storage.dart';
-export 'src/product_storage/domain/product_storage.dart';
+export 'src/product_storages/data/product_storage.dart';
+export 'src/product_storages/domain/product_storage.dart';
+
+export 'src/product_unit_of_measurements/data/product_unit_of_measurement.dart';
+export 'src/product_unit_of_measurements/domain/product_unit_of_measurement.dart';
 
 export 'src/provider/data/provider_plan.dart';
 export 'src/provider/data/provider.dart';
