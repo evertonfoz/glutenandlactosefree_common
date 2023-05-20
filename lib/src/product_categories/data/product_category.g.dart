@@ -1,22 +1,24 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'category.dart';
+part of 'product_category.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-CategoryModel _$CategoryModelFromJson(Map<String, dynamic> json) =>
-    CategoryModel(
-      categoryID: json['categoryID'] as int?,
+ProductCategoryModel _$ProductCategoryModelFromJson(
+        Map<String, dynamic> json) =>
+    ProductCategoryModel(
+      productCategoryID: json['productCategoryID'] as int?,
       name: json['name'] as String,
       imageURL: json['imageURL'] as String,
       providersCount: json['providersCount'] as int?,
     );
 
-Map<String, dynamic> _$CategoryModelToJson(CategoryModel instance) =>
+Map<String, dynamic> _$ProductCategoryModelToJson(
+        ProductCategoryModel instance) =>
     <String, dynamic>{
-      'categoryID': instance.categoryID,
+      'productCategoryID': instance.productCategoryID,
       'name': instance.name,
       'imageURL': instance.imageURL,
       'providersCount': instance.providersCount,

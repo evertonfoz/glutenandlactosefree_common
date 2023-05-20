@@ -1,18 +1,18 @@
 import 'package:equatable/equatable.dart';
 
-class CategoryEntity extends Equatable {
-  final int? categoryID;
+class ProductCategoryEntity extends Equatable {
+  final int? productCategoryID;
   final String name;
   final String imageURL;
   final int? providersCount;
 
-  CategoryEntity({
-    this.categoryID,
+  ProductCategoryEntity({
+    this.productCategoryID,
     required this.name,
     required this.imageURL,
     this.providersCount,
   });
 
   @override
-  List<Object?> get props => [categoryID];
+  List<Object?> get props => [productCategoryID];
 }
