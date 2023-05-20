@@ -11,18 +11,18 @@ part 'product.g.dart';
 
 @JsonSerializable(explicitToJson: true)
 class ProductModel extends ProductEntity {
-  final ProviderModel providerModel;
-  final ProductCategoryModel categoryModel;
-  final ProductStorageModel storageModel;
-  final ProductUnitOfMeasurementModel unitOfMeasurementModel;
+  final ProviderModel? providerModel;
+  final ProductCategoryModel? categoryModel;
+  final ProductStorageModel? storageModel;
+  final ProductUnitOfMeasurementModel? unitOfMeasurementModel;
 
   ProductModel({
     required super.productID,
     required super.name,
-    required this.providerModel,
-    required this.categoryModel,
-    required this.storageModel,
-    required this.unitOfMeasurementModel,
+    this.providerModel,
+    this.categoryModel,
+    this.storageModel,
+    this.unitOfMeasurementModel,
     required super.weight,
     required super.imageURL,
   }) : super(
@@ -33,6 +33,21 @@ class ProductModel extends ProductEntity {
         );
 
   factory ProductModel.fromJson(Map<String, dynamic> json) {
+    // final addressModel = AddressModel(
+    //   street: json['street'] ?? '',
+    //   number: json['number'] ?? '',
+    //   complement: json['complement'] ?? '',
+    //   district: json['district'] ?? '',
+    //   city: json['city'] ?? '',
+    //   state: json['state'] ?? '',
+    //   zipCode: json['zipCode'] ?? '',
+    // );
+
+    json['providerModel'] = null;
+    json['categoryModel'] = null;
+    json['storageModel'] = null;
+    json['unitOfMeasurementModel'] = null;
+    // addressModel.toJson();
     return _$ProductModelFromJson(json);
   }
 
