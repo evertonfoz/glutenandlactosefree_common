@@ -41,7 +41,7 @@ class ProductModel extends ProductEntity {
 
     json['providerModel'] = null;
     json['categoryModel'] = null;
-    json['storageModel'] = json['product_storage']['productStorageID'];
+    json['storageModel'] = json['product_storage'];
     json['unitOfMeasurementModel'] = json['product_unit_of_measurement'];
     // json['storageModel'] = ProductStorageModel(
     //     productStorageID: json['product_storage']['productStorageID'],
