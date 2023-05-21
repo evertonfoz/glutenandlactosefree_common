@@ -8,7 +8,7 @@ part 'product_unit_of_measurement.g.dart';
 @JsonSerializable(explicitToJson: true)
 class ProductUnitOfMeasurementModel extends ProductUnitOfMeasurementEntity {
   ProductUnitOfMeasurementModel({
-    required super.productOfMeasurementID,
+    required super.productUnitOfMeasurementID,
     required super.name,
     required super.symbol,
   });

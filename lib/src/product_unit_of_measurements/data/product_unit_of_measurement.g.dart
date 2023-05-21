@@ -9,7 +9,7 @@ part of 'product_unit_of_measurement.dart';
 ProductUnitOfMeasurementModel _$ProductUnitOfMeasurementModelFromJson(
         Map<String, dynamic> json) =>
     ProductUnitOfMeasurementModel(
-      productOfMeasurementID: json['productOfMeasurementID'] as int?,
+      productUnitOfMeasurementID: json['productUnitOfMeasurementID'] as int?,
       name: json['name'] as String,
       symbol: json['symbol'] as String,
     );
@@ -17,7 +17,7 @@ ProductUnitOfMeasurementModel _$ProductUnitOfMeasurementModelFromJson(
 Map<String, dynamic> _$ProductUnitOfMeasurementModelToJson(
         ProductUnitOfMeasurementModel instance) =>
     <String, dynamic>{
-      'productOfMeasurementID': instance.productOfMeasurementID,
+      'productUnitOfMeasurementID': instance.productUnitOfMeasurementID,
       'name': instance.name,
       'symbol': instance.symbol,
     };

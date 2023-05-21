@@ -1,11 +1,7 @@
 // flutter packages pub run build_runner build --delete-conflicting-outputs
 
 import 'package:common/common.dart';
-import 'package:common/src/product_unit_of_measurements/data/product_unit_of_measurement.dart';
 import 'package:json_annotation/json_annotation.dart';
-
-import '../../product_storages/data/product_storage.dart';
-import '../domain/product.dart';
 
 part 'product.g.dart';
 
@@ -46,11 +42,13 @@ class ProductModel extends ProductEntity {
     json['providerModel'] = null;
     json['categoryModel'] = null;
     json['storageModel'] = ProductStorageModel(
-        productStorageID: json['productStorageID'], name: json['name']);
+        productStorageID: json['product_storage']['productStorageID'],
+        name: json['product_storage']['name']);
     json['unitOfMeasurementModel'] = ProductUnitOfMeasurementModel(
-        productOfMeasurementID: json['productOfMeasurementID'],
-        name: json['name'],
-        symbol: json['symbol']);
+        productUnitOfMeasurementID: json['product_unit_of_measurement']
+            ['productUnitOfMeasurementID'],
+        name: json['product_unit_of_measurement']['name'],
+        symbol: json['product_unit_of_measurement']['symbol']);
     return _$ProductModelFromJson(json);
   }
 
