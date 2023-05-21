@@ -45,9 +45,12 @@ class ProductModel extends ProductEntity {
 
     json['providerModel'] = null;
     json['categoryModel'] = null;
-    json['storageModel'] = null;
-    json['unitOfMeasurementModel'] = null;
-    // addressModel.toJson();
+    json['storageModel'] = ProductStorageModel(
+        productStorageID: json['productStorageID'], name: json['name']);
+    json['unitOfMeasurementModel'] = ProductUnitOfMeasurementModel(
+        productOfMeasurementID: json['productOfMeasurementID'],
+        name: json['name'],
+        symbol: json['symbol']);
     return _$ProductModelFromJson(json);
   }
 
