@@ -4,6 +4,7 @@ import 'package:equatable/equatable.dart';
 class ProductEntity extends Equatable {
   final int? productID;
   final String? name;
+  final String? description;
   final ProductCategoryEntity? productCategory;
   final ProviderEntity? provider;
   final ProductStorageEntity? productStorage;
@@ -15,6 +16,7 @@ class ProductEntity extends Equatable {
   ProductEntity({
     this.productID,
     this.name,
+    this.description,
     this.productCategory,
     this.provider,
     this.productStorage,

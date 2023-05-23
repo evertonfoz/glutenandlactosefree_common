@@ -15,6 +15,7 @@ class ProductModel extends ProductEntity {
   ProductModel({
     required super.productID,
     required super.name,
+    required super.description,
     this.providerModel,
     this.categoryModel,
     this.storageModel,
