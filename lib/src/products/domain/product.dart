@@ -1,8 +1,5 @@
 import 'package:common/common.dart';
-import 'package:common/src/product_unit_of_measurements/domain/product_unit_of_measurement.dart';
 import 'package:equatable/equatable.dart';
-
-import '../../product_storages/domain/product_storage.dart';
 
 class ProductEntity extends Equatable {
   final int? productID;
@@ -13,6 +10,7 @@ class ProductEntity extends Equatable {
   final ProductUnitOfMeasurementEntity? productUnitOfMeasurement;
   final double? weight;
   final String? imageURL;
+  final double? price;
 
   ProductEntity({
     this.productID,
@@ -23,6 +21,7 @@ class ProductEntity extends Equatable {
     this.productUnitOfMeasurement,
     this.weight,
     this.imageURL,
+    this.price,
   });
 
   @override

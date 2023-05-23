@@ -21,6 +21,7 @@ class ProductModel extends ProductEntity {
     this.unitOfMeasurementModel,
     required super.weight,
     required super.imageURL,
+    super.price,
   }) : super(
           provider: providerModel,
           productCategory: categoryModel,
