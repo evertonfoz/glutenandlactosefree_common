@@ -39,7 +39,7 @@ class ProductModel extends ProductEntity {
     //   zipCode: json['zipCode'] ?? '',
     // );
 
-    json['providerModel'] = null;
+    json['providerModel'] = json['products_provider'];
     json['categoryModel'] = null;
     json['storageModel'] = json['product_storage'];
     json['unitOfMeasurementModel'] = json['product_unit_of_measurement'];
