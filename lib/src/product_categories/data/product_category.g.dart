@@ -13,6 +13,7 @@ ProductCategoryModel _$ProductCategoryModelFromJson(
       name: json['name'] as String,
       imageURL: json['imageURL'] as String,
       providersCount: json['providersCount'] as int?,
+      productsCount: json['productsCount'] as int?,
     );
 
 Map<String, dynamic> _$ProductCategoryModelToJson(
@@ -22,4 +23,5 @@ Map<String, dynamic> _$ProductCategoryModelToJson(
       'name': instance.name,
       'imageURL': instance.imageURL,
       'providersCount': instance.providersCount,
+      'productsCount': instance.productsCount,
     };

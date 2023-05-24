@@ -13,6 +13,7 @@ class ProductCategoryModel extends ProductCategoryEntity {
     required super.name,
     required super.imageURL,
     super.providersCount,
+    super.productsCount,
   });
 
   factory ProductCategoryModel.fromJson(Map<String, dynamic> json) {
