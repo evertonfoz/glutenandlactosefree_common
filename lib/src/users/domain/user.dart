@@ -20,18 +20,6 @@ class UserEntity extends Equatable {
     _providerEntity = providerEntity;
   }
 
-  void registerData({
-    required String email,
-    required UserProfileTypeEntity? userProfileTypeEntity,
-    required ConsumerEntity? consumerEntity,
-    required ProviderEntity? providerEntity,
-  }) {
-    _email = email;
-    _userProfileTypeEntity = userProfileTypeEntity;
-    _consumerEntity = consumerEntity;
-    _providerEntity = providerEntity;
-  }
-
   String? get email => _email;
   UserProfileTypeEntity? get userProfileEntity => _userProfileTypeEntity;
 
