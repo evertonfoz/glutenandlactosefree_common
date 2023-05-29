@@ -36,4 +36,26 @@ class ConsumerModel extends ConsumerEntity {
   }
 
   Map<String, dynamic> toJson() => _$ConsumerModelToJson(this);
+
+  ConsumerModel copyWith({
+    String? email,
+    String? fullName,
+    String? imageURL,
+    String? howKnowsAboutUs,
+    double? ratting,
+    AddressModel? addressModel,
+    String? phoneNumber,
+    String? aboutMe,
+  }) {
+    return ConsumerModel(
+      email: email ?? this.email,
+      fullName: fullName ?? this.fullName,
+      imageURL: imageURL ?? this.imageURL,
+      howKnowsAboutUs: howKnowsAboutUs ?? this.howKnowsAboutUs,
+      ratting: ratting ?? this.ratting,
+      addressModel: addressModel ?? this.addressModel,
+      phoneNumber: phoneNumber ?? this.phoneNumber,
+      aboutMe: aboutMe ?? this.aboutMe,
+    );
+  }
 }
