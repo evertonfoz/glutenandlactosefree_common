@@ -8,20 +8,38 @@ part 'user.g.dart';
 
 @JsonSerializable(explicitToJson: true)
 class UserModel extends UserEntity {
-  final UserProfileTypeModel? userProfileTypeModel;
-  final ConsumerModel? consumerModel;
-  final ProviderModel? providerModel;
+  UserProfileTypeModel? _userProfileTypeModel;
+  ConsumerModel? _consumerModel;
+  ProviderModel? _providerModel;
 
   UserModel({
     super.email,
-    this.userProfileTypeModel,
-    this.consumerModel,
-    this.providerModel,
+    userProfileTypeModel,
+    consumerModel,
+    providerModel,
   }) : super(
           userProfileTypeEntity: userProfileTypeModel,
           consumerEntity: consumerModel,
           providerEntity: providerModel,
-        );
+        ) {
+    _userProfileTypeModel = userProfileTypeModel;
+    _consumerModel = consumerModel;
+    _providerModel = providerModel;
+  }
+
+  UserProfileTypeModel? get useProfileTypeModel => _userProfileTypeModel;
+  ConsumerModel? get consumerModel => _consumerModel;
+  ProviderModel? get providerModel => _providerModel;
+
+  void registerData({
+    UserProfileTypeModel? userProfileTypeModel,
+    ConsumerModel? consumerModel,
+    ProviderModel? providerModel,
+  }) {
+    _userProfileTypeModel = userProfileTypeModel ?? _userProfileTypeModel;
+    _consumerModel = consumerModel ?? _consumerModel;
+    _providerModel = providerModel ?? _providerModel;
+  }
 
   factory UserModel.fromJson(Map<String, dynamic> json) {
     final userProfileTypeModel = UserProfileTypeModel(
@@ -35,17 +53,17 @@ class UserModel extends UserEntity {
 
   Map<String, dynamic> toJson() => _$UserModelToJson(this);
 
-  UserModel copyWith({
-    String? email,
-    UserProfileTypeModel? userProfileTypeModel,
-    ConsumerModel? consumerModel,
-    ProviderModel? providerModel,
-  }) {
-    return UserModel(
-      email: email ?? this.email,
-      userProfileTypeModel: userProfileTypeModel ?? this.userProfileTypeModel,
-      consumerModel: consumerModel ?? this.consumerModel,
-      providerModel: providerModel ?? this.providerModel,
-    );
-  }
+  // UserModel copyWith({
+  //   String? email,
+  //   UserProfileTypeModel? userProfileTypeModel,
+  //   ConsumerModel? consumerModel,
+  //   ProviderModel? providerModel,
+  // }) {
+  //   return UserModel(
+  //     email: email ?? super.email,
+  //     userProfileTypeModel: userProfileTypeModel ?? this.userProfileTypeModel,
+  //     consumerModel: consumerModel ?? this.consumerModel,
+  //     providerModel: providerModel ?? this.providerModel,
+  //   );
+  // }
 }

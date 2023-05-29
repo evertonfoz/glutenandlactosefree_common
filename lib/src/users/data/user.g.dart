@@ -8,23 +8,12 @@ part of 'user.dart';
 
 UserModel _$UserModelFromJson(Map<String, dynamic> json) => UserModel(
       email: json['email'],
-      userProfileTypeModel: json['userProfileTypeModel'] == null
-          ? null
-          : UserProfileTypeModel.fromJson(
-              json['userProfileTypeModel'] as Map<String, dynamic>),
-      consumerModel: json['consumerModel'] == null
-          ? null
-          : ConsumerModel.fromJson(
-              json['consumerModel'] as Map<String, dynamic>),
-      providerModel: json['providerModel'] == null
-          ? null
-          : ProviderModel.fromJson(
-              json['providerModel'] as Map<String, dynamic>),
+      consumerModel: json['consumerModel'],
+      providerModel: json['providerModel'],
     );
 
 Map<String, dynamic> _$UserModelToJson(UserModel instance) => <String, dynamic>{
       'email': instance.email,
-      'userProfileTypeModel': instance.userProfileTypeModel?.toJson(),
       'consumerModel': instance.consumerModel?.toJson(),
       'providerModel': instance.providerModel?.toJson(),
     };
