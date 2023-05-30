@@ -1,7 +1,6 @@
 import 'package:equatable/equatable.dart';
 
 class AddressEntity extends Equatable {
-  final int? addressID;
   final String? street;
   final String? complement;
   final String? district;
@@ -11,7 +10,6 @@ class AddressEntity extends Equatable {
   final String? zipCode;
 
   const AddressEntity({
-    this.addressID,
     this.street,
     this.complement,
     this.district,
@@ -22,5 +20,13 @@ class AddressEntity extends Equatable {
   });
 
   @override
-  List<Object> get props => [addressID ?? -1];
+  List<Object> get props => [
+        street ?? '',
+        complement ?? '',
+        district ?? '',
+        city ?? '',
+        state ?? '',
+        number ?? '',
+        zipCode ?? ''
+      ];
 }

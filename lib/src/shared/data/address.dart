@@ -7,7 +7,6 @@ part 'address.g.dart';
 @JsonSerializable()
 class AddressModel extends AddressEntity {
   const AddressModel({
-    addressID,
     street,
     number,
     complement,
@@ -16,7 +15,6 @@ class AddressModel extends AddressEntity {
     state,
     zipCode,
   }) : super(
-          addressID: addressID,
           street: street,
           number: number,
           complement: complement,

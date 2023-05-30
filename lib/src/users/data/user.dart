@@ -27,7 +27,7 @@ class UserModel extends UserEntity {
     _providerModel = providerModel;
   }
 
-  UserProfileTypeModel? get useProfileTypeModel => _userProfileTypeModel;
+  UserProfileTypeModel? get userProfileTypeModel => _userProfileTypeModel;
   ConsumerModel? get consumerModel => _consumerModel;
   ProviderModel? get providerModel => _providerModel;
 
