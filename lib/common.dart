@@ -34,6 +34,9 @@ export 'src/provider/domain/provider.dart';
 export 'src/shared/domain/address.dart';
 export 'src/shared/data/address.dart';
 
+export 'src/state_and_cities_for_providers/data/state_and_cities_for_providers.dart';
+export 'src/state_and_cities_for_providers/domain/state_and_cities_for_providers.dart';
+
 export 'src/testimony/domain/testimony.dart';
 export 'src/testimony/data/testimony.dart';
 
@@ -41,4 +44,4 @@ export 'src/users/data/user.dart';
 export 'src/users/data/user_profile_type.dart';
 export 'src/users/domain/enums.dart';
 export 'src/users/domain/user_profile_type.dart';
-export 'src/users/domain/user.dart';
+export 'src/state_and_cities_for_providers/domain/state_and_cities_for_providers.dart';

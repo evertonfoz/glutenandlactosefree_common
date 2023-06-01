@@ -4,6 +4,8 @@
 import 'package:common/common.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import '../domain/user.dart';
+
 part 'user.g.dart';
 
 @JsonSerializable(explicitToJson: true)

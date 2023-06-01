@@ -1,3 +1,5 @@
+// ignore_for_file: unused_field
+
 import 'package:common/common.dart';
 import 'package:equatable/equatable.dart';
 
@@ -19,18 +21,6 @@ class UserEntity extends Equatable {
     _consumerEntity = consumerEntity;
     _providerEntity = providerEntity;
   }
-
-  // void registerData({
-  //   required String email,
-  //   required UserProfileTypeEntity? userProfileTypeEntity,
-  //   required ConsumerEntity? consumerEntity,
-  //   required ProviderEntity? providerEntity,
-  // }) {
-  //   _email = email;
-  //   _userProfileTypeEntity = userProfileTypeEntity;
-  //   _consumerEntity = consumerEntity;
-  //   _providerEntity = providerEntity;
-  // }
 
   String? get email => _email;
 
