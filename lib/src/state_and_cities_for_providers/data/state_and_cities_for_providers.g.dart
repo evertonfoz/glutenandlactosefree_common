@@ -8,8 +8,16 @@ part of 'state_and_cities_for_providers.dart';
 
 StateAndCitiesForProvidersModel _$StateAndCitiesForProvidersModelFromJson(
         Map<String, dynamic> json) =>
-    StateAndCitiesForProvidersModel();
+    StateAndCitiesForProvidersModel(
+      state: json['state'],
+      cities: json['cities'],
+      providersCount: json['providersCount'],
+    );
 
 Map<String, dynamic> _$StateAndCitiesForProvidersModelToJson(
         StateAndCitiesForProvidersModel instance) =>
-    <String, dynamic>{};
+    <String, dynamic>{
+      'state': instance.state,
+      'cities': instance.cities,
+      'providersCount': instance.providersCount,
+    };

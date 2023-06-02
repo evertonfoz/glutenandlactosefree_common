@@ -9,9 +9,9 @@ part 'state_and_cities_for_providers.g.dart';
 @JsonSerializable(explicitToJson: true)
 class StateAndCitiesForProvidersModel extends StateAndCitiesForProvidersEntity {
   StateAndCitiesForProvidersModel({
-    super.state,
-    super.cities,
-    super.providersCount,
+    required super.state,
+    required super.cities,
+    required super.providersCount,
   });
 
   factory StateAndCitiesForProvidersModel.fromJson(Map<String, dynamic> json) {
