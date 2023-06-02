@@ -3,7 +3,7 @@ import 'package:equatable/equatable.dart';
 // ignore: must_be_immutable
 class StateAndCitiesForProvidersEntity extends Equatable {
   String? _state;
-  List<String>? _cities;
+  List<dynamic>? _cities;
   int? _providersCount;
 
   StateAndCitiesForProvidersEntity({
@@ -17,7 +17,7 @@ class StateAndCitiesForProvidersEntity extends Equatable {
   }
 
   String? get state => _state;
-  List<String>? get cities => _cities;
+  List<dynamic>? get cities => _cities;
   int? get providersCount => _providersCount;
 
   @override
