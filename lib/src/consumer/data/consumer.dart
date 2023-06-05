@@ -50,6 +50,10 @@ class ConsumerModel extends ConsumerEntity {
     AddressModel? addressModel,
     String? phoneNumber,
     String? aboutMe,
+    bool? glutenSensitive,
+    bool? lactoseIntolerance,
+    bool? glutenOrLactoseDontUseByChoice,
+    bool? otherTypeOfSensitive,
   }) {
     return ConsumerModel(
       email: email ?? this.email,
@@ -60,6 +64,12 @@ class ConsumerModel extends ConsumerEntity {
       addressModel: addressModel ?? this.addressModel,
       phoneNumber: phoneNumber ?? this.phoneNumber,
       aboutMe: aboutMe ?? this.aboutMe,
+      glutenSensitive: glutenSensitive ?? this.glutenSensitive,
+      lactoseIntolerance: lactoseIntolerance ?? this.lactoseIntolerance,
+      glutenOrLactoseDontUseByChoice:
+          glutenOrLactoseDontUseByChoice ?? this.glutenOrLactoseDontUseByChoice,
+      otherTypeOfSensitive:
+          this.otherTypeOfSensitive ?? this.otherTypeOfSensitive,
     );
   }
 }
