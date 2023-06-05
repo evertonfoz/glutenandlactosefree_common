@@ -19,6 +19,10 @@ class ConsumerModel extends ConsumerEntity {
     this.addressModel,
     super.phoneNumber,
     super.aboutMe,
+    super.glutenSensitive,
+    super.lactoseIntolerance,
+    super.glutenOrLactoseDontUseByChoice,
+    super.otherTypeOfSensitive,
   }) : super(address: addressModel);
 
   factory ConsumerModel.fromJson(Map<String, dynamic> json) {

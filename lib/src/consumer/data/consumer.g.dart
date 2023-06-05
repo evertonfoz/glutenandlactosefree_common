@@ -20,6 +20,11 @@ ConsumerModel _$ConsumerModelFromJson(Map<String, dynamic> json) =>
           : AddressModel.fromJson(json['addressModel'] as Map<String, dynamic>),
       phoneNumber: json['phoneNumber'] as String?,
       aboutMe: json['aboutMe'] as String?,
+      glutenSensitive: json['glutenSensitive'] as bool?,
+      lactoseIntolerance: json['lactoseIntolerance'] as bool?,
+      glutenOrLactoseDontUseByChoice:
+          json['glutenOrLactoseDontUseByChoice'] as bool?,
+      otherTypeOfSensitive: json['otherTypeOfSensitive'] as bool?,
     );
 
 Map<String, dynamic> _$ConsumerModelToJson(ConsumerModel instance) =>
@@ -33,5 +38,9 @@ Map<String, dynamic> _$ConsumerModelToJson(ConsumerModel instance) =>
       'ratting': instance.ratting,
       'phoneNumber': instance.phoneNumber,
       'aboutMe': instance.aboutMe,
+      'glutenSensitive': instance.glutenSensitive,
+      'lactoseIntolerance': instance.lactoseIntolerance,
+      'glutenOrLactoseDontUseByChoice': instance.glutenOrLactoseDontUseByChoice,
+      'otherTypeOfSensitive': instance.otherTypeOfSensitive,
       'addressModel': instance.addressModel?.toJson(),
     };

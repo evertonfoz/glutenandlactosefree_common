@@ -12,6 +12,10 @@ class ConsumerEntity extends Equatable {
   final AddressEntity? address;
   final String? phoneNumber;
   final String? aboutMe;
+  final bool? glutenSensitive;
+  final bool? lactoseIntolerance;
+  final bool? glutenOrLactoseDontUseByChoice;
+  final bool? otherTypeOfSensitive;
 
   ConsumerEntity({
     this.consumerPlanID,
@@ -24,6 +28,10 @@ class ConsumerEntity extends Equatable {
     this.address,
     this.phoneNumber,
     this.aboutMe,
+    this.glutenSensitive,
+    this.lactoseIntolerance,
+    this.glutenOrLactoseDontUseByChoice,
+    this.otherTypeOfSensitive,
   });
 
   @override
