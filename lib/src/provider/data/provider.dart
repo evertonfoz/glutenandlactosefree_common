@@ -26,6 +26,7 @@ class ProviderModel extends ProviderEntity {
     super.phoneNumber,
     super.observations,
     super.safeFood,
+    super.animalMilkFree,
   }) : super(address: addressModel);
 
   factory ProviderModel.fromJson(Map<String, dynamic> json) {

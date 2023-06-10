@@ -27,6 +27,7 @@ ProviderModel _$ProviderModelFromJson(Map<String, dynamic> json) =>
       phoneNumber: json['phoneNumber'] as String?,
       observations: json['observations'] as String?,
       safeFood: json['safeFood'] as bool?,
+      animalMilkFree: json['animalMilkFree'] as bool?,
     );
 
 Map<String, dynamic> _$ProviderModelToJson(ProviderModel instance) =>
@@ -47,5 +48,6 @@ Map<String, dynamic> _$ProviderModelToJson(ProviderModel instance) =>
       'phoneNumber': instance.phoneNumber,
       'observations': instance.observations,
       'safeFood': instance.safeFood,
+      'animalMilkFree': instance.animalMilkFree,
       'addressModel': instance.addressModel?.toJson(),
     };
