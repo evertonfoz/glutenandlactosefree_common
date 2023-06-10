@@ -28,6 +28,10 @@ ProviderModel _$ProviderModelFromJson(Map<String, dynamic> json) =>
       observations: json['observations'] as String?,
       safeFood: json['safeFood'] as bool?,
       animalMilkFree: json['animalMilkFree'] as bool?,
+      glutenFree: json['glutenFree'] as bool?,
+      lactoseFree: json['lactoseFree'] as bool?,
+      vegan: json['vegan'] as bool?,
+      vegetarian: json['vegetarian'] as bool?,
     );
 
 Map<String, dynamic> _$ProviderModelToJson(ProviderModel instance) =>
@@ -49,5 +53,9 @@ Map<String, dynamic> _$ProviderModelToJson(ProviderModel instance) =>
       'observations': instance.observations,
       'safeFood': instance.safeFood,
       'animalMilkFree': instance.animalMilkFree,
+      'glutenFree': instance.glutenFree,
+      'lactoseFree': instance.lactoseFree,
+      'vegan': instance.vegan,
+      'vegetarian': instance.vegetarian,
       'addressModel': instance.addressModel?.toJson(),
     };

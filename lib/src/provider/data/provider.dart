@@ -27,6 +27,10 @@ class ProviderModel extends ProviderEntity {
     super.observations,
     super.safeFood,
     super.animalMilkFree,
+    super.glutenFree,
+    super.lactoseFree,
+    super.vegan,
+    super.vegetarian,
   }) : super(address: addressModel);
 
   factory ProviderModel.fromJson(Map<String, dynamic> json) {

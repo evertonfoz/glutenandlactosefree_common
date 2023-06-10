@@ -20,6 +20,10 @@ class ProviderEntity extends Equatable {
   final String? observations;
   final bool? safeFood;
   final bool? animalMilkFree;
+  final bool? glutenFree;
+  final bool? lactoseFree;
+  final bool? vegan;
+  final bool? vegetarian;
 
   ProviderEntity({
     this.aboutServices,
@@ -40,6 +44,10 @@ class ProviderEntity extends Equatable {
     this.observations,
     this.safeFood,
     this.animalMilkFree,
+    this.glutenFree,
+    this.lactoseFree,
+    this.vegan,
+    this.vegetarian,
   });
 
   @override
