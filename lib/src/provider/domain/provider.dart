@@ -1,6 +1,8 @@
 import 'package:common/common.dart';
 import 'package:equatable/equatable.dart';
 
+import 'provider_service_day.dart';
+
 class ProviderEntity extends Equatable {
   final int? providerID;
   final String? email;
@@ -15,6 +17,7 @@ class ProviderEntity extends Equatable {
   final double? ratting;
   final String? balloonText;
   final AddressEntity? address;
+  final List<ProviderServiceDayEntity>? providerServiceDays;
   final String? advertiseText;
   final String? phoneNumber;
   final String? observations;
@@ -48,6 +51,7 @@ class ProviderEntity extends Equatable {
     this.lactoseFree,
     this.vegan,
     this.vegetarian,
+    this.providerServiceDays,
   });
 
   @override

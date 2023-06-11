@@ -2,11 +2,14 @@
 import 'package:common/common.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import 'provider_service_day.dart';
+
 part 'provider.g.dart';
 
 @JsonSerializable(explicitToJson: true)
 class ProviderModel extends ProviderEntity {
   final AddressModel? addressModel;
+  final List<ProviderServiceDayModel>? providerServiceDayModel;
 
   ProviderModel({
     super.providerPlanID,
@@ -31,7 +34,10 @@ class ProviderModel extends ProviderEntity {
     super.lactoseFree,
     super.vegan,
     super.vegetarian,
-  }) : super(address: addressModel);
+    this.providerServiceDayModel,
+  }) : super(
+            address: addressModel,
+            providerServiceDays: providerServiceDayModel);
 
   factory ProviderModel.fromJson(Map<String, dynamic> json) {
     final addressModel = AddressModel(

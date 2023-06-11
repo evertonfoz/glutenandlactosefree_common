@@ -32,6 +32,11 @@ ProviderModel _$ProviderModelFromJson(Map<String, dynamic> json) =>
       lactoseFree: json['lactoseFree'] as bool?,
       vegan: json['vegan'] as bool?,
       vegetarian: json['vegetarian'] as bool?,
+      providerServiceDayModel:
+          (json['providerServiceDayModel'] as List<dynamic>?)
+              ?.map((e) =>
+                  ProviderServiceDayModel.fromJson(e as Map<String, dynamic>))
+              .toList(),
     );
 
 Map<String, dynamic> _$ProviderModelToJson(ProviderModel instance) =>
@@ -58,4 +63,6 @@ Map<String, dynamic> _$ProviderModelToJson(ProviderModel instance) =>
       'vegan': instance.vegan,
       'vegetarian': instance.vegetarian,
       'addressModel': instance.addressModel?.toJson(),
+      'providerServiceDayModel':
+          instance.providerServiceDayModel?.map((e) => e.toJson()).toList(),
     };
