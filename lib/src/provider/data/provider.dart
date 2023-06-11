@@ -43,8 +43,9 @@ class ProviderModel extends ProviderEntity {
     final now = DateTime.now();
     final dayOfWeek = now.weekday;
     final serviceDay = providerServiceDayModel
-        ?.firstWhere((element) => element.dayOfWeek == dayOfWeek);
-    return serviceDay != null;
+        ?.indexWhere((element) => element.dayOfWeek == dayOfWeek);
+    // ?.firstWhere((element) => element.dayOfWeek == dayOfWeek);
+    return (serviceDay ?? -1) >= 0;
   }
 
   factory ProviderModel.fromJson(Map<String, dynamic> json) {
