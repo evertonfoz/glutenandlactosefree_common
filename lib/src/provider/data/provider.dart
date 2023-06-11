@@ -39,6 +39,14 @@ class ProviderModel extends ProviderEntity {
             address: addressModel,
             providerServiceDays: providerServiceDayModel);
 
+  bool get dayIsAServiceDay {
+    final now = DateTime.now();
+    final dayOfWeek = now.weekday;
+    final serviceDay = providerServiceDayModel
+        ?.firstWhere((element) => element.dayOfWeek == dayOfWeek);
+    return serviceDay != null;
+  }
+
   factory ProviderModel.fromJson(Map<String, dynamic> json) {
     final addressModel = AddressModel(
       street: json['street'] ?? '',
@@ -50,6 +58,11 @@ class ProviderModel extends ProviderEntity {
       zipCode: json['zipCode'] ?? '',
     );
     json['addressModel'] = addressModel.toJson();
+
+    // final servicesDaysJSON = json['provider_service_days'] as List<dynamic>;
+    // final servicesDaysModel = servicesDaysJSON
+    //     .map((e) => ProviderServiceDayModel.fromJson(e))
+    //     .toList();
     return _$ProviderModelFromJson(json);
   }
 
