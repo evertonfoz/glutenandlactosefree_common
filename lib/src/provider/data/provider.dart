@@ -58,6 +58,7 @@ class ProviderModel extends ProviderEntity {
       zipCode: json['zipCode'] ?? '',
     );
     json['addressModel'] = addressModel.toJson();
+    json['providerServiceDayModel'] = json['provider_service_days'];
 
     // final servicesDaysJSON = json['provider_service_days'] as List<dynamic>;
     // final servicesDaysModel = servicesDaysJSON
