@@ -6,6 +6,7 @@ class ProductCategoryEntity extends Equatable {
   final String imageURL;
   final int? providersCount;
   final int? productsCount;
+  final String? blurToImage;
 
   ProductCategoryEntity({
     this.productCategoryID,
@@ -13,6 +14,7 @@ class ProductCategoryEntity extends Equatable {
     required this.imageURL,
     this.providersCount,
     this.productsCount,
+    this.blurToImage,
   });
 
   @override

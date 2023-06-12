@@ -14,6 +14,7 @@ class ProductCategoryModel extends ProductCategoryEntity {
     required super.imageURL,
     super.providersCount,
     super.productsCount,
+    super.blurToImage,
   });
 
   factory ProductCategoryModel.fromJson(Map<String, dynamic> json) {

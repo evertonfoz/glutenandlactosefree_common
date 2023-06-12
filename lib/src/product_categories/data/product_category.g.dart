@@ -14,6 +14,7 @@ ProductCategoryModel _$ProductCategoryModelFromJson(
       imageURL: json['imageURL'] as String,
       providersCount: json['providersCount'] as int?,
       productsCount: json['productsCount'] as int?,
+      blurToImage: json['blurToImage'] as String?,
     );
 
 Map<String, dynamic> _$ProductCategoryModelToJson(
@@ -24,4 +25,5 @@ Map<String, dynamic> _$ProductCategoryModelToJson(
       'imageURL': instance.imageURL,
       'providersCount': instance.providersCount,
       'productsCount': instance.productsCount,
+      'blurToImage': instance.blurToImage,
     };
