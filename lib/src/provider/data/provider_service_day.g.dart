@@ -12,6 +12,11 @@ ProviderServiceDayModel _$ProviderServiceDayModelFromJson(
       providerServiceDayID: json['providerServiceDayID'] as int,
       providerID: json['providerID'] as int,
       dayOfWeek: json['dayOfWeek'] as int,
+      providerServiceHourModel:
+          (json['providerServiceHourModel'] as List<dynamic>?)
+              ?.map((e) =>
+                  ProviderServiceHourModel.fromJson(e as Map<String, dynamic>))
+              .toList(),
     );
 
 Map<String, dynamic> _$ProviderServiceDayModelToJson(
@@ -20,4 +25,5 @@ Map<String, dynamic> _$ProviderServiceDayModelToJson(
       'providerServiceDayID': instance.providerServiceDayID,
       'providerID': instance.providerID,
       'dayOfWeek': instance.dayOfWeek,
+      'providerServiceHourModel': instance.providerServiceHourModel,
     };
