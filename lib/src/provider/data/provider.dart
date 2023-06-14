@@ -35,6 +35,7 @@ class ProviderModel extends ProviderEntity {
     super.vegan,
     super.vegetarian,
     this.providerServiceDayModel,
+    super.blurToBrandImage,
   }) : super(
             address: addressModel,
             providerServiceDays: providerServiceDayModel);

@@ -37,6 +37,7 @@ ProviderModel _$ProviderModelFromJson(Map<String, dynamic> json) =>
               ?.map((e) =>
                   ProviderServiceDayModel.fromJson(e as Map<String, dynamic>))
               .toList(),
+      blurToBrandImage: json['blurToBrandImage'] as String?,
     );
 
 Map<String, dynamic> _$ProviderModelToJson(ProviderModel instance) =>
@@ -62,6 +63,7 @@ Map<String, dynamic> _$ProviderModelToJson(ProviderModel instance) =>
       'lactoseFree': instance.lactoseFree,
       'vegan': instance.vegan,
       'vegetarian': instance.vegetarian,
+      'blurToBrandImage': instance.blurToBrandImage,
       'addressModel': instance.addressModel?.toJson(),
       'providerServiceDayModel':
           instance.providerServiceDayModel?.map((e) => e.toJson()).toList(),
