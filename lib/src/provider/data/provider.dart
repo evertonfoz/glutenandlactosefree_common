@@ -40,12 +40,9 @@ class ProviderModel extends ProviderEntity {
             providerServiceDays: providerServiceDayModel);
 
   bool get dayIsAServiceDay {
-    final now = DateTime.now();
-    final dayOfWeek = now.weekday;
-    final serviceDay = providerServiceDayModel
-        ?.indexWhere((element) => element.dayOfWeek == dayOfWeek);
-    // ?.firstWhere((element) => element.dayOfWeek == dayOfWeek);
-    return (serviceDay ?? -1) >= 0;
+    return (providerServiceDayModel?.isNotEmpty ?? false) &&
+        (providerServiceDayModel![0].providerServiceHourModel?.isNotEmpty ??
+            false);
   }
 
   factory ProviderModel.fromJson(Map<String, dynamic> json) {
