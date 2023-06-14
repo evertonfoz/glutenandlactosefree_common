@@ -16,7 +16,8 @@ class ProviderServiceDayModel extends ProviderServiceDayEntity {
   }) : super(providerServiceHours: providerServiceHourModel);
 
   factory ProviderServiceDayModel.fromJson(Map<String, dynamic> json) {
-    json['providerServiceHourModel'] = json['providerServiceHours'];
+    json['providerServiceHourModel'] =
+        json['provider_services_days_provider_services_hours'];
     return _$ProviderServiceDayModelFromJson(json);
   }
 
