@@ -38,6 +38,8 @@ class ProviderModel extends ProviderEntity {
     super.blurToBrandImage,
     super.noPreservatives,
     super.frozen,
+    super.delivery,
+    super.acceptOrders,
   }) : super(
             address: addressModel,
             providerServiceDays: providerServiceDayModel);

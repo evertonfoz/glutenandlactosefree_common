@@ -40,6 +40,8 @@ ProviderModel _$ProviderModelFromJson(Map<String, dynamic> json) =>
       blurToBrandImage: json['blurToBrandImage'] as String?,
       noPreservatives: json['noPreservatives'] as bool?,
       frozen: json['frozen'] as bool?,
+      delivery: json['delivery'] as bool?,
+      acceptOrders: json['acceptOrders'] as bool?,
     );
 
 Map<String, dynamic> _$ProviderModelToJson(ProviderModel instance) =>
@@ -68,6 +70,8 @@ Map<String, dynamic> _$ProviderModelToJson(ProviderModel instance) =>
       'blurToBrandImage': instance.blurToBrandImage,
       'noPreservatives': instance.noPreservatives,
       'frozen': instance.frozen,
+      'delivery': instance.delivery,
+      'acceptOrders': instance.acceptOrders,
       'addressModel': instance.addressModel?.toJson(),
       'providerServiceDayModel':
           instance.providerServiceDayModel?.map((e) => e.toJson()).toList(),

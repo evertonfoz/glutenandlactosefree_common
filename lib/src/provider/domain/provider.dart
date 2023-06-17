@@ -30,6 +30,8 @@ class ProviderEntity extends Equatable {
   final String? blurToBrandImage;
   final bool? noPreservatives;
   final bool? frozen;
+  final bool? delivery;
+  final bool? acceptOrders;
 
   ProviderEntity({
     this.aboutServices,
@@ -58,6 +60,8 @@ class ProviderEntity extends Equatable {
     this.blurToBrandImage,
     this.noPreservatives,
     this.frozen,
+    this.delivery,
+    this.acceptOrders,
   });
 
   @override
