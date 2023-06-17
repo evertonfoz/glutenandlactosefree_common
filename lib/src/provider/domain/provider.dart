@@ -28,6 +28,8 @@ class ProviderEntity extends Equatable {
   final bool? vegan;
   final bool? vegetarian;
   final String? blurToBrandImage;
+  final bool? noPreservatives;
+  final bool? frozen;
 
   ProviderEntity({
     this.aboutServices,
@@ -54,6 +56,8 @@ class ProviderEntity extends Equatable {
     this.vegetarian,
     this.providerServiceDays,
     this.blurToBrandImage,
+    this.noPreservatives,
+    this.frozen,
   });
 
   @override
