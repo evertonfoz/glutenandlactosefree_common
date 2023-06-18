@@ -32,6 +32,7 @@ class ProviderEntity extends Equatable {
   final bool? frozen;
   final bool? delivery;
   final bool? acceptOrders;
+  final bool? haveResellers;
 
   ProviderEntity({
     this.aboutServices,
@@ -62,6 +63,7 @@ class ProviderEntity extends Equatable {
     this.frozen,
     this.delivery,
     this.acceptOrders,
+    this.haveResellers,
   });
 
   @override

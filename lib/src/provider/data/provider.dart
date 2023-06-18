@@ -40,6 +40,7 @@ class ProviderModel extends ProviderEntity {
     super.frozen,
     super.delivery,
     super.acceptOrders,
+    super.haveResellers,
   }) : super(
             address: addressModel,
             providerServiceDays: providerServiceDayModel);

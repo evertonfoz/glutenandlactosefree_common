@@ -42,6 +42,7 @@ ProviderModel _$ProviderModelFromJson(Map<String, dynamic> json) =>
       frozen: json['frozen'] as bool?,
       delivery: json['delivery'] as bool?,
       acceptOrders: json['acceptOrders'] as bool?,
+      haveResellers: json['haveResellers'] as bool?,
     );
 
 Map<String, dynamic> _$ProviderModelToJson(ProviderModel instance) =>
@@ -72,6 +73,7 @@ Map<String, dynamic> _$ProviderModelToJson(ProviderModel instance) =>
       'frozen': instance.frozen,
       'delivery': instance.delivery,
       'acceptOrders': instance.acceptOrders,
+      'haveResellers': instance.haveResellers,
       'addressModel': instance.addressModel?.toJson(),
       'providerServiceDayModel':
           instance.providerServiceDayModel?.map((e) => e.toJson()).toList(),
