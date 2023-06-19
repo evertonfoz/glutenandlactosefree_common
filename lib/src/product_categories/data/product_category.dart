@@ -21,7 +21,9 @@ class ProductCategoryModel extends ProductCategoryEntity {
         );
 
   factory ProductCategoryModel.fromJson(Map<String, dynamic> json) {
-    json['products'] = json['provider_categories_products'];
+    json['products'] =
+        json['categories_providers_categories']['provider_categories_products'];
+
     return _$ProductCategoryModelFromJson(json);
   }
 
