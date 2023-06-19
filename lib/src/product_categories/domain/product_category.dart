@@ -1,3 +1,4 @@
+import 'package:common/common.dart';
 import 'package:equatable/equatable.dart';
 
 class ProductCategoryEntity extends Equatable {
@@ -7,6 +8,7 @@ class ProductCategoryEntity extends Equatable {
   final int? providersCount;
   final int? productsCount;
   final String? blurToImage;
+  final List<ProductModel>? products;
 
   ProductCategoryEntity({
     this.productCategoryID,
@@ -15,6 +17,7 @@ class ProductCategoryEntity extends Equatable {
     this.providersCount,
     this.productsCount,
     this.blurToImage,
+    this.products,
   });
 
   @override

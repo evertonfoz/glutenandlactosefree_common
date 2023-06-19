@@ -15,6 +15,9 @@ ProductCategoryModel _$ProductCategoryModelFromJson(
       providersCount: json['providersCount'] as int?,
       productsCount: json['productsCount'] as int?,
       blurToImage: json['blurToImage'] as String?,
+      productsModel: (json['productsModel'] as List<dynamic>?)
+          ?.map((e) => ProductModel.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$ProductCategoryModelToJson(
@@ -26,4 +29,5 @@ Map<String, dynamic> _$ProductCategoryModelToJson(
       'providersCount': instance.providersCount,
       'productsCount': instance.productsCount,
       'blurToImage': instance.blurToImage,
+      'productsModel': instance.productsModel?.map((e) => e.toJson()).toList(),
     };
