@@ -44,4 +44,3 @@ export 'src/users/data/user.dart';
 export 'src/users/data/user_profile_type.dart';
 export 'src/users/domain/enums.dart';
 export 'src/users/domain/user_profile_type.dart';
-export 'src/state_and_cities_for_providers/domain/state_and_cities_for_providers.dart';
