@@ -16,6 +16,7 @@ class UserModel extends UserEntity {
 
   UserModel({
     super.email,
+    super.token,
     userProfileTypeModel,
     consumerModel,
     providerModel,
@@ -54,18 +55,4 @@ class UserModel extends UserEntity {
   }
 
   Map<String, dynamic> toJson() => _$UserModelToJson(this);
-
-  // UserModel copyWith({
-  //   String? email,
-  //   UserProfileTypeModel? userProfileTypeModel,
-  //   ConsumerModel? consumerModel,
-  //   ProviderModel? providerModel,
-  // }) {
-  //   return UserModel(
-  //     email: email ?? super.email,
-  //     userProfileTypeModel: userProfileTypeModel ?? this.userProfileTypeModel,
-  //     consumerModel: consumerModel ?? this.consumerModel,
-  //     providerModel: providerModel ?? this.providerModel,
-  //   );
-  // }
 }

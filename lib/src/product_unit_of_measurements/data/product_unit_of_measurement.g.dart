@@ -11,7 +11,7 @@ ProductUnitOfMeasurementModel _$ProductUnitOfMeasurementModelFromJson(
     ProductUnitOfMeasurementModel(
       productUnitOfMeasurementID: json['productUnitOfMeasurementID'] as int?,
       name: json['name'] as String,
-      symbol: json['symbol'] as String?,
+      symbol: json['symbol'] as String,
     );
 
 Map<String, dynamic> _$ProductUnitOfMeasurementModelToJson(

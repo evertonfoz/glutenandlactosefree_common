@@ -10,7 +10,7 @@ class ProductUnitOfMeasurementModel extends ProductUnitOfMeasurementEntity {
   ProductUnitOfMeasurementModel({
     required super.productUnitOfMeasurementID,
     required super.name,
-    super.symbol,
+    required super.symbol,
   });
 
   factory ProductUnitOfMeasurementModel.fromJson(Map<String, dynamic> json) {

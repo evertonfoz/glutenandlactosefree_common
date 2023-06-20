@@ -3,12 +3,12 @@ import 'package:equatable/equatable.dart';
 class ProductUnitOfMeasurementEntity extends Equatable {
   final int? productUnitOfMeasurementID;
   final String name;
-  final String? symbol;
+  final String symbol;
 
   ProductUnitOfMeasurementEntity({
     this.productUnitOfMeasurementID,
     required this.name,
-    this.symbol,
+    required this.symbol,
   });
 
   @override
