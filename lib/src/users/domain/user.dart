@@ -25,8 +25,8 @@ class UserEntity extends Equatable {
     _providerEntity = providerEntity;
   }
 
-  String? get email => _email;
-  String? get token => _token;
+  // String? get email => _email;
+  // String? get token => _token;
 
   @override
   List<Object?> get props => [_email];
