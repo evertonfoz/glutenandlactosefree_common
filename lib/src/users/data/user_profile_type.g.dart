@@ -10,7 +10,7 @@ UserProfileTypeModel _$UserProfileTypeModelFromJson(
         Map<String, dynamic> json) =>
     UserProfileTypeModel(
       userProfileTypeID: json['userProfileTypeID'] as int,
-      description: json['description'] as String,
+      description: json['description'] as String?,
     );
 
 Map<String, dynamic> _$UserProfileTypeModelToJson(

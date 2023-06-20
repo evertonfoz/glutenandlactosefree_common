@@ -8,7 +8,7 @@ part 'user_profile_type.g.dart';
 class UserProfileTypeModel extends UserProfileTypeEntity {
   UserProfileTypeModel({
     required super.userProfileTypeID,
-    required super.description,
+    super.description,
   });
 
   factory UserProfileTypeModel.fromJson(Map<String, dynamic> json) =>
