@@ -42,6 +42,7 @@ class UserModel extends UserEntity {
   ConsumerModel? get consumerModel => _consumerModel;
   ProviderModel? get providerModel => _providerModel;
   String? get email => _email;
+  String? get token => _token;
 
   void registerData({
     UserProfileTypeModel? userProfileTypeModel,
