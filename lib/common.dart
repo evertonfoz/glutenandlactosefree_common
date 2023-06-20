@@ -44,3 +44,4 @@ export 'src/users/data/user.dart';
 export 'src/users/data/user_profile_type.dart';
 export 'src/users/domain/enums.dart';
 export 'src/users/domain/user_profile_type.dart';
+export 'src/users//dtos/user_by_email.dart';
