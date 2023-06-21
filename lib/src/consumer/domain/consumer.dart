@@ -1,7 +1,8 @@
-// ignore_for_file: unnecessary_getters_setters
+// ignore_for_file: unnecessary_getters_setters, must_be_immutable
 
 import 'package:common/common.dart';
 import 'package:equatable/equatable.dart';
+import 'package:json_annotation/json_annotation.dart';
 
 class ConsumerEntity extends Equatable {
   int? _consumerID;
@@ -58,7 +59,9 @@ class ConsumerEntity extends Equatable {
   String? get howKnowsAboutUs => _howKnowsAboutUs;
   int? get consumerPlanID => _consumerPlanID;
   double? get ratting => _ratting;
-  // AddressEntity? get address => _address;
+
+  @JsonKey(fromJson: fromAddressJson, toJson: toAddressJson)
+  AddressEntity? get address => _address;
   String? get phoneNumber => _phoneNumber;
   String? get aboutMe => _aboutMe;
   bool? get glutenSensitive => _glutenSensitive;
@@ -84,4 +87,12 @@ class ConsumerEntity extends Equatable {
 
   @override
   List<Object?> get props => [_consumerID];
+
+  static AddressEntity fromAddressJson(Map<String, dynamic> json) {
+    return AddressModel.fromJson(json);
+  }
+
+  static Map<String, dynamic> toAddressJson(AddressEntity? address) {
+    return (address as AddressModel).toJson();
+  }
 }

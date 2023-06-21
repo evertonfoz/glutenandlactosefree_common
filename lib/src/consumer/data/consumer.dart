@@ -1,4 +1,6 @@
 // flutter packages pub run build_runner build --delete-conflicting-outputs
+// ignore_for_file: must_be_immutable
+
 import 'package:common/common.dart';
 import 'package:json_annotation/json_annotation.dart';
 
@@ -6,7 +8,7 @@ part 'consumer.g.dart';
 
 @JsonSerializable(explicitToJson: true)
 class ConsumerModel extends ConsumerEntity {
-  final AddressModel? addressModel;
+  // final AddressModel? addressModel;
 
   ConsumerModel({
     super.consumerPlanID,
@@ -16,15 +18,15 @@ class ConsumerModel extends ConsumerEntity {
     super.imageURL,
     super.howKnowsAboutUs,
     super.ratting,
-    // super.address,
-    this.addressModel,
+    super.address,
+    // this.addressModel,
     super.phoneNumber,
     super.aboutMe,
     super.glutenSensitive,
     super.lactoseIntolerance,
     super.glutenOrLactoseDontUseByChoice,
     super.otherTypeOfSensitive,
-  }) : super(address: addressModel);
+  }); // : super(address: addressModel);
 
   void registerData({
     required ConsumerModel consumerModel,
@@ -35,7 +37,7 @@ class ConsumerModel extends ConsumerEntity {
     imageURL = consumerModel.imageURL;
     howKnowsAboutUs = consumerModel.howKnowsAboutUs;
     ratting = consumerModel.ratting;
-    address = consumerModel.addressModel;
+    address = consumerModel.address;
     phoneNumber = consumerModel.phoneNumber;
     aboutMe = consumerModel.aboutMe;
     glutenSensitive = consumerModel.glutenSensitive;
@@ -46,16 +48,17 @@ class ConsumerModel extends ConsumerEntity {
   }
 
   factory ConsumerModel.fromJson(Map<String, dynamic> json) {
-    final addressModel = AddressModel(
-      street: json['street'] ?? '',
-      number: json['number'] ?? '',
-      complement: json['complement'] ?? '',
-      district: json['district'] ?? '',
-      city: json['city'] ?? '',
-      state: json['state'] ?? '',
-      zipCode: json['zipCode'] ?? '',
-    );
-    json['addressModel'] = addressModel.toJson();
+    // final addressModel = AddressModel(
+    //   street: json['street'] ?? '',
+    //   number: json['number'] ?? '',
+    //   complement: json['complement'] ?? '',
+    //   district: json['district'] ?? '',
+    //   city: json['city'] ?? '',
+    //   state: json['state'] ?? '',
+    //   zipCode: json['zipCode'] ?? '',
+    // );
+    // json['address'] = addressModel.toJson();
+    // json['addressModel'] = addressModel.toJson();
     return _$ConsumerModelFromJson(json);
   }
 
@@ -81,6 +84,7 @@ class ConsumerModel extends ConsumerEntity {
       imageURL: imageURL ?? this.imageURL,
       howKnowsAboutUs: howKnowsAboutUs ?? this.howKnowsAboutUs,
       ratting: ratting ?? this.ratting,
+      address: addressModel ?? address,
       // addressModel: addressModel ?? this.addressModel,
       phoneNumber: phoneNumber ?? this.phoneNumber,
       aboutMe: aboutMe ?? this.aboutMe,
