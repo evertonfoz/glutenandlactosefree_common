@@ -1,38 +1,38 @@
 class ConsumerByEmailDTO {
   final int consumerID;
-  final String fullName;
-  final String aboutMe;
-  final String imageURL;
-  final String phoneNumber;
-  final String street;
-  final String number;
-  final String complement;
-  final String district;
-  final String zipCode;
-  final String city;
-  final String state;
-  final String glutenOrLactoseDontUseByChoice;
-  final String glutenSensitive;
-  final String lactoseIntolerance;
-  final String otherTypeOfSensitive;
+  final String? fullName;
+  final String? aboutMe;
+  final String? imageURL;
+  final String? phoneNumber;
+  final String? street;
+  final String? number;
+  final String? complement;
+  final String? district;
+  final String? zipCode;
+  final String? city;
+  final String? state;
+  final String? glutenOrLactoseDontUseByChoice;
+  final String? glutenSensitive;
+  final String? lactoseIntolerance;
+  final String? otherTypeOfSensitive;
 
   ConsumerByEmailDTO({
-    required this.aboutMe,
-    required this.city,
-    required this.complement,
+    this.aboutMe,
+    this.city,
+    this.complement,
     required this.consumerID,
-    required this.fullName,
-    required this.glutenOrLactoseDontUseByChoice,
-    required this.glutenSensitive,
-    required this.imageURL,
-    required this.lactoseIntolerance,
-    required this.number,
-    required this.otherTypeOfSensitive,
-    required this.phoneNumber,
-    required this.state,
-    required this.street,
-    required this.zipCode,
-    required this.district,
+    this.fullName,
+    this.glutenOrLactoseDontUseByChoice,
+    this.glutenSensitive,
+    this.imageURL,
+    this.lactoseIntolerance,
+    this.number,
+    this.otherTypeOfSensitive,
+    this.phoneNumber,
+    this.state,
+    this.street,
+    this.zipCode,
+    this.district,
   });
 
   factory ConsumerByEmailDTO.fromJson(Map<String, dynamic> json) {
