@@ -24,6 +24,9 @@ class AddressModel extends AddressEntity {
           zipCode: zipCode,
         );
 
+  String get completeAddress =>
+      '$street, $number, $district, $city, $state, $zipCode';
+
   factory AddressModel.fromJson(Map<String, dynamic> json) {
     return _$AddressModelFromJson(json);
   }
