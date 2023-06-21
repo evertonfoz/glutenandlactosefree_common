@@ -73,7 +73,7 @@ class ConsumerByEmailDTO {
   Map<String, dynamic> toJson() {
     return {
       'aboutMe': aboutMe,
-      'address': (address as AddressModel).toJson(),
+      'address': address?.toJson(),
       // 'city': city,
       // 'complement': complement,
       'consumerID': consumerID,

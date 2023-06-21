@@ -1,10 +1,5 @@
-import 'package:json_annotation/json_annotation.dart';
-
 import '../domain/address.dart';
 
-part 'address.g.dart';
-
-@JsonSerializable()
 class AddressModel extends AddressEntity {
   const AddressModel({
     street,
@@ -27,12 +22,12 @@ class AddressModel extends AddressEntity {
   String get completeAddress =>
       '$street, $number, $district, $city, $state, $zipCode';
 
-  factory AddressModel.fromJson(Map<String, dynamic> json) {
-    return _$AddressModelFromJson(json);
-  }
+  // factory AddressModel.fromJson(Map<String, dynamic> json) {
+  //   return _$AddressModelFromJson(json);
+  // }
 
   /// Connect the generated [_$ProviderModelToJson] function to the `toJson` method.
-  Map<String, dynamic> toJson() => _$AddressModelToJson(this);
+  // Map<String, dynamic> toJson() => _$AddressModelToJson(this);
 
   // @override
   // String toString() {

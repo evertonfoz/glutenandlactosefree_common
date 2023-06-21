@@ -19,9 +19,6 @@ ProviderModel _$ProviderModelFromJson(Map<String, dynamic> json) =>
       responsibleImageURL: json['responsibleImageURL'] as String?,
       advertiseImageURL: json['advertiseImageURL'] as String?,
       ratting: (json['ratting'] as num?)?.toDouble(),
-      addressModel: json['addressModel'] == null
-          ? null
-          : AddressModel.fromJson(json['addressModel'] as Map<String, dynamic>),
       balloonText: json['balloonText'] as String?,
       advertiseText: json['advertiseText'] as String?,
       phoneNumber: json['phoneNumber'] as String?,
@@ -43,6 +40,9 @@ ProviderModel _$ProviderModelFromJson(Map<String, dynamic> json) =>
       delivery: json['delivery'] as bool?,
       acceptOrders: json['acceptOrders'] as bool?,
       haveResellers: json['haveResellers'] as bool?,
+      address: json['address'] == null
+          ? null
+          : AddressEntity.fromJson(json['address'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$ProviderModelToJson(ProviderModel instance) =>
@@ -59,6 +59,7 @@ Map<String, dynamic> _$ProviderModelToJson(ProviderModel instance) =>
       'advertiseImageURL': instance.advertiseImageURL,
       'ratting': instance.ratting,
       'balloonText': instance.balloonText,
+      'address': instance.address?.toJson(),
       'advertiseText': instance.advertiseText,
       'phoneNumber': instance.phoneNumber,
       'observations': instance.observations,
@@ -74,7 +75,6 @@ Map<String, dynamic> _$ProviderModelToJson(ProviderModel instance) =>
       'delivery': instance.delivery,
       'acceptOrders': instance.acceptOrders,
       'haveResellers': instance.haveResellers,
-      'addressModel': instance.addressModel?.toJson(),
       'providerServiceDayModel':
           instance.providerServiceDayModel?.map((e) => e.toJson()).toList(),
     };

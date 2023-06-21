@@ -8,7 +8,7 @@ part 'provider.g.dart';
 
 @JsonSerializable(explicitToJson: true)
 class ProviderModel extends ProviderEntity {
-  final AddressModel? addressModel;
+  // final AddressModel? addressModel;
   final List<ProviderServiceDayModel>? providerServiceDayModel;
 
   ProviderModel({
@@ -23,7 +23,6 @@ class ProviderModel extends ProviderEntity {
     super.responsibleImageURL,
     super.advertiseImageURL,
     super.ratting,
-    this.addressModel,
     super.balloonText,
     super.advertiseText,
     super.phoneNumber,
@@ -41,8 +40,9 @@ class ProviderModel extends ProviderEntity {
     super.delivery,
     super.acceptOrders,
     super.haveResellers,
+    super.address,
   }) : super(
-            address: addressModel,
+            // address: addressModel,
             providerServiceDays: providerServiceDayModel);
 
   bool get dayIsAServiceDay {

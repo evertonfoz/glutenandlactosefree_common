@@ -89,7 +89,7 @@ class ConsumerEntity extends Equatable {
   List<Object?> get props => [_consumerID];
 
   static AddressEntity fromAddressJson(Map<String, dynamic> json) {
-    return AddressModel.fromJson(json);
+    return AddressEntity.fromJson(json);
   }
 
   static Map<String, dynamic> toAddressJson(AddressEntity? address) {
