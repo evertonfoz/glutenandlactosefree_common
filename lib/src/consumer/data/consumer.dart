@@ -16,6 +16,7 @@ class ConsumerModel extends ConsumerEntity {
     super.imageURL,
     super.howKnowsAboutUs,
     super.ratting,
+    // super.address,
     this.addressModel,
     super.phoneNumber,
     super.aboutMe,
@@ -24,6 +25,25 @@ class ConsumerModel extends ConsumerEntity {
     super.glutenOrLactoseDontUseByChoice,
     super.otherTypeOfSensitive,
   }) : super(address: addressModel);
+
+  void registerData({
+    required ConsumerModel consumerModel,
+  }) {
+    consumerID = consumerModel.consumerID;
+    email = consumerModel.email;
+    fullName = consumerModel.fullName;
+    imageURL = consumerModel.imageURL;
+    howKnowsAboutUs = consumerModel.howKnowsAboutUs;
+    ratting = consumerModel.ratting;
+    address = consumerModel.addressModel;
+    phoneNumber = consumerModel.phoneNumber;
+    aboutMe = consumerModel.aboutMe;
+    glutenSensitive = consumerModel.glutenSensitive;
+    lactoseIntolerance = consumerModel.lactoseIntolerance;
+    glutenOrLactoseDontUseByChoice =
+        consumerModel.glutenOrLactoseDontUseByChoice;
+    otherTypeOfSensitive = consumerModel.otherTypeOfSensitive;
+  }
 
   factory ConsumerModel.fromJson(Map<String, dynamic> json) {
     final addressModel = AddressModel(
@@ -61,7 +81,7 @@ class ConsumerModel extends ConsumerEntity {
       imageURL: imageURL ?? this.imageURL,
       howKnowsAboutUs: howKnowsAboutUs ?? this.howKnowsAboutUs,
       ratting: ratting ?? this.ratting,
-      addressModel: addressModel ?? this.addressModel,
+      // addressModel: addressModel ?? this.addressModel,
       phoneNumber: phoneNumber ?? this.phoneNumber,
       aboutMe: aboutMe ?? this.aboutMe,
       glutenSensitive: glutenSensitive ?? this.glutenSensitive,
