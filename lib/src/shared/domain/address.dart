@@ -53,4 +53,7 @@ class AddressEntity extends Equatable {
       'zipCode': zipCode,
     };
   }
+
+  String get completeAddress =>
+      '$street, $number, $district, $city, $state, $zipCode';
 }
