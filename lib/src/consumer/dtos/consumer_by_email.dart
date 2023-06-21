@@ -11,10 +11,10 @@ class ConsumerByEmailDTO {
   final String? zipCode;
   final String? city;
   final String? state;
-  final String? glutenOrLactoseDontUseByChoice;
-  final String? glutenSensitive;
-  final String? lactoseIntolerance;
-  final String? otherTypeOfSensitive;
+  final bool? glutenOrLactoseDontUseByChoice;
+  final bool? glutenSensitive;
+  final bool? lactoseIntolerance;
+  final bool? otherTypeOfSensitive;
 
   ConsumerByEmailDTO({
     this.aboutMe,
