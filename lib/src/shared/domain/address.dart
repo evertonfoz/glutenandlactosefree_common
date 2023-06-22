@@ -55,5 +55,5 @@ class AddressEntity extends Equatable {
   }
 
   String get completeAddress =>
-      '$street, $number, $district, $city, $state, $zipCode';
+      '$street $number, $district, $city, $state, $zipCode';
 }
