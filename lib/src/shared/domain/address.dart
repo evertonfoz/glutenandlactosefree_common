@@ -55,5 +55,5 @@ class AddressEntity extends Equatable {
   }
 
   String get completeAddress =>
-      '$street ${number?.replaceAll(' ', '').replaceAll(RegExp(r'\D'), '').replaceAll('.', '')}, $district, $city, $state, $zipCode';
+      '${street?.replaceAll('.', '')} ${number?.replaceAll(' ', '').replaceAll(RegExp(r'\D'), '').replaceAll('.', '')}, $district, $city, $state, $zipCode';
 }
