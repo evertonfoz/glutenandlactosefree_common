@@ -18,6 +18,7 @@ export 'src/products/domain/product.dart';
 
 export 'src/product_categories/data/product_category.dart';
 export 'src/product_categories/domain/product_category.dart';
+export 'src/product_categories/dtos/get_all.dart';
 
 export 'src/product_storages/data/product_storage.dart';
 export 'src/product_storages/domain/product_storage.dart';
