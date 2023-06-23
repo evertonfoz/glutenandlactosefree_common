@@ -16,6 +16,7 @@ class ProductCategoryModel extends ProductCategoryEntity {
     super.productsCount,
     super.blurToImage,
     this.productsModel,
+    super.visitCount,
   }) : super(
           products: productsModel,
         );

@@ -18,6 +18,7 @@ ProductCategoryModel _$ProductCategoryModelFromJson(
       productsModel: (json['productsModel'] as List<dynamic>?)
           ?.map((e) => ProductModel.fromJson(e as Map<String, dynamic>))
           .toList(),
+      visitCount: json['visitCount'] as int?,
     );
 
 Map<String, dynamic> _$ProductCategoryModelToJson(
@@ -29,5 +30,6 @@ Map<String, dynamic> _$ProductCategoryModelToJson(
       'providersCount': instance.providersCount,
       'productsCount': instance.productsCount,
       'blurToImage': instance.blurToImage,
+      'visitCount': instance.visitCount,
       'productsModel': instance.productsModel?.map((e) => e.toJson()).toList(),
     };

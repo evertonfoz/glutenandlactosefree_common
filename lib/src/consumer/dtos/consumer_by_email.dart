@@ -1,4 +1,3 @@
-import 'package:common/src/shared/data/address.dart';
 import 'package:common/src/shared/domain/address.dart';
 
 class ConsumerByEmailDTO {

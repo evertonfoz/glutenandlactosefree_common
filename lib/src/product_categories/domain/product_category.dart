@@ -9,16 +9,17 @@ class ProductCategoryEntity extends Equatable {
   final int? productsCount;
   final String? blurToImage;
   final List<ProductModel>? products;
+  final int? visitCount;
 
-  ProductCategoryEntity({
-    this.productCategoryID,
-    required this.name,
-    required this.imageURL,
-    this.providersCount,
-    this.productsCount,
-    this.blurToImage,
-    this.products,
-  });
+  ProductCategoryEntity(
+      {this.productCategoryID,
+      required this.name,
+      required this.imageURL,
+      this.providersCount,
+      this.productsCount,
+      this.blurToImage,
+      this.products,
+      this.visitCount});
 
   @override
   List<Object?> get props => [productCategoryID];
