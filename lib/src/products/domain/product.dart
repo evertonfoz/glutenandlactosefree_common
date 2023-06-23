@@ -12,6 +12,7 @@ class ProductEntity extends Equatable {
   final double? weight;
   final String? imageURL;
   final double? price;
+  final String? blurImageURL;
 
   ProductEntity({
     this.productID,
@@ -24,6 +25,7 @@ class ProductEntity extends Equatable {
     this.weight,
     this.imageURL,
     this.price,
+    this.blurImageURL,
   });
 
   @override

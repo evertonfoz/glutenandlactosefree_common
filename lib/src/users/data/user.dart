@@ -1,8 +1,6 @@
 // flutter packages pub run build_runner build --delete-conflicting-outputs
 // ignore_for_file: must_be_immutable
 
-import 'dart:math';
-
 import 'package:common/common.dart';
 import 'package:json_annotation/json_annotation.dart';
 

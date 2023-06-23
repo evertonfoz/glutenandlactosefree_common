@@ -22,6 +22,7 @@ class ProductModel extends ProductEntity {
     this.unitOfMeasurementModel,
     required super.weight,
     required super.imageURL,
+    required super.blurImageURL,
     super.price,
   }) : super(
           provider: providerModel,
@@ -31,28 +32,11 @@ class ProductModel extends ProductEntity {
         );
 
   factory ProductModel.fromJson(Map<String, dynamic> json) {
-    // final addressModel = AddressModel(
-    //   street: json['street'] ?? '',
-    //   number: json['number'] ?? '',
-    //   complement: json['complement'] ?? '',
-    //   district: json['district'] ?? '',
-    //   city: json['city'] ?? '',
-    //   state: json['state'] ?? '',
-    //   zipCode: json['zipCode'] ?? '',
-    // );
-
     json['providerModel'] = json['products_provider'];
     json['categoryModel'] = json['products_category'];
     json['storageModel'] = json['product_storage'];
     json['unitOfMeasurementModel'] = json['product_unit_of_measurement'];
-    // json['storageModel'] = ProductStorageModel(
-    //     productStorageID: json['product_storage']['productStorageID'],
-    //     name: json['product_storage']['name']);
-    // json['unitOfMeasurementModel'] = ProductUnitOfMeasurementModel(
-    //     productUnitOfMeasurementID: json['product_unit_of_measurement']
-    //         ['productUnitOfMeasurementID'],
-    //     name: json['product_unit_of_measurement']['name'],
-    //     symbol: json['product_unit_of_measurement']['symbol']);
+
     return _$ProductModelFromJson(json);
   }
 

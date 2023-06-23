@@ -28,6 +28,7 @@ ProductModel _$ProductModelFromJson(Map<String, dynamic> json) => ProductModel(
               json['unitOfMeasurementModel'] as Map<String, dynamic>),
       weight: (json['weight'] as num?)?.toDouble(),
       imageURL: json['imageURL'] as String?,
+      blurImageURL: json['blurImageURL'] as String?,
       price: (json['price'] as num?)?.toDouble(),
     );
 
@@ -39,6 +40,7 @@ Map<String, dynamic> _$ProductModelToJson(ProductModel instance) =>
       'weight': instance.weight,
       'imageURL': instance.imageURL,
       'price': instance.price,
+      'blurImageURL': instance.blurImageURL,
       'providerModel': instance.providerModel?.toJson(),
       'categoryModel': instance.categoryModel?.toJson(),
       'storageModel': instance.storageModel?.toJson(),
