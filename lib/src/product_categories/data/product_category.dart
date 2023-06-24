@@ -26,7 +26,7 @@ class ProductCategoryModel extends ProductCategoryEntity {
       json['productsModel'] = json['categories_providers_categories'][0]
           ['provider_categories_products'];
     } else if (json['products'] != null) {
-      json['productsModel'] = json['products'];
+      json['productsModel'] = json['products']['products'];
     }
 
     return _$ProductCategoryModelFromJson(json);
