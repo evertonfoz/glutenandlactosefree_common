@@ -13,6 +13,16 @@ class ProductEntity extends Equatable {
   final String? imageURL;
   final double? price;
   final String? blurImageURL;
+  final bool? safeFood;
+  final bool? animalMilkFree;
+  final bool? glutenFree;
+  final bool? lactoseFree;
+  final bool? vegan;
+  final bool? vegetarian;
+  final bool? noPreservatives;
+  final bool? frozen;
+  final bool? delivery;
+  final bool? acceptOrders;
 
   ProductEntity({
     this.productID,
@@ -26,6 +36,16 @@ class ProductEntity extends Equatable {
     this.imageURL,
     this.price,
     this.blurImageURL,
+    this.acceptOrders,
+    this.animalMilkFree,
+    this.delivery,
+    this.frozen,
+    this.glutenFree,
+    this.lactoseFree,
+    this.noPreservatives,
+    this.safeFood,
+    this.vegan,
+    this.vegetarian,
   });
 
   @override
