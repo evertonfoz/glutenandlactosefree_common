@@ -1,5 +1,3 @@
-import 'package:common/src/shared/domain/address.dart';
-
 class CategoryGetAllDTO {
   final int productCategoryID;
   final String name;
