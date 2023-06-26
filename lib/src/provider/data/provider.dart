@@ -41,6 +41,7 @@ class ProviderModel extends ProviderEntity {
     super.acceptOrders,
     super.haveResellers,
     super.address,
+    super.resellersInListView,
   }) : super(
             // address: addressModel,
             providerServiceDays: providerServiceDayModel);
