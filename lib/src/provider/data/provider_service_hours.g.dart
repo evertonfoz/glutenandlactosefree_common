@@ -9,10 +9,10 @@ part of 'provider_service_hours.dart';
 ProviderServiceHourModel _$ProviderServiceHourModelFromJson(
         Map<String, dynamic> json) =>
     ProviderServiceHourModel(
-      providerServiceDayID: json['providerServiceDayID'] as int,
-      providerServiceHourID: json['providerServiceHourID'] as int,
-      startHour: json['startHour'] as String,
-      endHour: json['endHour'] as String,
+      providerServiceDayID: json['providerServiceDayID'] as int?,
+      providerServiceHourID: json['providerServiceHourID'] as int?,
+      startHour: json['startHour'] as String?,
+      endHour: json['endHour'] as String?,
     );
 
 Map<String, dynamic> _$ProviderServiceHourModelToJson(

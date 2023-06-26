@@ -9,9 +9,9 @@ part of 'provider_service_day.dart';
 ProviderServiceDayModel _$ProviderServiceDayModelFromJson(
         Map<String, dynamic> json) =>
     ProviderServiceDayModel(
-      providerServiceDayID: json['providerServiceDayID'] as int,
-      providerID: json['providerID'] as int,
-      dayOfWeek: json['dayOfWeek'] as int,
+      providerServiceDayID: json['providerServiceDayID'] as int?,
+      providerID: json['providerID'] as int?,
+      dayOfWeek: json['dayOfWeek'] as int?,
       providerServiceHourModel:
           (json['providerServiceHourModel'] as List<dynamic>?)
               ?.map((e) =>
