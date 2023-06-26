@@ -9,9 +9,9 @@ part 'provider_service_day.g.dart';
 class ProviderServiceDayModel extends ProviderServiceDayEntity {
   final List<ProviderServiceHourModel>? providerServiceHourModel;
   ProviderServiceDayModel({
-    required super.providerServiceDayID,
-    required super.providerID,
-    required super.dayOfWeek,
+    super.providerServiceDayID,
+    super.providerID,
+    super.dayOfWeek,
     this.providerServiceHourModel,
   }) : super(providerServiceHours: providerServiceHourModel);
 

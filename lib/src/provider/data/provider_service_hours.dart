@@ -7,10 +7,10 @@ part 'provider_service_hours.g.dart';
 @JsonSerializable()
 class ProviderServiceHourModel extends ProviderServiceHourEntity {
   ProviderServiceHourModel({
-    required super.providerServiceDayID,
-    required super.providerServiceHourID,
-    required super.startHour,
-    required super.endHour,
+    super.providerServiceDayID,
+    super.providerServiceHourID,
+    super.startHour,
+    super.endHour,
   });
 
   factory ProviderServiceHourModel.fromJson(Map<String, dynamic> json) =>
