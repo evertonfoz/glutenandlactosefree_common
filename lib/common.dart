@@ -29,9 +29,13 @@ export 'src/product_unit_of_measurements/domain/product_unit_of_measurement.dart
 export 'src/provider/data/provider_plan.dart';
 export 'src/provider/data/provider.dart';
 export 'src/provider/data/provider_profile_type.dart';
+export 'src/provider/data/provider_service_day.dart';
+export 'src/provider/data/provider_service_hours.dart';
 export 'src/provider/domain/provider_plan.dart';
 export 'src/provider/domain/provider_profile_type.dart';
 export 'src/provider/domain/provider.dart';
+export 'src/provider/domain/provider_service_day.dart';
+export 'src/provider/domain/provider_service_hours.dart';
 
 export 'src/shared/domain/address.dart';
 export 'src/shared/data/address.dart';
