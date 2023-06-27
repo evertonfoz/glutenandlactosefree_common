@@ -2,13 +2,13 @@ class CategoryGetAllDTO {
   final int productCategoryID;
   final String name;
   final String imageURL;
-  final String blurToImage;
+  final String? blurToImage;
 
   CategoryGetAllDTO({
     required this.productCategoryID,
     required this.name,
     required this.imageURL,
-    required this.blurToImage,
+    this.blurToImage,
   });
 
   factory CategoryGetAllDTO.fromJson(Map<String, dynamic> json) {
