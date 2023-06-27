@@ -15,6 +15,16 @@ class ProviderServiceDayModel extends ProviderServiceDayEntity {
     this.providerServiceHourModel,
   }) : super(providerServiceHours: providerServiceHourModel);
 
+  String get nameOfDayOfWeek => [
+        'Domingo',
+        'Segunda',
+        'Terça',
+        'Quarta',
+        'Quinta',
+        'Sexta',
+        'Sábado'
+      ][(dayOfWeek ?? 0) + 1];
+
   factory ProviderServiceDayModel.fromJson(Map<String, dynamic> json) {
     json['providerServiceHourModel'] =
         json['provider_services_days_provider_services_hours'];
