@@ -23,7 +23,7 @@ class ProviderServiceDayModel extends ProviderServiceDayEntity {
         'Quinta',
         'Sexta',
         'Sábado'
-      ][(dayOfWeek ?? 0) + 1];
+      ][(dayOfWeek ?? 0) - 1];
 
   factory ProviderServiceDayModel.fromJson(Map<String, dynamic> json) {
     json['providerServiceHourModel'] =
