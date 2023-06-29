@@ -52,6 +52,10 @@ class ProviderModel extends ProviderEntity {
             false);
   }
 
+  bool get profileIsOK {
+    return (brandName?.isNotEmpty ?? false);
+  }
+
   factory ProviderModel.fromJson(Map<String, dynamic> json) {
     final addressModel = AddressModel(
       street: json['street'] ?? '',
