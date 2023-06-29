@@ -4,6 +4,7 @@ class UserByEmailDTO {
   final String city;
   final String state;
   final String token;
+  final int? providerID;
 
   UserByEmailDTO({
     required this.email,
@@ -11,6 +12,7 @@ class UserByEmailDTO {
     required this.city,
     required this.state,
     required this.token,
+    this.providerID,
   });
 
   factory UserByEmailDTO.fromJson(Map<String, dynamic> json) {
@@ -20,6 +22,7 @@ class UserByEmailDTO {
       city: json['city'],
       state: json['state'],
       token: json['token'],
+      providerID: json['providerID'],
     );
   }
 
@@ -30,6 +33,7 @@ class UserByEmailDTO {
       'city': city,
       'state': state,
       'token': token,
+      'providerID': providerID,
     };
   }
 }
