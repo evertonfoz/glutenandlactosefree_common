@@ -7,7 +7,7 @@ part 'provider.g.dart';
 
 @JsonSerializable(explicitToJson: true)
 class ApplicationProviderModel extends ApplicationProviderEntity {
-  final List<ProviderProfileTypeModel> modelProfilesType;
+  // final List<ProviderProfileTypeModel> modelProfilesType;
 
   ApplicationProviderModel({
     super.applicationProviderID,
@@ -15,7 +15,7 @@ class ApplicationProviderModel extends ApplicationProviderEntity {
     required super.stateAndCity,
     required super.phoneNumber,
     required super.email,
-    required this.modelProfilesType,
+    // required this.modelProfilesType,
     required super.profileTypeOther,
     required super.placeToDisclose,
     required super.placeToDiscloseNames,
@@ -24,7 +24,7 @@ class ApplicationProviderModel extends ApplicationProviderEntity {
     required super.appDontUse,
     required super.appAngel,
     required super.comments,
-  }) : super(profilesType: modelProfilesType);
+  }); //: super(profilesType: modelProfilesType);
 
   factory ApplicationProviderModel.fromJson(Map<String, dynamic> json) =>
       _$ApplicationProviderModelFromJson(json);

@@ -14,10 +14,6 @@ ApplicationProviderModel _$ApplicationProviderModelFromJson(
       stateAndCity: json['stateAndCity'] as String,
       phoneNumber: json['phoneNumber'] as String,
       email: json['email'] as String,
-      modelProfilesType: (json['modelProfilesType'] as List<dynamic>)
-          .map((e) =>
-              ProviderProfileTypeModel.fromJson(e as Map<String, dynamic>))
-          .toList(),
       profileTypeOther: json['profileTypeOther'] as String,
       placeToDisclose: json['placeToDisclose'] as String,
       placeToDiscloseNames: json['placeToDiscloseNames'] as String,
@@ -46,6 +42,4 @@ Map<String, dynamic> _$ApplicationProviderModelToJson(
       'appDontUse': instance.appDontUse,
       'appAngel': instance.appAngel,
       'comments': instance.comments,
-      'modelProfilesType':
-          instance.modelProfilesType.map((e) => e.toJson()).toList(),
     };

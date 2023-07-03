@@ -8,7 +8,7 @@ class ApplicationProviderEntity extends Equatable {
   final String stateAndCity;
   final String phoneNumber;
   final String email;
-  final List<ProviderProfileTypeEntity> profilesType;
+  // final List<ProviderProfileTypeEntity> profilesType;
   final String profileTypeOther;
   final String placeToDisclose;
   final String placeToDiscloseNames;
@@ -24,7 +24,7 @@ class ApplicationProviderEntity extends Equatable {
     required this.stateAndCity,
     required this.phoneNumber,
     required this.email,
-    required this.profilesType,
+    // required this.profilesType,
     required this.profileTypeOther,
     required this.placeToDisclose,
     required this.placeToDiscloseNames,
