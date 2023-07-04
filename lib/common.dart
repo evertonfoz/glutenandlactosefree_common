@@ -12,6 +12,7 @@ export 'src/consumer/domain/consumer_plan.dart';
 export 'src/consumer/domain/consumer_profile_type.dart';
 export 'src/consumer/domain/consumer.dart';
 export 'src/consumer/dtos/consumer_by_email.dart';
+export 'src/consumer_sensitive_type/consumer_sensitive_type.dart';
 
 export 'src/products/data/product.dart';
 export 'src/products/domain/product.dart';
