@@ -36,6 +36,7 @@ class ProviderEntity extends Equatable {
   final bool? resellersInListView;
   final List<ProductEntity>? products;
   final String? brandDominantColor;
+  final String? foreGroundColor;
 
   ProviderEntity({
     this.aboutServices,
@@ -70,6 +71,7 @@ class ProviderEntity extends Equatable {
     this.resellersInListView,
     this.products,
     this.brandDominantColor,
+    this.foreGroundColor,
   });
 
   @override
