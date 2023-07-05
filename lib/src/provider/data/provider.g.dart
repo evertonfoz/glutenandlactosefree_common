@@ -47,7 +47,7 @@ ProviderModel _$ProviderModelFromJson(Map<String, dynamic> json) =>
       productsModel: (json['productsModel'] as List<dynamic>?)
           ?.map((e) => ProductModel.fromJson(e as Map<String, dynamic>))
           .toList(),
-      bradDominantColor: json['bradDominantColor'] as String?,
+      brandDominantColor: json['brandDominantColor'] as String?,
     );
 
 Map<String, dynamic> _$ProviderModelToJson(ProviderModel instance) =>
@@ -81,7 +81,7 @@ Map<String, dynamic> _$ProviderModelToJson(ProviderModel instance) =>
       'acceptOrders': instance.acceptOrders,
       'haveResellers': instance.haveResellers,
       'resellersInListView': instance.resellersInListView,
-      'bradDominantColor': instance.bradDominantColor,
+      'brandDominantColor': instance.brandDominantColor,
       'providerServiceDayModel':
           instance.providerServiceDayModel?.map((e) => e.toJson()).toList(),
       'productsModel': instance.productsModel?.map((e) => e.toJson()).toList(),

@@ -44,7 +44,7 @@ class ProviderModel extends ProviderEntity {
     super.address,
     super.resellersInListView,
     this.productsModel,
-    super.bradDominantColor,
+    super.brandDominantColor,
   }) : super(
             // address: addressModel,
             providerServiceDays: providerServiceDayModel,
