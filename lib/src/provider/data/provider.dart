@@ -10,6 +10,7 @@ part 'provider.g.dart';
 class ProviderModel extends ProviderEntity {
   // final AddressModel? addressModel;
   final List<ProviderServiceDayModel>? providerServiceDayModel;
+  final List<ProductModel>? productsModel;
 
   ProviderModel({
     super.providerPlanID,
@@ -42,9 +43,11 @@ class ProviderModel extends ProviderEntity {
     super.haveResellers,
     super.address,
     super.resellersInListView,
+    this.productsModel,
   }) : super(
             // address: addressModel,
-            providerServiceDays: providerServiceDayModel);
+            providerServiceDays: providerServiceDayModel,
+            products: productsModel);
 
   bool get dayIsAServiceDay {
     return (providerServiceDayModel?.isNotEmpty ?? false) &&
@@ -68,6 +71,7 @@ class ProviderModel extends ProviderEntity {
     );
     json['address'] = addressModel.toJson();
     json['providerServiceDayModel'] = json['provider_service_days'];
+    json['productsModel'] = json['products'];
 
     // final servicesDaysJSON = json['provider_service_days'] as List<dynamic>;
     // final servicesDaysModel = servicesDaysJSON

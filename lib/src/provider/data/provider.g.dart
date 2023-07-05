@@ -44,6 +44,9 @@ ProviderModel _$ProviderModelFromJson(Map<String, dynamic> json) =>
           ? null
           : AddressEntity.fromJson(json['address'] as Map<String, dynamic>),
       resellersInListView: json['resellersInListView'] as bool?,
+      productsModel: (json['productsModel'] as List<dynamic>?)
+          ?.map((e) => ProductModel.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$ProviderModelToJson(ProviderModel instance) =>
@@ -79,4 +82,5 @@ Map<String, dynamic> _$ProviderModelToJson(ProviderModel instance) =>
       'resellersInListView': instance.resellersInListView,
       'providerServiceDayModel':
           instance.providerServiceDayModel?.map((e) => e.toJson()).toList(),
+      'productsModel': instance.productsModel?.map((e) => e.toJson()).toList(),
     };
