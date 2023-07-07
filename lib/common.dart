@@ -7,6 +7,7 @@ export 'src/application/domain/provider.dart';
 
 export 'src/chat/data/message.dart';
 export 'src/chat/domain/message.dart';
+export 'src/chat/dtos/network_users.dart';
 export 'src/consumer/data/consumer_plan.dart';
 export 'src/consumer/data/consumer.dart';
 export 'src/consumer/data/consumer_profile_type.dart';
