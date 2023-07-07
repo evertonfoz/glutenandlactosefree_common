@@ -1,8 +1,6 @@
 // ignore_for_file: unnecessary_getters_setters, must_be_immutable
 
-import 'package:common/common.dart';
 import 'package:equatable/equatable.dart';
-import 'package:json_annotation/json_annotation.dart';
 
 class MessageEntity extends Equatable {
   int? _messageID;

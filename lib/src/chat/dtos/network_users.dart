@@ -1,5 +1,3 @@
-import 'package:common/src/shared/domain/address.dart';
-
 class NetworkUserDTO {
   final String? fullName;
   final String? email;

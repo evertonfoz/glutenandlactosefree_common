@@ -57,11 +57,13 @@ class UserModel extends UserEntity {
   }
 
   factory UserModel.fromJson(Map<String, dynamic> json) {
-    final userProfileTypeModel = UserProfileTypeModel(
-      userProfileTypeID: json['userProfileTypeID'],
-      description: json['description'] ?? '',
-    );
-    json['userProfileTypeModel'] = userProfileTypeModel.toJson();
+    if (json['userProfileTypeModel'] != null) {
+      final userProfileTypeModel = UserProfileTypeModel(
+        userProfileTypeID: json['userProfileTypeID'],
+        description: json['description'] ?? '',
+      );
+      json['userProfileTypeModel'] = userProfileTypeModel.toJson();
+    }
 
     return _$UserModelFromJson(json);
   }

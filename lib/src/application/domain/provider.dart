@@ -1,7 +1,5 @@
 import 'package:equatable/equatable.dart';
 
-import '../../../common.dart';
-
 class ApplicationProviderEntity extends Equatable {
   final int? applicationProviderID;
   final String fullName;

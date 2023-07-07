@@ -1,8 +1,6 @@
 import 'package:common/common.dart';
 import 'package:equatable/equatable.dart';
 
-import 'provider_service_day.dart';
-
 class ProviderEntity extends Equatable {
   final int? providerID;
   final String? email;
