@@ -61,7 +61,7 @@ class UserModel extends UserEntity {
       userProfileTypeID: json['userProfileTypeID'],
       description: json['description'] ?? '',
     );
-    json['userProfileTypeModel'] = userProfileTypeModel.toJson();
+    json['userProfileTypeModel'] = userProfileTypeModel; //.toJson();
 
     return _$UserModelFromJson(json);
   }
