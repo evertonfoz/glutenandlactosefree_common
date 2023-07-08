@@ -5,6 +5,9 @@ class UserByEmailDTO {
   final String state;
   final String token;
   final int? providerID;
+  final int? consumerID;
+  final String? imageURL;
+  final String? brandImageURL;
 
   UserByEmailDTO({
     required this.email,
@@ -13,6 +16,9 @@ class UserByEmailDTO {
     required this.state,
     required this.token,
     this.providerID,
+    this.brandImageURL,
+    this.consumerID,
+    this.imageURL,
   });
 
   factory UserByEmailDTO.fromJson(Map<String, dynamic> json) {
@@ -23,6 +29,9 @@ class UserByEmailDTO {
       state: json['state'],
       token: json['token'],
       providerID: json['providerID'],
+      consumerID: json['consumerID'],
+      imageURL: json['imageURL'],
+      brandImageURL: json['brandImageURL'],
     );
   }
 
@@ -34,6 +43,9 @@ class UserByEmailDTO {
       'state': state,
       'token': token,
       'providerID': providerID,
+      'consumerID': consumerID,
+      'imageURL': imageURL,
+      'brandImageURL': brandImageURL,
     };
   }
 }
