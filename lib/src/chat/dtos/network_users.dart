@@ -4,13 +4,13 @@ class NetworkUserDTO {
   final String? fullName;
   final String? email;
   final String? imageURL;
-  final UserProfileTypeModel? userProfileTypeModel;
+  final int? userProfileTypeID;
 
   NetworkUserDTO({
     this.fullName,
     this.imageURL,
     this.email,
-    this.userProfileTypeModel,
+    this.userProfileTypeID,
   });
 
   factory NetworkUserDTO.fromJson(Map<String, dynamic> json) {
@@ -18,9 +18,7 @@ class NetworkUserDTO {
       fullName: json['fullName'],
       email: json['email'],
       imageURL: json['imageURL'],
-      userProfileTypeModel: UserProfileTypeModel.fromJson(
-        json['userProfileTypeModel'],
-      ),
+      userProfileTypeID: json['userProfileTypeID'],
     );
   }
 
@@ -29,7 +27,7 @@ class NetworkUserDTO {
       'fullName': fullName,
       'imageURL': imageURL,
       'email': email,
-      'userProfileTypeModel': userProfileTypeModel?.toJson(),
+      'userProfileTypeID': userProfileTypeID,
     };
   }
 }
