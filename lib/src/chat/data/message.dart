@@ -10,10 +10,13 @@ part 'message.g.dart';
 @JsonSerializable(explicitToJson: true)
 class MessageModel extends MessageEntity {
   MessageModel({
-    super.messageID,
-    super.message,
     super.authorEmail,
-    super.channelID,
+    super.receiverEmail,
+    super.message,
+    super.messageID,
+    super.createdAt,
+    super.readAt,
+    super.messageType,
   });
 
   factory MessageModel.fromJson(Map<String, dynamic> json) {

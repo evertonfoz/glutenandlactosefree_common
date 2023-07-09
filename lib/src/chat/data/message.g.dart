@@ -7,10 +7,17 @@ part of 'message.dart';
 // **************************************************************************
 
 MessageModel _$MessageModelFromJson(Map<String, dynamic> json) => MessageModel(
-      messageID: json['messageID'] as int?,
-      message: json['message'] as String?,
       authorEmail: json['authorEmail'] as String?,
-      channelID: json['channelID'] as int?,
+      receiverEmail: json['receiverEmail'] as String?,
+      message: json['message'] as String?,
+      messageID: json['messageID'] as int?,
+      createdAt: json['createdAt'] == null
+          ? null
+          : DateTime.parse(json['createdAt'] as String),
+      readAt: json['readAt'] == null
+          ? null
+          : DateTime.parse(json['readAt'] as String),
+      messageType: json['messageType'] as int?,
     );
 
 Map<String, dynamic> _$MessageModelToJson(MessageModel instance) =>
@@ -18,5 +25,8 @@ Map<String, dynamic> _$MessageModelToJson(MessageModel instance) =>
       'messageID': instance.messageID,
       'message': instance.message,
       'authorEmail': instance.authorEmail,
-      'channelID': instance.channelID,
+      'receiverEmail': instance.receiverEmail,
+      'createdAt': instance.createdAt?.toIso8601String(),
+      'readAt': instance.readAt?.toIso8601String(),
+      'messageType': instance.messageType,
     };

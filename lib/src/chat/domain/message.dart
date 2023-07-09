@@ -6,29 +6,49 @@ class MessageEntity extends Equatable {
   int? _messageID;
   String? _message;
   String? _authorEmail;
-  int? _channelID;
+  String? _receiverEmail;
+  DateTime? _createdAt;
+  DateTime? _readAt;
+  int? _messageType;
 
   MessageEntity({
     int? messageID,
     String? message,
     String? authorEmail,
-    int? channelID,
+    String? receiverEmail,
+    DateTime? createdAt,
+    DateTime? readAt,
+    int? messageType,
   }) {
     _messageID = messageID;
     _message = message;
     _authorEmail = authorEmail;
-    _channelID = channelID;
+    _receiverEmail = receiverEmail;
+    _createdAt = createdAt;
+    _readAt = readAt;
+    _messageType = messageType;
   }
 
   int? get messageID => _messageID;
-  String? get message => _message;
-  String? get authorEmail => _authorEmail;
-  int? get channelID => _channelID;
+  set messageID(int? messageID) => _messageID = messageID;
 
-  set messageID(int? value) => _messageID = value;
-  set message(String? value) => _message = value;
-  set authorEmail(String? value) => _authorEmail = value;
-  set channelID(int? value) => _channelID = value;
+  String? get message => _message;
+  set message(String? message) => _message = message;
+
+  String? get authorEmail => _authorEmail;
+  set authorEmail(String? authorEmail) => _authorEmail = authorEmail;
+
+  String? get receiverEmail => _receiverEmail;
+  set receiverEmail(String? receiverEmail) => _receiverEmail = receiverEmail;
+
+  DateTime? get createdAt => _createdAt;
+  set createdAt(DateTime? createdAt) => _createdAt = createdAt;
+
+  DateTime? get readAt => _readAt;
+  set readAt(DateTime? readAt) => _readAt = readAt;
+
+  int? get messageType => _messageType;
+  set messageType(int? messageType) => _messageType = messageType;
 
   @override
   List<Object?> get props => [_messageID];
