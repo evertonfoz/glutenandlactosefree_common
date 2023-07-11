@@ -19,9 +19,9 @@ class NetworkUserDTO {
 
   factory NetworkUserDTO.fromJson(Map<String, dynamic> json) {
     return NetworkUserDTO(
-      fullName: json['fullName'],
+      fullName: json['fullName'] ?? json['brandName'],
       email: json['email'],
-      imageURL: json['imageURL'],
+      imageURL: json['imageURL'] ?? json['brandImageURL'],
       userProfileTypeID: json['userProfileTypeID'],
       lastMessage: json['lastMessage'],
       lastMessageAt: json['lastMessageAt'],
