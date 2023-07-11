@@ -8,6 +8,8 @@ class UserByEmailDTO {
   final int? consumerID;
   final String? imageURL;
   final String? brandImageURL;
+  final String? fullName;
+  final String? brandName;
 
   UserByEmailDTO({
     required this.email,
@@ -19,6 +21,8 @@ class UserByEmailDTO {
     this.brandImageURL,
     this.consumerID,
     this.imageURL,
+    this.fullName,
+    this.brandName,
   });
 
   factory UserByEmailDTO.fromJson(Map<String, dynamic> json) {
@@ -32,6 +36,8 @@ class UserByEmailDTO {
       consumerID: json['consumerID'],
       imageURL: json['imageURL'],
       brandImageURL: json['brandImageURL'],
+      fullName: json['fullName'],
+      brandName: json['brandName'],
     );
   }
 
@@ -46,6 +52,8 @@ class UserByEmailDTO {
       'consumerID': consumerID,
       'imageURL': imageURL,
       'brandImageURL': brandImageURL,
+      'fullName': fullName,
+      'brandName': brandName,
     };
   }
 }
