@@ -38,7 +38,9 @@ export 'src/provider/data/provider_service_hours.dart';
 export 'src/provider/domain/provider.dart';
 export 'src/provider_advertisement/domain/provider_advertisement.dart';
 export 'src/provider_plan/domain/provider_plan.dart';
-export 'src/provider_profile_type/provider_profile_type.dart';
+export 'src/provider_profile_type/enums/provider_profile_type.dart';
+export 'src/provider_profile_type/data/provider_profile_type.dart';
+export 'src/provider_profile_type/domain/provider_profile_type.dart';
 export 'src/provider/domain/provider_service_day.dart';
 export 'src/provider/domain/provider_service_hours.dart';
 
