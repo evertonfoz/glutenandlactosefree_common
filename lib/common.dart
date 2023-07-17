@@ -17,6 +17,9 @@ export 'src/consumer/domain/consumer.dart';
 export 'src/consumer/dtos/consumer_by_email.dart';
 export 'src/consumer_sensitive_type/consumer_sensitive_type.dart';
 
+export 'src/logs/data/log_providers_on_top_banner.dart';
+export 'src/logs/domain/log_providers_on_top_banner.dart';
+
 export 'src/products/data/product.dart';
 export 'src/products/domain/product.dart';
 

@@ -1,4 +1,4 @@
-enum ProviderProfileType {
+enum ProviderProfileTypeEnum {
   kDelivery,
   kRawMaterialSupplier,
   kHotelAndTheLike,
