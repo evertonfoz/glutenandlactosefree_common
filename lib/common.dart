@@ -38,6 +38,8 @@ export 'src/provider_advertisement/data/provider_advertisement.dart';
 export 'src/provider_plan/data/provider_plan.dart';
 export 'src/provider/data/provider_service_day.dart';
 export 'src/provider/data/provider_service_hours.dart';
+export 'src/provider/enum/return_api_type.dart';
+
 export 'src/provider/domain/provider.dart';
 export 'src/provider_advertisement/domain/provider_advertisement.dart';
 export 'src/provider_plan/domain/provider_plan.dart';
