@@ -8,8 +8,18 @@ part of 'log_providers_on_top_banner.dart';
 
 LogProvidersOnTopBannerModel _$LogProvidersOnTopBannerModelFromJson(
         Map<String, dynamic> json) =>
-    LogProvidersOnTopBannerModel();
+    LogProvidersOnTopBannerModel(
+      providerID: json['providerID'] as int?,
+      accessDate: json['accessDate'] == null
+          ? null
+          : DateTime.parse(json['accessDate'] as String),
+      accessCount: json['accessCount'] as int?,
+    );
 
 Map<String, dynamic> _$LogProvidersOnTopBannerModelToJson(
         LogProvidersOnTopBannerModel instance) =>
-    <String, dynamic>{};
+    <String, dynamic>{
+      'providerID': instance.providerID,
+      'accessDate': instance.accessDate?.toIso8601String(),
+      'accessCount': instance.accessCount,
+    };

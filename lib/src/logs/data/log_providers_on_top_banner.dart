@@ -8,9 +8,9 @@ part 'log_providers_on_top_banner.g.dart';
 @JsonSerializable(explicitToJson: true)
 class LogProvidersOnTopBannerModel extends LogProvidersOnTopBannerEntity {
   LogProvidersOnTopBannerModel({
-    super.providerID,
-    super.accessDate,
-    super.accessCount,
+    required super.providerID,
+    required super.accessDate,
+    required super.accessCount,
   });
 
   factory LogProvidersOnTopBannerModel.fromJson(Map<String, dynamic> json) {
