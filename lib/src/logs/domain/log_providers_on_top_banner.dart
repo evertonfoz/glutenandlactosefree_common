@@ -2,12 +2,12 @@
 
 import 'package:equatable/equatable.dart';
 
-class LogProvidersOnTopBanner extends Equatable {
+class LogProvidersOnTopBannerEntity extends Equatable {
   int? _providerID;
   DateTime? _accessDate;
   int? _accessCount;
 
-  LogProvidersOnTopBanner({
+  LogProvidersOnTopBannerEntity({
     int? providerID,
     DateTime? accessDate,
     int? accessCount,

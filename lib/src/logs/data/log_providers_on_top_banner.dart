@@ -1,6 +1,7 @@
-import 'package:json_annotation/json_annotation.dart';
+// ignore_for_file: must_be_immutable
 
-import '../domain/log_providers_on_top_banner.dart';
+import 'package:common/common.dart';
+import 'package:json_annotation/json_annotation.dart';
 
 part 'log_providers_on_top_banner.g.dart';
 
