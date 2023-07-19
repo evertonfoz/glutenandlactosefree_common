@@ -40,6 +40,8 @@ ProductModel _$ProductModelFromJson(Map<String, dynamic> json) => ProductModel(
       safeFood: json['safeFood'] as bool?,
       vegan: json['vegan'] as bool?,
       vegetarian: json['vegetarian'] as bool?,
+      productDominantColor: json['productDominantColor'] as String?,
+      productForegroundColor: json['productForegroundColor'] as String?,
     );
 
 Map<String, dynamic> _$ProductModelToJson(ProductModel instance) =>
@@ -61,6 +63,8 @@ Map<String, dynamic> _$ProductModelToJson(ProductModel instance) =>
       'frozen': instance.frozen,
       'delivery': instance.delivery,
       'acceptOrders': instance.acceptOrders,
+      'productDominantColor': instance.productDominantColor,
+      'productForegroundColor': instance.productForegroundColor,
       'providerModel': instance.providerModel?.toJson(),
       'categoryModel': instance.categoryModel?.toJson(),
       'storageModel': instance.storageModel?.toJson(),

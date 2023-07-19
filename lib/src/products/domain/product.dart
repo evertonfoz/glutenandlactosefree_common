@@ -23,6 +23,8 @@ class ProductEntity extends Equatable {
   final bool? frozen;
   final bool? delivery;
   final bool? acceptOrders;
+  final String? productDominantColor;
+  final String? productForegroundColor;
 
   ProductEntity({
     this.productID,
@@ -46,6 +48,8 @@ class ProductEntity extends Equatable {
     this.safeFood,
     this.vegan,
     this.vegetarian,
+    this.productDominantColor,
+    this.productForegroundColor,
   });
 
   @override

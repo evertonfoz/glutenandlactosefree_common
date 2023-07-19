@@ -34,6 +34,8 @@ class ProductModel extends ProductEntity {
     super.safeFood,
     super.vegan,
     super.vegetarian,
+    super.productDominantColor,
+    super.productForegroundColor,
   }) : super(
           provider: providerModel,
           productCategory: categoryModel,
