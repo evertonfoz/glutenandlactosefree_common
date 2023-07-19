@@ -1,3 +1,4 @@
 enum ReturnApiTypeEnum {
   kCover,
+  kProfile,
 }
