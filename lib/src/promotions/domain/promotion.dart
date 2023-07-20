@@ -1,4 +1,3 @@
-import 'package:common/common.dart';
 import 'package:equatable/equatable.dart';
 
 class PromotionEntity extends Equatable {
@@ -7,6 +6,7 @@ class PromotionEntity extends Equatable {
   final String? blurToImage;
   final String? dominantColor;
   final String? foreGroundColor;
+  final double? ratting;
 
   PromotionEntity({
     this.productID,
@@ -14,6 +14,7 @@ class PromotionEntity extends Equatable {
     this.blurToImage,
     this.dominantColor,
     this.foreGroundColor,
+    this.ratting,
   });
 
   @override

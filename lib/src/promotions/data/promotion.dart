@@ -14,6 +14,7 @@ class PromotionModel extends PromotionEntity {
     super.blurToImage,
     super.dominantColor,
     super.foreGroundColor,
+    super.ratting,
   });
 
   factory PromotionModel.fromJson(Map<String, dynamic> json) {
