@@ -33,6 +33,9 @@ export 'src/product_storages/domain/product_storage.dart';
 export 'src/product_unit_of_measurements/data/product_unit_of_measurement.dart';
 export 'src/product_unit_of_measurements/domain/product_unit_of_measurement.dart';
 
+export 'src/promotions/data/promotion.dart';
+export 'src/promotions/domain/promotion.dart';
+
 export 'src/provider/data/provider.dart';
 export 'src/provider_advertisement/data/provider_advertisement.dart';
 export 'src/provider_plan/data/provider_plan.dart';
