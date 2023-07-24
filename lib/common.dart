@@ -61,6 +61,9 @@ export 'src/state_and_cities_for_providers/domain/state_and_cities_for_providers
 export 'src/testimony/domain/testimony.dart';
 export 'src/testimony/data/testimony.dart';
 
+export 'src/the_best_rated_product/data/the_best_rated_product.dart';
+export 'src/the_best_rated_product/domain/the_best_rated_product.dart';
+
 export 'src/users/data/user.dart';
 export 'src/users/data/user_profile_type.dart';
 export 'src/users/domain/enums.dart';
