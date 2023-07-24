@@ -51,6 +51,7 @@ export 'src/provider_profile_type/data/provider_profile_type.dart';
 export 'src/provider_profile_type/domain/provider_profile_type.dart';
 export 'src/provider/domain/provider_service_day.dart';
 export 'src/provider/domain/provider_service_hours.dart';
+export 'src/provider/enum/from_which_app_view.dart';
 
 export 'src/shared/domain/address.dart';
 export 'src/shared/data/address.dart';

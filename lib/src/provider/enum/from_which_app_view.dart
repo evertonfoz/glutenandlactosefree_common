@@ -1,0 +1,4 @@
+enum FromWhichAppViewEnum {
+  kDashboardProviders,
+  kDashboardNew,
+}
