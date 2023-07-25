@@ -1,4 +1,4 @@
-enum FromWhichAppViewEnum {
+enum ProviderFromWhichAppViewEnum {
   kDashboardProviders,
   kDashboardNew,
   kSearch,
