@@ -34,6 +34,8 @@ export 'src/product_unit_of_measurements/data/product_unit_of_measurement.dart';
 export 'src/product_unit_of_measurements/domain/product_unit_of_measurement.dart';
 
 export 'src/products/enum/from_which_app_view.dart';
+export 'src/product_images/domain/product_image.dart';
+export 'src/product_images/data/product_image.dart';
 
 export 'src/promotions/data/promotion.dart';
 export 'src/promotions/domain/promotion.dart';
