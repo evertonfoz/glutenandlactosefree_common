@@ -33,6 +33,8 @@ export 'src/product_storages/domain/product_storage.dart';
 export 'src/product_unit_of_measurements/data/product_unit_of_measurement.dart';
 export 'src/product_unit_of_measurements/domain/product_unit_of_measurement.dart';
 
+export 'src/products/enum/from_which_app_view.dart';
+
 export 'src/promotions/data/promotion.dart';
 export 'src/promotions/domain/promotion.dart';
 
