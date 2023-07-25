@@ -30,8 +30,6 @@ ProductModel _$ProductModelFromJson(Map<String, dynamic> json) => ProductModel(
           ?.map((e) => ProductImageModel.fromJson(e as Map<String, dynamic>))
           .toList(),
       weight: (json['weight'] as num?)?.toDouble(),
-      imageURL: json['imageURL'] as String?,
-      blurImageURL: json['blurImageURL'] as String?,
       price: (json['price'] as num?)?.toDouble(),
       acceptOrders: json['acceptOrders'] as bool?,
       animalMilkFree: json['animalMilkFree'] as bool?,
@@ -43,8 +41,6 @@ ProductModel _$ProductModelFromJson(Map<String, dynamic> json) => ProductModel(
       safeFood: json['safeFood'] as bool?,
       vegan: json['vegan'] as bool?,
       vegetarian: json['vegetarian'] as bool?,
-      productDominantColor: json['productDominantColor'] as String?,
-      productForegroundColor: json['productForegroundColor'] as String?,
     );
 
 Map<String, dynamic> _$ProductModelToJson(ProductModel instance) =>
@@ -53,9 +49,7 @@ Map<String, dynamic> _$ProductModelToJson(ProductModel instance) =>
       'name': instance.name,
       'description': instance.description,
       'weight': instance.weight,
-      'imageURL': instance.imageURL,
       'price': instance.price,
-      'blurImageURL': instance.blurImageURL,
       'safeFood': instance.safeFood,
       'animalMilkFree': instance.animalMilkFree,
       'glutenFree': instance.glutenFree,
@@ -66,8 +60,6 @@ Map<String, dynamic> _$ProductModelToJson(ProductModel instance) =>
       'frozen': instance.frozen,
       'delivery': instance.delivery,
       'acceptOrders': instance.acceptOrders,
-      'productDominantColor': instance.productDominantColor,
-      'productForegroundColor': instance.productForegroundColor,
       'providerModel': instance.providerModel?.toJson(),
       'categoryModel': instance.categoryModel?.toJson(),
       'storageModel': instance.storageModel?.toJson(),

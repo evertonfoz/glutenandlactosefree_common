@@ -10,9 +10,7 @@ class ProductEntity extends Equatable {
   final ProductStorageEntity? productStorage;
   final ProductUnitOfMeasurementEntity? productUnitOfMeasurement;
   final double? weight;
-  final String? imageURL;
   final double? price;
-  final String? blurImageURL;
   final bool? safeFood;
   final bool? animalMilkFree;
   final bool? glutenFree;
@@ -23,9 +21,7 @@ class ProductEntity extends Equatable {
   final bool? frozen;
   final bool? delivery;
   final bool? acceptOrders;
-  final String? productDominantColor;
-  final String? productForegroundColor;
-  final List<ProductImageModel>? productImages;
+  final List<ProductImageModel>? productImagesModel;
 
   ProductEntity({
     this.productID,
@@ -36,9 +32,7 @@ class ProductEntity extends Equatable {
     this.productStorage,
     this.productUnitOfMeasurement,
     this.weight,
-    this.imageURL,
     this.price,
-    this.blurImageURL,
     this.acceptOrders,
     this.animalMilkFree,
     this.delivery,
@@ -49,9 +43,7 @@ class ProductEntity extends Equatable {
     this.safeFood,
     this.vegan,
     this.vegetarian,
-    this.productDominantColor,
-    this.productForegroundColor,
-    this.productImages,
+    this.productImagesModel,
   });
 
   @override
