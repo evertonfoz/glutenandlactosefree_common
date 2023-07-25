@@ -1,6 +1,8 @@
 import 'package:common/common.dart';
 import 'package:equatable/equatable.dart';
 
+import '../../product_images/data/product_image.dart';
+
 class ProductEntity extends Equatable {
   final int? productID;
   final String? name;
@@ -25,6 +27,7 @@ class ProductEntity extends Equatable {
   final bool? acceptOrders;
   final String? productDominantColor;
   final String? productForegroundColor;
+  final List<ProductImageModel>? productImages;
 
   ProductEntity({
     this.productID,
@@ -50,6 +53,7 @@ class ProductEntity extends Equatable {
     this.vegetarian,
     this.productDominantColor,
     this.productForegroundColor,
+    this.productImages,
   });
 
   @override

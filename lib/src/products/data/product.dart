@@ -3,6 +3,8 @@
 import 'package:common/common.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import '../../product_images/data/product_image.dart';
+
 part 'product.g.dart';
 
 @JsonSerializable(explicitToJson: true)
@@ -11,6 +13,7 @@ class ProductModel extends ProductEntity {
   final ProductCategoryModel? categoryModel;
   final ProductStorageModel? storageModel;
   final ProductUnitOfMeasurementModel? unitOfMeasurementModel;
+  final List<ProductImageModel>? productsModel;
 
   ProductModel({
     required super.productID,
@@ -20,6 +23,7 @@ class ProductModel extends ProductEntity {
     this.categoryModel,
     this.storageModel,
     this.unitOfMeasurementModel,
+    this.productsModel,
     required super.weight,
     required super.imageURL,
     required super.blurImageURL,
@@ -41,6 +45,7 @@ class ProductModel extends ProductEntity {
           productCategory: categoryModel,
           productStorage: storageModel,
           productUnitOfMeasurement: unitOfMeasurementModel,
+          productImages: productsModel,
         );
 
   factory ProductModel.fromJson(Map<String, dynamic> json) {
@@ -48,6 +53,7 @@ class ProductModel extends ProductEntity {
     json['categoryModel'] = json['products_category'];
     json['storageModel'] = json['product_storage'];
     json['unitOfMeasurementModel'] = json['product_unit_of_measurement'];
+    json['productsModel'] = json['product_images'];
 
     return _$ProductModelFromJson(json);
   }
