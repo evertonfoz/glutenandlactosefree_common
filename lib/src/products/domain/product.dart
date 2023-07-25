@@ -1,8 +1,6 @@
 import 'package:common/common.dart';
 import 'package:equatable/equatable.dart';
 
-import '../../product_images/data/product_image.dart';
-
 class ProductEntity extends Equatable {
   final int? productID;
   final String? name;
