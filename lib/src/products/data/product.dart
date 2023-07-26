@@ -11,7 +11,7 @@ class ProductModel extends ProductEntity {
   final ProductCategoryModel? categoryModel;
   final ProductStorageModel? storageModel;
   final ProductUnitOfMeasurementModel? unitOfMeasurementModel;
-  final List<ProductImageModel>? productsImagesModel;
+  final List<ProductImageModel>? productImagesModel;
 
   ProductModel({
     required super.productID,
@@ -21,7 +21,7 @@ class ProductModel extends ProductEntity {
     this.categoryModel,
     this.storageModel,
     this.unitOfMeasurementModel,
-    this.productsImagesModel,
+    this.productImagesModel,
     required super.weight,
     super.price,
     super.acceptOrders,
@@ -39,7 +39,7 @@ class ProductModel extends ProductEntity {
           productCategory: categoryModel,
           productStorage: storageModel,
           productUnitOfMeasurement: unitOfMeasurementModel,
-          productImagesModel: productsImagesModel,
+          productImages: productImagesModel,
         );
 
   factory ProductModel.fromJson(Map<String, dynamic> json) {

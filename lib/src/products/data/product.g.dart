@@ -26,7 +26,7 @@ ProductModel _$ProductModelFromJson(Map<String, dynamic> json) => ProductModel(
           ? null
           : ProductUnitOfMeasurementModel.fromJson(
               json['unitOfMeasurementModel'] as Map<String, dynamic>),
-      productsImagesModel: (json['productsImagesModel'] as List<dynamic>?)
+      productImagesModel: (json['productImagesModel'] as List<dynamic>?)
           ?.map((e) => ProductImageModel.fromJson(e as Map<String, dynamic>))
           .toList(),
       weight: (json['weight'] as num?)?.toDouble(),
@@ -64,6 +64,6 @@ Map<String, dynamic> _$ProductModelToJson(ProductModel instance) =>
       'categoryModel': instance.categoryModel?.toJson(),
       'storageModel': instance.storageModel?.toJson(),
       'unitOfMeasurementModel': instance.unitOfMeasurementModel?.toJson(),
-      'productsImagesModel':
-          instance.productsImagesModel?.map((e) => e.toJson()).toList(),
+      'productImagesModel':
+          instance.productImagesModel?.map((e) => e.toJson()).toList(),
     };
