@@ -4,7 +4,7 @@ class ProductImageEntity extends Equatable {
   final int? productImageID;
   final int? productID;
   final String? imageURL;
-  final String? blurImageURL;
+  final String? blurImageString;
   final String? dominantColor;
   final String? foregroundColor;
 
@@ -12,7 +12,7 @@ class ProductImageEntity extends Equatable {
     this.productImageID,
     this.productID,
     this.imageURL,
-    this.blurImageURL,
+    this.blurImageString,
     this.dominantColor,
     this.foregroundColor,
   });

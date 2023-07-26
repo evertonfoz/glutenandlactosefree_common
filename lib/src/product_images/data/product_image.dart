@@ -10,7 +10,7 @@ class ProductImageModel extends ProductImageEntity {
     required super.productImageID,
     required super.productID,
     required super.imageURL,
-    required super.blurImageURL,
+    required super.blurImageString,
     required super.dominantColor,
     required super.foregroundColor,
   });

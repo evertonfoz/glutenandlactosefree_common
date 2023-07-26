@@ -11,7 +11,7 @@ ProductImageModel _$ProductImageModelFromJson(Map<String, dynamic> json) =>
       productImageID: json['productImageID'] as int?,
       productID: json['productID'] as int?,
       imageURL: json['imageURL'] as String?,
-      blurImageURL: json['blurImageURL'] as String?,
+      blurImageString: json['blurImageString'] as String?,
       dominantColor: json['dominantColor'] as String?,
       foregroundColor: json['foregroundColor'] as String?,
     );
@@ -21,7 +21,7 @@ Map<String, dynamic> _$ProductImageModelToJson(ProductImageModel instance) =>
       'productImageID': instance.productImageID,
       'productID': instance.productID,
       'imageURL': instance.imageURL,
-      'blurImageURL': instance.blurImageURL,
+      'blurImageString': instance.blurImageString,
       'dominantColor': instance.dominantColor,
       'foregroundColor': instance.foregroundColor,
     };
