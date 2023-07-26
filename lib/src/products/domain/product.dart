@@ -21,6 +21,7 @@ class ProductEntity extends Equatable {
   final bool? frozen;
   final bool? delivery;
   final bool? acceptOrders;
+  final double? rating;
   final List<ProductImageEntity>? productImages;
 
   ProductEntity({
@@ -44,6 +45,7 @@ class ProductEntity extends Equatable {
     this.vegan,
     this.vegetarian,
     this.productImages,
+    this.rating,
   });
 
   @override
