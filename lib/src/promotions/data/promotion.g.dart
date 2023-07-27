@@ -13,6 +13,7 @@ PromotionModel _$PromotionModelFromJson(Map<String, dynamic> json) =>
       blurToImage: json['blurToImage'] as String?,
       dominantColor: json['dominantColor'] as String?,
       foreGroundColor: json['foreGroundColor'] as String?,
+      description: json['description'] as String?,
     );
 
 Map<String, dynamic> _$PromotionModelToJson(PromotionModel instance) =>
@@ -22,4 +23,5 @@ Map<String, dynamic> _$PromotionModelToJson(PromotionModel instance) =>
       'blurToImage': instance.blurToImage,
       'dominantColor': instance.dominantColor,
       'foreGroundColor': instance.foreGroundColor,
+      'description': instance.description,
     };

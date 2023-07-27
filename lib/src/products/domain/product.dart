@@ -25,6 +25,7 @@ class ProductEntity extends Equatable {
   final double? rating;
   final List<ProductImageEntity>? productImages;
   final List<ProductReviewEntity>? productReviews;
+  final List<PromotionEntity>? promotions;
   final double? ratingSum;
   final int? ratingCount;
 
@@ -53,6 +54,7 @@ class ProductEntity extends Equatable {
     this.ratingSum,
     this.ratingCount,
     this.productReviews,
+    this.promotions,
   });
 
   @override

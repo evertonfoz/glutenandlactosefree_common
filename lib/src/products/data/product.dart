@@ -15,6 +15,7 @@ class ProductModel extends ProductEntity {
   final ProductUnitOfMeasurementModel? unitOfMeasurementModel;
   final List<ProductImageModel>? productImagesModel;
   final List<ProductReviewModel>? productReviewsModel;
+  final List<PromotionModel>? promotionsModel;
 
   ProductModel({
     required super.productID,
@@ -26,6 +27,7 @@ class ProductModel extends ProductEntity {
     this.unitOfMeasurementModel,
     this.productImagesModel,
     this.productReviewsModel,
+    this.promotionsModel,
     required super.weight,
     super.price,
     super.acceptOrders,
@@ -48,6 +50,7 @@ class ProductModel extends ProductEntity {
           productUnitOfMeasurement: unitOfMeasurementModel,
           productImages: productImagesModel,
           productReviews: productReviewsModel,
+          promotions: promotionsModel,
         );
 
   factory ProductModel.fromJson(Map<String, dynamic> json) {
@@ -57,6 +60,7 @@ class ProductModel extends ProductEntity {
     json['unitOfMeasurementModel'] = json['product_unit_of_measurement'];
     json['productImagesModel'] = json['products_product_images'];
     json['productReviewsModel'] = json['products_product_reviews'];
+    json['promotionsModel'] = json['products_promotions'];
 
     return _$ProductModelFromJson(json);
   }
