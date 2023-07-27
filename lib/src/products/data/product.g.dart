@@ -43,7 +43,7 @@ ProductModel _$ProductModelFromJson(Map<String, dynamic> json) => ProductModel(
       vegetarian: json['vegetarian'] as bool?,
       rating: (json['rating'] as num?)?.toDouble(),
       ratingSum: (json['ratingSum'] as num?)?.toDouble(),
-      ratingCount: (json['ratingCount'] as num?)?.toDouble(),
+      ratingCount: json['ratingCount'] as int?,
     );
 
 Map<String, dynamic> _$ProductModelToJson(ProductModel instance) =>

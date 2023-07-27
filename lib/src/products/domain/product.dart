@@ -24,7 +24,7 @@ class ProductEntity extends Equatable {
   final double? rating;
   final List<ProductImageEntity>? productImages;
   final double? ratingSum;
-  final double? ratingCount;
+  final int? ratingCount;
 
   ProductEntity({
     this.productID,
