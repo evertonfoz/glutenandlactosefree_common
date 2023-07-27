@@ -42,6 +42,8 @@ ProductModel _$ProductModelFromJson(Map<String, dynamic> json) => ProductModel(
       vegan: json['vegan'] as bool?,
       vegetarian: json['vegetarian'] as bool?,
       rating: (json['rating'] as num?)?.toDouble(),
+      ratingSum: (json['ratingSum'] as num?)?.toDouble(),
+      ratingCount: (json['ratingCount'] as num?)?.toDouble(),
     );
 
 Map<String, dynamic> _$ProductModelToJson(ProductModel instance) =>
@@ -62,6 +64,8 @@ Map<String, dynamic> _$ProductModelToJson(ProductModel instance) =>
       'delivery': instance.delivery,
       'acceptOrders': instance.acceptOrders,
       'rating': instance.rating,
+      'ratingSum': instance.ratingSum,
+      'ratingCount': instance.ratingCount,
       'providerModel': instance.providerModel?.toJson(),
       'categoryModel': instance.categoryModel?.toJson(),
       'storageModel': instance.storageModel?.toJson(),

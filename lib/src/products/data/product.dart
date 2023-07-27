@@ -35,6 +35,8 @@ class ProductModel extends ProductEntity {
     super.vegan,
     super.vegetarian,
     super.rating,
+    super.ratingSum,
+    super.ratingCount,
   }) : super(
           provider: providerModel,
           productCategory: categoryModel,

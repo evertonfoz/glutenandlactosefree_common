@@ -23,6 +23,8 @@ class ProductEntity extends Equatable {
   final bool? acceptOrders;
   final double? rating;
   final List<ProductImageEntity>? productImages;
+  final double? ratingSum;
+  final double? ratingCount;
 
   ProductEntity({
     this.productID,
@@ -46,6 +48,8 @@ class ProductEntity extends Equatable {
     this.vegetarian,
     this.productImages,
     this.rating,
+    this.ratingSum,
+    this.ratingCount,
   });
 
   @override
