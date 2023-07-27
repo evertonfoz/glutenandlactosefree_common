@@ -1,4 +1,5 @@
 import 'package:common/common.dart';
+import 'package:common/src/product_reviews/domain/product_review.dart';
 import 'package:equatable/equatable.dart';
 
 class ProductEntity extends Equatable {
@@ -23,6 +24,7 @@ class ProductEntity extends Equatable {
   final bool? acceptOrders;
   final double? rating;
   final List<ProductImageEntity>? productImages;
+  final List<ProductReviewEntity>? productReviews;
   final double? ratingSum;
   final int? ratingCount;
 
@@ -50,6 +52,7 @@ class ProductEntity extends Equatable {
     this.rating,
     this.ratingSum,
     this.ratingCount,
+    this.productReviews,
   });
 
   @override

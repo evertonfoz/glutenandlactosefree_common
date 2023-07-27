@@ -3,6 +3,8 @@
 import 'package:common/common.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import '../../product_reviews/data/product_review.dart';
+
 part 'product.g.dart';
 
 @JsonSerializable(explicitToJson: true)
@@ -12,6 +14,7 @@ class ProductModel extends ProductEntity {
   final ProductStorageModel? storageModel;
   final ProductUnitOfMeasurementModel? unitOfMeasurementModel;
   final List<ProductImageModel>? productImagesModel;
+  final List<ProductReviewModel>? productReviewsModel;
 
   ProductModel({
     required super.productID,
@@ -22,6 +25,7 @@ class ProductModel extends ProductEntity {
     this.storageModel,
     this.unitOfMeasurementModel,
     this.productImagesModel,
+    this.productReviewsModel,
     required super.weight,
     super.price,
     super.acceptOrders,
@@ -43,6 +47,7 @@ class ProductModel extends ProductEntity {
           productStorage: storageModel,
           productUnitOfMeasurement: unitOfMeasurementModel,
           productImages: productImagesModel,
+          productReviews: productReviewsModel,
         );
 
   factory ProductModel.fromJson(Map<String, dynamic> json) {
@@ -51,6 +56,7 @@ class ProductModel extends ProductEntity {
     json['storageModel'] = json['product_storage'];
     json['unitOfMeasurementModel'] = json['product_unit_of_measurement'];
     json['productImagesModel'] = json['products_product_images'];
+    json['productReviewsModel'] = json['products_product_reviews'];
 
     return _$ProductModelFromJson(json);
   }
