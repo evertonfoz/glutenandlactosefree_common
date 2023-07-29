@@ -1,7 +1,7 @@
 class CategoryGetAllDTO {
   final int productCategoryID;
   final String name;
-  final String imageURL;
+  final String? imageURL;
   final String? blurToImage;
   final int visitCount;
   final bool isEnabled;
@@ -9,7 +9,7 @@ class CategoryGetAllDTO {
   CategoryGetAllDTO({
     required this.productCategoryID,
     required this.name,
-    required this.imageURL,
+    this.imageURL,
     this.blurToImage,
     this.visitCount = 0,
     this.isEnabled = true,
