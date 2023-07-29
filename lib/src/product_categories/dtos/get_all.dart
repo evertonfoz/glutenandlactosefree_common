@@ -3,8 +3,8 @@ class CategoryGetAllDTO {
   final String name;
   final String? imageURL;
   final String? blurToImage;
-  final int visitCount;
-  final bool isEnabled;
+  final int? visitCount;
+  final bool? isEnabled;
 
   CategoryGetAllDTO({
     required this.productCategoryID,
