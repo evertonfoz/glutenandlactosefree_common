@@ -11,7 +11,7 @@ class ProductCategoryModel extends ProductCategoryEntity {
   ProductCategoryModel({
     required super.productCategoryID,
     required super.name,
-    required super.imageURL,
+    super.imageURL,
     super.providersCount,
     super.productsCount,
     super.blurToImage,

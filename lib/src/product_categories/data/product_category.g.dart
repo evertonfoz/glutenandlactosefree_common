@@ -11,7 +11,7 @@ ProductCategoryModel _$ProductCategoryModelFromJson(
     ProductCategoryModel(
       productCategoryID: json['productCategoryID'] as int?,
       name: json['name'] as String,
-      imageURL: json['imageURL'] as String,
+      imageURL: json['imageURL'] as String?,
       providersCount: json['providersCount'] as int?,
       productsCount: json['productsCount'] as int?,
       blurToImage: json['blurToImage'] as String?,
