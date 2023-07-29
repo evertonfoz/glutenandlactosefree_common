@@ -57,6 +57,9 @@ export 'src/provider/domain/provider_service_day.dart';
 export 'src/provider/domain/provider_service_hours.dart';
 export 'src/provider/enum/from_which_app_view.dart';
 
+export 'src/provider_review/data/provider_review.dart';
+export 'src/provider_review/domain/provider_review.dart';
+
 export 'src/shared/domain/address.dart';
 export 'src/shared/data/address.dart';
 
