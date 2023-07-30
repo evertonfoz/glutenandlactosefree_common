@@ -13,6 +13,7 @@ class ProviderReviewModel extends ProviderReviewEntity {
     required super.review,
     required super.rating,
     required super.userImageURL,
+    required super.userName,
   });
 
   factory ProviderReviewModel.fromJson(Map<String, dynamic> json) {

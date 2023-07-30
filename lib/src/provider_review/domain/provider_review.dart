@@ -7,6 +7,7 @@ class ProviderReviewEntity extends Equatable {
   final String? review;
   final double? rating;
   final String? userImageURL;
+  final String? userName;
 
   ProviderReviewEntity({
     this.providerReviewID,
@@ -15,6 +16,7 @@ class ProviderReviewEntity extends Equatable {
     this.review,
     this.rating,
     this.userImageURL,
+    this.userName,
   });
 
   @override
