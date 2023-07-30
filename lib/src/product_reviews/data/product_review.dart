@@ -13,10 +13,12 @@ class ProductReviewModel extends ProductReviewEntity {
     required super.review,
     required super.rating,
     required super.userImageURL,
+    required super.userName,
   });
 
   factory ProductReviewModel.fromJson(Map<String, dynamic> json) {
     json['userImageURL'] = json['product_review_consumer']['imageURL'];
+    json['userName'] = json['product_review_consumer']['fullName'];
     return _$ProductReviewModelFromJson(json);
   }
 
