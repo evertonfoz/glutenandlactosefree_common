@@ -18,7 +18,7 @@ class ProviderReviewModel extends ProviderReviewEntity {
 
   factory ProviderReviewModel.fromJson(Map<String, dynamic> json) {
     json['userImageURL'] = json['provider_review_consumer']['imageURL'];
-    json['userName'] = json['provider_review_consumer']['userName'];
+    json['userName'] = json['provider_review_consumer']['fullName'];
     return _$ProviderReviewModelFromJson(json);
   }
 
