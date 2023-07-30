@@ -14,6 +14,7 @@ ProductReviewModel _$ProductReviewModelFromJson(Map<String, dynamic> json) =>
       review: json['review'] as String?,
       rating: (json['rating'] as num?)?.toDouble(),
       userImageURL: json['userImageURL'] as String?,
+      userName: json['userName'] as String?,
     );
 
 Map<String, dynamic> _$ProductReviewModelToJson(ProductReviewModel instance) =>
@@ -24,4 +25,5 @@ Map<String, dynamic> _$ProductReviewModelToJson(ProductReviewModel instance) =>
       'review': instance.review,
       'rating': instance.rating,
       'userImageURL': instance.userImageURL,
+      'userName': instance.userName,
     };
