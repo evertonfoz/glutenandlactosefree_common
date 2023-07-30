@@ -30,6 +30,9 @@ export 'src/product_categories/dtos/get_all.dart';
 export 'src/product_storages/data/product_storage.dart';
 export 'src/product_storages/domain/product_storage.dart';
 
+export 'src/product_reviews/domain/product_review.dart';
+export 'src/product_reviews/data/product_review.dart';
+
 export 'src/product_unit_of_measurements/data/product_unit_of_measurement.dart';
 export 'src/product_unit_of_measurements/domain/product_unit_of_measurement.dart';
 
