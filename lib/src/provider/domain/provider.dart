@@ -37,6 +37,7 @@ class ProviderEntity extends Equatable {
   final String? foreGroundColor;
   final double? ratingSum;
   final int? ratingCount;
+  final bool isFavorited;
 
   ProviderEntity({
     this.aboutServices,
@@ -74,6 +75,7 @@ class ProviderEntity extends Equatable {
     this.foreGroundColor,
     this.ratingSum,
     this.ratingCount,
+    this.isFavorited = false,
   });
 
   @override

@@ -51,6 +51,7 @@ ProviderModel _$ProviderModelFromJson(Map<String, dynamic> json) =>
       foreGroundColor: json['foreGroundColor'] as String?,
       ratingSum: (json['ratingSum'] as num?)?.toDouble(),
       ratingCount: json['ratingCount'] as int?,
+      isFavorited: json['isFavorited'] as bool? ?? false,
     );
 
 Map<String, dynamic> _$ProviderModelToJson(ProviderModel instance) =>
@@ -88,6 +89,7 @@ Map<String, dynamic> _$ProviderModelToJson(ProviderModel instance) =>
       'foreGroundColor': instance.foreGroundColor,
       'ratingSum': instance.ratingSum,
       'ratingCount': instance.ratingCount,
+      'isFavorited': instance.isFavorited,
       'providerServiceDayModel':
           instance.providerServiceDayModel?.map((e) => e.toJson()).toList(),
       'productsModel': instance.productsModel?.map((e) => e.toJson()).toList(),
