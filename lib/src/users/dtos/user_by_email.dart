@@ -1,8 +1,6 @@
 class UserByEmailDTO {
   final String email;
   final int userProfileTypeID;
-  final String city;
-  final String state;
   final String token;
   final int? providerID;
   final int? consumerID;
@@ -10,12 +8,17 @@ class UserByEmailDTO {
   final String? brandImageURL;
   final String? fullName;
   final String? brandName;
+  final String city;
+  final String state;
+  final String street;
+  final String zipCode;
+  final String number;
+  final String complement;
+  final String district;
 
   UserByEmailDTO({
     required this.email,
     required this.userProfileTypeID,
-    required this.city,
-    required this.state,
     required this.token,
     this.providerID,
     this.brandImageURL,
@@ -23,14 +26,19 @@ class UserByEmailDTO {
     this.imageURL,
     this.fullName,
     this.brandName,
+    required this.state,
+    required this.city,
+    required this.street,
+    required this.zipCode,
+    required this.number,
+    required this.complement,
+    required this.district,
   });
 
   factory UserByEmailDTO.fromJson(Map<String, dynamic> json) {
     return UserByEmailDTO(
       email: json['email'],
       userProfileTypeID: json['userProfileTypeID'],
-      city: json['city'],
-      state: json['state'],
       token: json['token'],
       providerID: json['providerID'],
       consumerID: json['consumerID'],
@@ -38,6 +46,13 @@ class UserByEmailDTO {
       brandImageURL: json['brandImageURL'],
       fullName: json['fullName'],
       brandName: json['brandName'],
+      city: json['city'],
+      state: json['state'],
+      street: json['street'],
+      zipCode: json['zipCode'],
+      number: json['number'],
+      complement: json['complement'],
+      district: json['district'],
     );
   }
 
@@ -45,8 +60,6 @@ class UserByEmailDTO {
     return {
       'email': email,
       'userProfileTypeID': userProfileTypeID,
-      'city': city,
-      'state': state,
       'token': token,
       'providerID': providerID,
       'consumerID': consumerID,
@@ -54,6 +67,13 @@ class UserByEmailDTO {
       'brandImageURL': brandImageURL,
       'fullName': fullName,
       'brandName': brandName,
+      'city': city,
+      'state': state,
+      'street': street,
+      'zipCode': zipCode,
+      'number': number,
+      'complement': complement,
+      'district': district,
     };
   }
 }
