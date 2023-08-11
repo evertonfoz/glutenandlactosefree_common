@@ -84,7 +84,7 @@ class ConsumerModel extends ConsumerEntity {
       imageURL: imageURL ?? this.imageURL,
       howKnowsAboutUs: howKnowsAboutUs ?? this.howKnowsAboutUs,
       ratting: ratting ?? this.ratting,
-      address: address ?? address,
+      address: address ?? this.address,
       // addressModel: addressModel ?? this.addressModel,
       phoneNumber: phoneNumber ?? this.phoneNumber,
       aboutMe: aboutMe ?? this.aboutMe,
