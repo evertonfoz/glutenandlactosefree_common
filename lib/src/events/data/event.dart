@@ -33,6 +33,8 @@ class EventModel extends EventEntity {
     json['imagesModel'] = json['events_event_images'];
     json['providerModel'] = json['events_user']['user_provider'];
     json['consumerModel'] = json['events_user']['user_consumer'];
+    json['consumerModel']['address'] = {};
+    json['providerModel']['address'] = {};
 
     return _$EventModelFromJson(json);
   }
