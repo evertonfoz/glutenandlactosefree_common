@@ -16,7 +16,7 @@ ConsumerModel _$ConsumerModelFromJson(Map<String, dynamic> json) =>
       howKnowsAboutUs: json['howKnowsAboutUs'] as String?,
       ratting: (json['ratting'] as num?)?.toDouble(),
       address: ConsumerEntity.fromAddressJson(
-          json['address'] as Map<String, dynamic>),
+          json['address'] as Map<String, dynamic>?),
       phoneNumber: json['phoneNumber'] as String?,
       aboutMe: json['aboutMe'] as String?,
       glutenSensitive: json['glutenSensitive'] as bool?,
