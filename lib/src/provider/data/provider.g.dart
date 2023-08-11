@@ -42,7 +42,7 @@ ProviderModel _$ProviderModelFromJson(Map<String, dynamic> json) =>
       haveResellers: json['haveResellers'] as bool?,
       address: json['address'] == null
           ? null
-          : AddressEntity.fromJson(json['address'] as Map<String, dynamic>),
+          : AddressEntity.fromJson(json['address'] as Map<String, dynamic>?),
       resellersInListView: json['resellersInListView'] as bool?,
       productsModel: (json['productsModel'] as List<dynamic>?)
           ?.map((e) => ProductModel.fromJson(e as Map<String, dynamic>))

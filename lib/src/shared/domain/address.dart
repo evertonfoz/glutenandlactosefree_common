@@ -30,7 +30,8 @@ class AddressEntity extends Equatable {
         zipCode ?? ''
       ];
 
-  factory AddressEntity.fromJson(Map<String, dynamic> json) {
+  factory AddressEntity.fromJson(Map<String, dynamic>? json) {
+    if (json == null) return AddressEntity();
     return AddressEntity(
       street: json['street'],
       number: json['number'],

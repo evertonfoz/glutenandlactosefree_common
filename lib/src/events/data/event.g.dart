@@ -16,7 +16,7 @@ EventModel _$EventModelFromJson(Map<String, dynamic> json) => EventModel(
       description: json['description'] as String?,
       address: json['address'] == null
           ? null
-          : AddressEntity.fromJson(json['address'] as Map<String, dynamic>),
+          : AddressEntity.fromJson(json['address'] as Map<String, dynamic>?),
       providerModel: json['providerModel'] == null
           ? null
           : ProviderModel.fromJson(
