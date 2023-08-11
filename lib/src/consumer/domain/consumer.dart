@@ -88,8 +88,7 @@ class ConsumerEntity extends Equatable {
   @override
   List<Object?> get props => [_consumerID];
 
-  static AddressEntity? fromAddressJson(Map<String, dynamic>? json) {
-    if (json == null) return null;
+  static AddressEntity fromAddressJson(Map<String, dynamic> json) {
     return AddressEntity.fromJson(json);
   }
 
