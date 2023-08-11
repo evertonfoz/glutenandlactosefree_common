@@ -30,9 +30,31 @@ class EventModel extends EventEntity {
         );
 
   factory EventModel.fromJson(Map<String, dynamic> json) {
-    json['imagesModel'] = json['event_event_images'];
-    json['providerModel'] = json['user_provider'];
-    json['consumerModel'] = json['user_consumer'];
+    json['imagesModel'] = json['events_event_images'];
+    json['providerModel'] = json['events_user']['user_provider'];
+    json['consumerModel'] = json['events_user']['user_consumer'];
+    if (json['consumerModel'] != null) {
+      json['consumerModel']['address'] = AddressEntity(
+        street: json['events_user']['user_consumer']['street'],
+        number: json['events_user']['user_consumer']['number'],
+        complement: json['events_user']['user_consumer']['complement'],
+        district: json['events_user']['user_consumer']['district'],
+        zipCode: json['events_user']['user_consumer']['zipCode'],
+        city: json['events_user']['user_consumer']['city'],
+        state: json['events_user']['user_consumer']['state'],
+      );
+    }
+    if (json['providerModel'] != null) {
+      json['providerModel']['address'] = AddressEntity(
+        street: json['events_user']['user_provider']['street'],
+        number: json['events_user']['user_provider']['number'],
+        complement: json['events_user']['user_provider']['complement'],
+        district: json['events_user']['user_provider']['district'],
+        zipCode: json['events_user']['user_provider']['zipCode'],
+        city: json['events_user']['user_provider']['city'],
+        state: json['events_user']['user_provider']['state'],
+      );
+    }
 
     return _$EventModelFromJson(json);
   }
