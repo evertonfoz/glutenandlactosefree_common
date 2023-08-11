@@ -30,9 +30,9 @@ class EventModel extends EventEntity {
         );
 
   factory EventModel.fromJson(Map<String, dynamic> json) {
-    json['imagesModel'] = json['event_event_images'];
-    json['providerModel'] = json['user_provider'];
-    json['consumerModel'] = json['user_consumer'];
+    json['imagesModel'] = json['events_event_images'];
+    json['providerModel'] = json['events_user']['user_provider'];
+    json['consumerModel'] = json['events_user']['user_consumer'];
 
     return _$EventModelFromJson(json);
   }
