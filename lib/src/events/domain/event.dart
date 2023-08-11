@@ -5,7 +5,7 @@ import 'package:equatable/equatable.dart';
 class EventEntity extends Equatable {
   final int? eventID;
   final String emailOrganizer;
-  final DateTime? dateTime;
+  final DateTime? dateAndTime;
   final String? title;
   final String? description;
   final AddressEntity? address;
@@ -16,7 +16,7 @@ class EventEntity extends Equatable {
   EventEntity({
     this.eventID,
     required this.emailOrganizer,
-    this.dateTime,
+    this.dateAndTime,
     this.title,
     this.description,
     this.images,
