@@ -1,9 +1,11 @@
 // flutter packages pub run build_runner build --delete-conflicting-outputs
 
 import 'package:common/common.dart';
+import 'package:common/src/events/data/event_image.dart';
+import 'package:common/src/events/domain/event.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-part 'event.g.dart';
+part 'recipe.g.dart';
 
 @JsonSerializable(explicitToJson: true)
 class EventModel extends EventEntity {
