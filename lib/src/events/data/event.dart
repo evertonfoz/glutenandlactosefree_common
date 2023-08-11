@@ -42,7 +42,7 @@ class EventModel extends EventEntity {
         zipCode: json['events_user']['user_consumer']['zipCode'],
         city: json['events_user']['user_consumer']['city'],
         state: json['events_user']['user_consumer']['state'],
-      );
+      ).toJson();
     }
     if (json['providerModel'] != null) {
       json['providerModel']['address'] = AddressEntity(
@@ -53,7 +53,7 @@ class EventModel extends EventEntity {
         zipCode: json['events_user']['user_provider']['zipCode'],
         city: json['events_user']['user_provider']['city'],
         state: json['events_user']['user_provider']['state'],
-      );
+      ).toJson();
     }
 
     return _$EventModelFromJson(json);
