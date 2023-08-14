@@ -1,4 +1,3 @@
-import 'package:common/common.dart';
 import 'package:equatable/equatable.dart';
 
 class EventImageEntity extends Equatable {

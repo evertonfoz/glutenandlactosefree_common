@@ -6,7 +6,7 @@ part of 'recipe.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-EventModel _$EventModelFromJson(Map<String, dynamic> json) => EventModel(
+RecipeModel _$RecipeModelFromJson(Map<String, dynamic> json) => RecipeModel(
       eventID: json['eventID'] as int?,
       emailOrganizer: json['emailOrganizer'] as String,
       dateAndTime: json['dateAndTime'] == null
@@ -30,7 +30,7 @@ EventModel _$EventModelFromJson(Map<String, dynamic> json) => EventModel(
           .toList(),
     );
 
-Map<String, dynamic> _$EventModelToJson(EventModel instance) =>
+Map<String, dynamic> _$RecipeModelToJson(RecipeModel instance) =>
     <String, dynamic>{
       'eventID': instance.eventID,
       'emailOrganizer': instance.emailOrganizer,

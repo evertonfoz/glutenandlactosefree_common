@@ -3,8 +3,6 @@
 import 'package:common/common.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-import '../../product_reviews/data/product_review.dart';
-
 part 'product.g.dart';
 
 @JsonSerializable(explicitToJson: true)

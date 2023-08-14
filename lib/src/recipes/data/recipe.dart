@@ -1,19 +1,17 @@
 // flutter packages pub run build_runner build --delete-conflicting-outputs
 
 import 'package:common/common.dart';
-import 'package:common/src/events/data/event_image.dart';
-import 'package:common/src/events/domain/event.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'recipe.g.dart';
 
 @JsonSerializable(explicitToJson: true)
-class EventModel extends EventEntity {
+class RecipeModel extends EventEntity {
   final List<EventImageModel>? imagesModel;
   final ProviderModel? providerModel;
   final ConsumerModel? consumerModel;
 
-  EventModel({
+  RecipeModel({
     required super.eventID,
     required super.emailOrganizer,
     required super.dateAndTime,
@@ -29,7 +27,7 @@ class EventModel extends EventEntity {
           consumer: consumerModel,
         );
 
-  factory EventModel.fromJson(Map<String, dynamic> json) {
+  factory RecipeModel.fromJson(Map<String, dynamic> json) {
     json['imagesModel'] = json['events_event_images'];
     json['providerModel'] = json['events_user']['user_provider'];
     json['consumerModel'] = json['events_user']['user_consumer'];
@@ -56,10 +54,10 @@ class EventModel extends EventEntity {
       ).toJson();
     }
 
-    return _$EventModelFromJson(json);
+    return _$RecipeModelFromJson(json);
   }
 
   Map<String, dynamic> toJson() {
-    return _$EventModelToJson(this);
+    return _$RecipeModelToJson(this);
   }
 }

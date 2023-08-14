@@ -4,7 +4,7 @@ import 'package:equatable/equatable.dart';
 
 import '../data/recipe_ingredient.dart';
 
-class EventEntity extends Equatable {
+class RecipeEntity extends Equatable {
   final int? recipeID;
   final String emailChef;
   final String? name;
@@ -16,7 +16,7 @@ class EventEntity extends Equatable {
   final List<RecipeImageModel>? images;
   final List<RecipeIngredientModel>? ingredients;
 
-  EventEntity({
+  RecipeEntity({
     this.recipeID,
     required this.emailChef,
     this.name,
