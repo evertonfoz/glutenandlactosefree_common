@@ -85,3 +85,10 @@ export 'src/users/data/user_profile_type.dart';
 export 'src/users/domain/enums.dart';
 export 'src/users/domain/user_profile_type.dart';
 export 'src/users//dtos/user_by_email.dart';
+
+export 'src/recipes/data/recipe.dart';
+export 'src/recipes/domain/recipe.dart';
+export 'src/recipes/data/recipe_image.dart';
+export 'src/recipes/domain/recipe_image.dart';
+export 'src/recipes/data/recipe_ingredient.dart';
+export 'src/recipes/domain/recipe_ingredient.dart';
