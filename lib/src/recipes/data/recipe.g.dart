@@ -7,16 +7,12 @@ part of 'recipe.dart';
 // **************************************************************************
 
 RecipeModel _$RecipeModelFromJson(Map<String, dynamic> json) => RecipeModel(
-      eventID: json['eventID'] as int?,
-      emailOrganizer: json['emailOrganizer'] as String,
-      dateAndTime: json['dateAndTime'] == null
-          ? null
-          : DateTime.parse(json['dateAndTime'] as String),
-      title: json['title'] as String?,
+      recipeID: json['recipeID'] as int?,
+      emailChef: json['emailChef'] as String,
+      level: json['level'] as int?,
+      methodOfPreparation: json['methodOfPreparation'] as String?,
       description: json['description'] as String?,
-      address: json['address'] == null
-          ? null
-          : AddressEntity.fromJson(json['address'] as Map<String, dynamic>?),
+      name: json['name'] as String?,
       providerModel: json['providerModel'] == null
           ? null
           : ProviderModel.fromJson(
@@ -26,19 +22,25 @@ RecipeModel _$RecipeModelFromJson(Map<String, dynamic> json) => RecipeModel(
           : ConsumerModel.fromJson(
               json['consumerModel'] as Map<String, dynamic>),
       imagesModel: (json['imagesModel'] as List<dynamic>?)
-          ?.map((e) => EventImageModel.fromJson(e as Map<String, dynamic>))
+          ?.map((e) => RecipeImageModel.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      recipeIngredientsModel: (json['recipeIngredientsModel'] as List<dynamic>?)
+          ?.map(
+              (e) => RecipeIngredientModel.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
 Map<String, dynamic> _$RecipeModelToJson(RecipeModel instance) =>
     <String, dynamic>{
-      'eventID': instance.eventID,
-      'emailOrganizer': instance.emailOrganizer,
-      'dateAndTime': instance.dateAndTime?.toIso8601String(),
-      'title': instance.title,
+      'recipeID': instance.recipeID,
+      'emailChef': instance.emailChef,
+      'name': instance.name,
       'description': instance.description,
-      'address': instance.address?.toJson(),
+      'level': instance.level,
+      'methodOfPreparation': instance.methodOfPreparation,
       'imagesModel': instance.imagesModel?.map((e) => e.toJson()).toList(),
+      'recipeIngredientsModel':
+          instance.recipeIngredientsModel?.map((e) => e.toJson()).toList(),
       'providerModel': instance.providerModel?.toJson(),
       'consumerModel': instance.consumerModel?.toJson(),
     };
