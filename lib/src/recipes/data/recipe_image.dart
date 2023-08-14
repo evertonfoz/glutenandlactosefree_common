@@ -1,18 +1,17 @@
 // flutter packages pub run build_runner build --delete-conflicting-outputs
 
 import 'package:common/common.dart';
-import 'package:common/src/events/domain/event_image.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'recipe_image.g.dart';
 
 @JsonSerializable(explicitToJson: true)
-class RecipeImageModel extends EventImageEntity {
+class RecipeImageModel extends RecipeImageEntity {
   RecipeImageModel({
-    required super.eventImageID,
-    required super.eventID,
-    required super.eventImageURL,
-    required super.eventDescription,
+    required super.recipeImageID,
+    required super.recipeID,
+    required super.imageDescription,
+    required super.recipeImageURL,
     required super.blurToImage,
     required super.dominantColor,
     required super.foregroundColor,

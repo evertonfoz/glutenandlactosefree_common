@@ -8,10 +8,10 @@ part of 'recipe_image.dart';
 
 RecipeImageModel _$RecipeImageModelFromJson(Map<String, dynamic> json) =>
     RecipeImageModel(
-      eventImageID: json['eventImageID'] as int?,
-      eventID: json['eventID'] as int?,
-      eventImageURL: json['eventImageURL'] as String?,
-      eventDescription: json['eventDescription'] as String?,
+      recipeImageID: json['recipeImageID'] as int?,
+      recipeID: json['recipeID'] as int?,
+      imageDescription: json['imageDescription'] as String?,
+      recipeImageURL: json['recipeImageURL'] as String?,
       blurToImage: json['blurToImage'] as String?,
       dominantColor: json['dominantColor'] as String?,
       foregroundColor: json['foregroundColor'] as String?,
@@ -19,10 +19,10 @@ RecipeImageModel _$RecipeImageModelFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$RecipeImageModelToJson(RecipeImageModel instance) =>
     <String, dynamic>{
-      'eventImageID': instance.eventImageID,
-      'eventID': instance.eventID,
-      'eventImageURL': instance.eventImageURL,
-      'eventDescription': instance.eventDescription,
+      'recipeImageID': instance.recipeImageID,
+      'recipeID': instance.recipeID,
+      'recipeImageURL': instance.recipeImageURL,
+      'imageDescription': instance.imageDescription,
       'blurToImage': instance.blurToImage,
       'dominantColor': instance.dominantColor,
       'foregroundColor': instance.foregroundColor,
