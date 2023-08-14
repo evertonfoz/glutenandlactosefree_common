@@ -31,8 +31,9 @@ class RecipeModel extends RecipeEntity {
 
   factory RecipeModel.fromJson(Map<String, dynamic> json) {
     json['imagesModel'] = json['recipes_recipe_images'];
-    json['providerModel'] = json['user_provider']['user_provider'];
-    json['consumerModel'] = json['user_consumer']['user_consumer'];
+    json['recipeIngredientsModel'] = json['recipes_recipe_ingredients'];
+    json['providerModel'] = json['recipes_user']['user_provider'];
+    json['consumerModel'] = json['recipes_user']['user_consumer'];
 
     return _$RecipeModelFromJson(json);
   }
