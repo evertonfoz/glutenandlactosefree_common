@@ -14,6 +14,7 @@ class ProductReviewModel extends ProductReviewEntity {
     required super.rating,
     required super.userImageURL,
     required super.userName,
+    required super.isValidated,
   });
 
   factory ProductReviewModel.fromJson(Map<String, dynamic> json) {

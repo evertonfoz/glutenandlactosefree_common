@@ -8,6 +8,7 @@ class ProductReviewEntity extends Equatable {
   final double? rating;
   final String? userImageURL;
   final String? userName;
+  final bool? isValidated;
 
   ProductReviewEntity({
     this.productReviewID,
@@ -17,6 +18,7 @@ class ProductReviewEntity extends Equatable {
     this.rating,
     this.userImageURL,
     this.userName,
+    this.isValidated,
   });
 
   @override

@@ -1,8 +1,5 @@
 import 'package:common/common.dart';
-import 'package:common/src/recipes/data/recipe_image.dart';
 import 'package:equatable/equatable.dart';
-
-import '../data/recipe_ingredient.dart';
 
 class RecipeEntity extends Equatable {
   final int? recipeID;

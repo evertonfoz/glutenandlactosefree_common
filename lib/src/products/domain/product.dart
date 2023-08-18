@@ -1,5 +1,4 @@
 import 'package:common/common.dart';
-import 'package:common/src/product_reviews/domain/product_review.dart';
 import 'package:equatable/equatable.dart';
 
 class ProductEntity extends Equatable {
