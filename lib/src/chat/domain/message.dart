@@ -10,6 +10,7 @@ class MessageEntity extends Equatable {
   DateTime? _createdAt;
   DateTime? _readAt;
   int? _messageType;
+  String? _abuseExplanation;
 
   MessageEntity({
     int? messageID,
@@ -19,6 +20,7 @@ class MessageEntity extends Equatable {
     DateTime? createdAt,
     DateTime? readAt,
     int? messageType,
+    String? abuseExplanation,
   }) {
     _messageID = messageID;
     _message = message;
@@ -27,6 +29,7 @@ class MessageEntity extends Equatable {
     _createdAt = createdAt;
     _readAt = readAt;
     _messageType = messageType;
+    _abuseExplanation = abuseExplanation;
   }
 
   int? get messageID => _messageID;
@@ -49,6 +52,8 @@ class MessageEntity extends Equatable {
 
   int? get messageType => _messageType;
   set messageType(int? messageType) => _messageType = messageType;
+
+  String? get abuseExplanation => _abuseExplanation;
 
   @override
   List<Object?> get props => [_messageID];

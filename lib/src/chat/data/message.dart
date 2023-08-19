@@ -17,6 +17,7 @@ class MessageModel extends MessageEntity {
     super.createdAt,
     super.readAt,
     super.messageType,
+    super.abuseExplanation,
   });
 
   factory MessageModel.fromJson(Map<String, dynamic> json) {
