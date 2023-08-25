@@ -28,6 +28,7 @@ class RecipeModel extends RecipeEntity {
           images: imagesModel,
           provider: providerModel,
           consumer: consumerModel,
+          ingredients: recipeIngredientsModel,
         );
 
   factory RecipeModel.fromJson(Map<String, dynamic> json) {
