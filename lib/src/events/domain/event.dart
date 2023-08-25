@@ -11,6 +11,7 @@ class EventEntity extends Equatable {
   final ProviderEntity? provider;
   final ConsumerEntity? consumer;
   final List<EventImageModel>? images;
+  final bool isAPublicEvent;
 
   EventEntity({
     this.eventID,
@@ -22,6 +23,7 @@ class EventEntity extends Equatable {
     this.address,
     this.provider,
     this.consumer,
+    this.isAPublicEvent = true,
   });
 
   @override

@@ -21,6 +21,7 @@ class EventModel extends EventEntity {
     this.providerModel,
     this.consumerModel,
     this.imagesModel,
+    super.isAPublicEvent,
   }) : super(
           images: imagesModel,
           provider: providerModel,

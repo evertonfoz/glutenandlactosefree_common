@@ -28,6 +28,7 @@ EventModel _$EventModelFromJson(Map<String, dynamic> json) => EventModel(
       imagesModel: (json['imagesModel'] as List<dynamic>?)
           ?.map((e) => EventImageModel.fromJson(e as Map<String, dynamic>))
           .toList(),
+      isAPublicEvent: json['isAPublicEvent'] as bool? ?? true,
     );
 
 Map<String, dynamic> _$EventModelToJson(EventModel instance) =>
@@ -38,6 +39,7 @@ Map<String, dynamic> _$EventModelToJson(EventModel instance) =>
       'title': instance.title,
       'description': instance.description,
       'address': instance.address?.toJson(),
+      'isAPublicEvent': instance.isAPublicEvent,
       'imagesModel': instance.imagesModel?.map((e) => e.toJson()).toList(),
       'providerModel': instance.providerModel?.toJson(),
       'consumerModel': instance.consumerModel?.toJson(),
