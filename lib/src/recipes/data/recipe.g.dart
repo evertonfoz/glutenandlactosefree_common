@@ -28,6 +28,7 @@ RecipeModel _$RecipeModelFromJson(Map<String, dynamic> json) => RecipeModel(
           ?.map(
               (e) => RecipeIngredientModel.fromJson(e as Map<String, dynamic>))
           .toList(),
+      timeToPrepare: json['timeToPrepare'] as int? ?? 0,
     );
 
 Map<String, dynamic> _$RecipeModelToJson(RecipeModel instance) =>
@@ -38,6 +39,7 @@ Map<String, dynamic> _$RecipeModelToJson(RecipeModel instance) =>
       'description': instance.description,
       'level': instance.level,
       'methodOfPreparation': instance.methodOfPreparation,
+      'timeToPrepare': instance.timeToPrepare,
       'imagesModel': instance.imagesModel?.map((e) => e.toJson()).toList(),
       'recipeIngredientsModel':
           instance.recipeIngredientsModel?.map((e) => e.toJson()).toList(),

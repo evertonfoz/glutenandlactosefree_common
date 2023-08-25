@@ -23,6 +23,7 @@ class RecipeModel extends RecipeEntity {
     this.consumerModel,
     this.imagesModel,
     this.recipeIngredientsModel,
+    required super.timeToPrepare,
   }) : super(
           images: imagesModel,
           provider: providerModel,

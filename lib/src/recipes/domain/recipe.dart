@@ -12,6 +12,7 @@ class RecipeEntity extends Equatable {
   final ConsumerEntity? consumer;
   final List<RecipeImageModel>? images;
   final List<RecipeIngredientModel>? ingredients;
+  final int timeToPrepare;
 
   RecipeEntity({
     this.recipeID,
@@ -24,6 +25,7 @@ class RecipeEntity extends Equatable {
     this.level,
     this.methodOfPreparation,
     this.ingredients,
+    this.timeToPrepare = 0,
   });
 
   @override
