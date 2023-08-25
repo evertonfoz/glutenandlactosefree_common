@@ -55,6 +55,16 @@ class EventModel extends EventEntity {
         state: json['events_user']['user_provider']['state'],
       ).toJson();
     }
+    final addressModel = AddressModel(
+      street: json['street'] ?? '',
+      number: json['number'] ?? '',
+      complement: json['complement'] ?? '',
+      district: json['district'] ?? '',
+      city: json['city'] ?? '',
+      state: json['state'] ?? '',
+      zipCode: json['zipCode'] ?? '',
+    );
+    json['address'] = addressModel.toJson();
 
     return _$EventModelFromJson(json);
   }
