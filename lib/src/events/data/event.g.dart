@@ -9,9 +9,12 @@ part of 'event.dart';
 EventModel _$EventModelFromJson(Map<String, dynamic> json) => EventModel(
       eventID: json['eventID'] as int?,
       emailOrganizer: json['emailOrganizer'] as String,
-      dateAndTime: json['dateAndTime'] == null
+      startDateAndTime: json['startDateAndTime'] == null
           ? null
-          : DateTime.parse(json['dateAndTime'] as String),
+          : DateTime.parse(json['startDateAndTime'] as String),
+      endDateAndTime: json['endDateAndTime'] == null
+          ? null
+          : DateTime.parse(json['endDateAndTime'] as String),
       title: json['title'] as String?,
       description: json['description'] as String?,
       address: json['address'] == null
@@ -35,7 +38,8 @@ Map<String, dynamic> _$EventModelToJson(EventModel instance) =>
     <String, dynamic>{
       'eventID': instance.eventID,
       'emailOrganizer': instance.emailOrganizer,
-      'dateAndTime': instance.dateAndTime?.toIso8601String(),
+      'startDateAndTime': instance.startDateAndTime?.toIso8601String(),
+      'endDateAndTime': instance.endDateAndTime?.toIso8601String(),
       'title': instance.title,
       'description': instance.description,
       'address': instance.address?.toJson(),

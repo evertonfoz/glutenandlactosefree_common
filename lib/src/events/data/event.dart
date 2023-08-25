@@ -14,7 +14,8 @@ class EventModel extends EventEntity {
   EventModel({
     required super.eventID,
     required super.emailOrganizer,
-    required super.dateAndTime,
+    required super.startDateAndTime,
+    required super.endDateAndTime,
     required super.title,
     required super.description,
     required super.address,
