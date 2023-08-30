@@ -62,6 +62,47 @@ class ProviderModel extends ProviderEntity {
     return (brandName?.isNotEmpty ?? false);
   }
 
+  void registerData({
+    required ProviderModel providerModel,
+  }) {
+    providerPlanID = providerModel.providerPlanID;
+    providerID = providerModel.providerID;
+    email = providerModel.email;
+    brandName = providerModel.brandName;
+    responsibleName = providerModel.responsibleName;
+    brandImageURL = providerModel.brandImageURL;
+    howKnowsAboutUs = providerModel.howKnowsAboutUs;
+    aboutServices = providerModel.aboutServices;
+    responsibleImageURL = providerModel.responsibleImageURL;
+    advertiseImageURL = providerModel.advertiseImageURL;
+    ratting = providerModel.ratting;
+    balloonText = providerModel.balloonText;
+    advertiseText = providerModel.advertiseText;
+    phoneNumber = providerModel.phoneNumber;
+    observations = providerModel.observations;
+    safeFood = providerModel.safeFood;
+    animalMilkFree = providerModel.animalMilkFree;
+    glutenFree = providerModel.glutenFree;
+    lactoseFree = providerModel.lactoseFree;
+    vegan = providerModel.vegan;
+    vegetarian = providerModel.vegetarian;
+    // providerServiceDays = providerModel.providerServiceDays;
+    blurToBrandImage = providerModel.blurToBrandImage;
+    noPreservatives = providerModel.noPreservatives;
+    frozen = providerModel.frozen;
+    delivery = providerModel.delivery;
+    acceptOrders = providerModel.acceptOrders;
+    haveResellers = providerModel.haveResellers;
+    address = providerModel.address;
+    resellersInListView = providerModel.resellersInListView;
+    // products = providerModel.products;
+    brandDominantColor = providerModel.brandDominantColor;
+    foreGroundColor = providerModel.foreGroundColor;
+    ratingSum = providerModel.ratingSum;
+    ratingCount = providerModel.ratingCount;
+    isFavorited = providerModel.isFavorited;
+  }
+
   factory ProviderModel.fromJson(Map<String, dynamic> json) {
     final addressModel = AddressModel(
       street: json['street'] ?? '',
