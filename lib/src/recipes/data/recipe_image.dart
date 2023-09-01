@@ -24,4 +24,23 @@ class RecipeImageModel extends RecipeImageEntity {
   Map<String, dynamic> toJson() {
     return _$RecipeImageModelToJson(this);
   }
+
+  RecipeImageModel copyWith(
+      {int? recipeImageID,
+      int? recipeID,
+      String? imageDescription,
+      String? recipeImageURL,
+      String? blurToImage,
+      String? dominantColor,
+      String? foregroundColor}) {
+    return RecipeImageModel(
+      recipeImageID: recipeImageID ?? this.recipeImageID,
+      recipeID: recipeID ?? this.recipeID,
+      imageDescription: imageDescription ?? this.imageDescription,
+      recipeImageURL: recipeImageURL ?? this.recipeImageURL,
+      blurToImage: blurToImage ?? this.blurToImage,
+      dominantColor: dominantColor ?? this.dominantColor,
+      foregroundColor: foregroundColor ?? this.foregroundColor,
+    );
+  }
 }
