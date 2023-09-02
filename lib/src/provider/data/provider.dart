@@ -122,7 +122,7 @@ class ProviderModel extends ProviderEntity {
     json['providerServiceDayModel'] = json['provider_service_days'];
     json['productsModel'] = json['products'];
     json['providerProfileTypesModel'] =
-        json['providers_provider_profile_types'];
+        json['providers_provider_profiles_types'];
 
     // final servicesDaysJSON = json['provider_service_days'] as List<dynamic>;
     // final servicesDaysModel = servicesDaysJSON
