@@ -40,6 +40,7 @@ class ProviderEntity extends Equatable {
   double? _ratingSum;
   int? _ratingCount;
   bool _isFavorited;
+  List<ProviderProfileTypeEntity>? _providerProfileTypes;
 
   ProviderEntity({
     String? aboutServices,
@@ -78,6 +79,7 @@ class ProviderEntity extends Equatable {
     double? ratingSum,
     int? ratingCount,
     bool isFavorited = false,
+    List<ProviderProfileTypeEntity>? providerProfileTypes,
   })  : _isFavorited = isFavorited,
         _ratingCount = ratingCount,
         _ratingSum = ratingSum,
@@ -113,7 +115,8 @@ class ProviderEntity extends Equatable {
         _responsibleName = responsibleName,
         _brandName = brandName,
         _email = email,
-        _providerID = providerID;
+        _providerID = providerID,
+        _providerProfileTypes = providerProfileTypes;
 
   int? get providerID => _providerID;
   String? get email => _email;
@@ -152,6 +155,8 @@ class ProviderEntity extends Equatable {
   double? get ratingSum => _ratingSum;
   int? get ratingCount => _ratingCount;
   bool get isFavorited => _isFavorited;
+  List<ProviderProfileTypeEntity>? get providerProfileTypes =>
+      _providerProfileTypes;
 
   set providerID(int? value) => _providerID = value;
   set email(String? value) => _email = value;
@@ -190,6 +195,8 @@ class ProviderEntity extends Equatable {
   set ratingSum(double? value) => _ratingSum = value;
   set ratingCount(int? value) => _ratingCount = value;
   set isFavorited(bool value) => _isFavorited = value;
+  // set providerProfileTypes(List<ProviderProfileTypeEntity>? value) =>
+  //     _providerProfileTypes = value;
 
   @override
   List<Object?> get props => [_providerID];

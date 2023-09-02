@@ -9,6 +9,7 @@ class ProviderModel extends ProviderEntity {
   // final AddressModel? addressModel;
   final List<ProviderServiceDayModel>? providerServiceDayModel;
   final List<ProductModel>? productsModel;
+  final List<ProviderProfileTypeModel>? providerProfileTypesModel;
 
   ProviderModel({
     super.providerPlanID,
@@ -47,10 +48,13 @@ class ProviderModel extends ProviderEntity {
     super.ratingSum,
     super.ratingCount,
     super.isFavorited,
+    this.providerProfileTypesModel,
   }) : super(
-            // address: addressModel,
-            providerServiceDays: providerServiceDayModel,
-            products: productsModel);
+          // address: addressModel,
+          providerServiceDays: providerServiceDayModel,
+          products: productsModel,
+          providerProfileTypes: providerProfileTypesModel,
+        );
 
   bool get dayIsAServiceDay {
     return (providerServiceDayModel?.isNotEmpty ?? false) &&
@@ -101,6 +105,7 @@ class ProviderModel extends ProviderEntity {
     ratingSum = providerModel.ratingSum;
     ratingCount = providerModel.ratingCount;
     isFavorited = providerModel.isFavorited;
+    // providerProfileTypes = providerModel.providerProfileTypes;
   }
 
   factory ProviderModel.fromJson(Map<String, dynamic> json) {
@@ -116,6 +121,7 @@ class ProviderModel extends ProviderEntity {
     json['address'] = addressModel.toJson();
     json['providerServiceDayModel'] = json['provider_service_days'];
     json['productsModel'] = json['products'];
+    json['providerProfileTypesModel'] = json['provider_profile_types'];
 
     // final servicesDaysJSON = json['provider_service_days'] as List<dynamic>;
     // final servicesDaysModel = servicesDaysJSON
