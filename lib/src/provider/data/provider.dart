@@ -124,11 +124,13 @@ class ProviderModel extends ProviderEntity {
     json['providerProfileTypesModel'] =
         json['providers_provider_profiles_types'];
 
-    for (var element
-        in (json['providerProfileTypesModel'] as List<dynamic>?)!) {
-      element['description'] =
-          element['provider_profiles_type_provider_profile_type']
-              ['description'];
+    if (json['providerProfileTypesModel'] != null) {
+      for (var element
+          in (json['providerProfileTypesModel'] as List<dynamic>?)!) {
+        element['description'] =
+            element['provider_profiles_type_provider_profile_type']
+                ['description'];
+      }
     }
 
     // final servicesDaysJSON = json['provider_service_days'] as List<dynamic>;
