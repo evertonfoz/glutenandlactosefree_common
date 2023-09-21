@@ -27,34 +27,35 @@ class ProductEntity extends Equatable {
   final List<PromotionEntity>? promotions;
   final double? ratingSum;
   final int? ratingCount;
+  final bool? isFavorited;
 
-  ProductEntity({
-    this.productID,
-    this.name,
-    this.description,
-    this.productCategory,
-    this.provider,
-    this.productStorage,
-    this.productUnitOfMeasurement,
-    this.weight,
-    this.price,
-    this.acceptOrders,
-    this.animalMilkFree,
-    this.delivery,
-    this.frozen,
-    this.glutenFree,
-    this.lactoseFree,
-    this.noPreservatives,
-    this.safeFood,
-    this.vegan,
-    this.vegetarian,
-    this.productImages,
-    this.rating,
-    this.ratingSum,
-    this.ratingCount,
-    this.productReviews,
-    this.promotions,
-  });
+  ProductEntity(
+      {this.productID,
+      this.name,
+      this.description,
+      this.productCategory,
+      this.provider,
+      this.productStorage,
+      this.productUnitOfMeasurement,
+      this.weight,
+      this.price,
+      this.acceptOrders,
+      this.animalMilkFree,
+      this.delivery,
+      this.frozen,
+      this.glutenFree,
+      this.lactoseFree,
+      this.noPreservatives,
+      this.safeFood,
+      this.vegan,
+      this.vegetarian,
+      this.productImages,
+      this.rating,
+      this.ratingSum,
+      this.ratingCount,
+      this.productReviews,
+      this.promotions,
+      this.isFavorited});
 
   @override
   List<Object?> get props => [productID];

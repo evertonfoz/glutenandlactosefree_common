@@ -41,6 +41,7 @@ class ProductModel extends ProductEntity {
     super.rating,
     super.ratingSum,
     super.ratingCount,
+    super.isFavorited,
   }) : super(
           provider: providerModel,
           productCategory: categoryModel,
