@@ -105,7 +105,7 @@ class ProviderModel extends ProviderEntity {
     ratingSum = providerModel.ratingSum;
     ratingCount = providerModel.ratingCount;
     isFavorited = providerModel.isFavorited;
-    // providerProfileTypes = providerModel.providerProfileTypes;
+    providerProfileTypes = providerModel.providerProfileTypes??[];
   }
 
   factory ProviderModel.fromJson(Map<String, dynamic> json) {
