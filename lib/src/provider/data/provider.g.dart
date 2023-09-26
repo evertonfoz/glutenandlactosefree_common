@@ -57,8 +57,7 @@ ProviderModel _$ProviderModelFromJson(Map<String, dynamic> json) =>
               ?.map((e) =>
                   ProviderProfileTypeModel.fromJson(e as Map<String, dynamic>))
               .toList(),
-    )..providerProfileTypes = ProviderEntity.fromProviderProfileTypeJson(
-        json['providerProfileTypes'] as Map<String, dynamic>);
+    );
 
 Map<String, dynamic> _$ProviderModelToJson(ProviderModel instance) =>
     <String, dynamic>{
@@ -96,8 +95,6 @@ Map<String, dynamic> _$ProviderModelToJson(ProviderModel instance) =>
       'ratingSum': instance.ratingSum,
       'ratingCount': instance.ratingCount,
       'isFavorited': instance.isFavorited,
-      'providerProfileTypes': ProviderEntity.toProviderProfileTypeJson(
-          instance.providerProfileTypes),
       'providerServiceDayModel':
           instance.providerServiceDayModel?.map((e) => e.toJson()).toList(),
       'productsModel': instance.productsModel?.map((e) => e.toJson()).toList(),
