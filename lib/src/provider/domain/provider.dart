@@ -3,6 +3,8 @@
 import 'package:common/common.dart';
 import 'package:equatable/equatable.dart';
 
+import 'package:json_annotation/json_annotation.dart';
+
 class ProviderEntity extends Equatable {
   int? _providerID;
   String? _email;
@@ -131,6 +133,7 @@ class ProviderEntity extends Equatable {
   double? get ratting => _ratting;
   String? get balloonText => _balloonText;
   AddressEntity? get address => _address;
+
   List<ProviderServiceDayEntity>? get providerServiceDays =>
       _providerServiceDays;
   String? get advertiseText => _advertiseText;
@@ -155,6 +158,9 @@ class ProviderEntity extends Equatable {
   double? get ratingSum => _ratingSum;
   int? get ratingCount => _ratingCount;
   bool get isFavorited => _isFavorited;
+
+  @JsonKey(
+      fromJson: fromProviderProfileTypeJson, toJson: toProviderProfileTypeJson)
   List<ProviderProfileTypeEntity>? get providerProfileTypes =>
       _providerProfileTypes;
 
@@ -195,9 +201,19 @@ class ProviderEntity extends Equatable {
   set ratingSum(double? value) => _ratingSum = value;
   set ratingCount(int? value) => _ratingCount = value;
   set isFavorited(bool value) => _isFavorited = value;
-  // set providerProfileTypes(List<ProviderProfileTypeEntity>? value) =>
-  //     _providerProfileTypes = value;
+  set providerProfileTypes(List<ProviderProfileTypeEntity>? value) =>
+      _providerProfileTypes = value;
 
   @override
   List<Object?> get props => [_providerID];
+
+  static List<ProviderProfileTypeEntity> fromProviderProfileTypeJson(
+      Map<String, dynamic> json) {
+    return [ProviderProfileTypeModel.fromJson(json)];
+  }
+
+  static Map<String, dynamic> toProviderProfileTypeJson(
+      List<ProviderProfileTypeEntity>? address) {
+    return (address as ProviderProfileTypeModel).toJson();
+  }
 }
