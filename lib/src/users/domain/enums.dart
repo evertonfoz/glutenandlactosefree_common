@@ -3,5 +3,6 @@ enum ProfileType {
   kConsumer,
   kProvider,
   kGuest,
+  kManager,
   // kConsumerAndProvider,
 }
