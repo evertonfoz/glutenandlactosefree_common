@@ -15,16 +15,19 @@ class UserModel extends UserEntity {
   ProviderModel? _providerModel;
   String? _email;
   String? _token;
+  String _tokenFCM = '';
 
   UserModel({
     email,
     token,
+    tokenFCM,
     userProfileTypeModel,
     consumerModel,
     providerModel,
   }) : super(
           email: email,
           token: token,
+          tokenFCM: tokenFCM,
           userProfileTypeEntity: userProfileTypeModel,
           consumerEntity: consumerModel,
           providerEntity: providerModel,
@@ -34,6 +37,7 @@ class UserModel extends UserEntity {
     _providerModel = providerModel;
     _email = email;
     _token = token;
+    _tokenFCM = tokenFCM;
   }
 
   UserProfileTypeModel? get userProfileTypeModel => _userProfileTypeModel;
@@ -41,6 +45,7 @@ class UserModel extends UserEntity {
   ProviderModel? get providerModel => _providerModel;
   String? get email => _email;
   String? get token => _token;
+  String get tokenFCM => _tokenFCM;
 
   void registerData({
     UserProfileTypeModel? userProfileTypeModel,
@@ -48,12 +53,14 @@ class UserModel extends UserEntity {
     ProviderModel? providerModel,
     String? email,
     String? token,
+    String? tokenFCM,
   }) {
     _userProfileTypeModel = userProfileTypeModel ?? _userProfileTypeModel;
     _consumerModel = consumerModel ?? _consumerModel;
     _providerModel = providerModel ?? _providerModel;
     _email = email ?? _email;
     _token = token ?? _token;
+    _tokenFCM = tokenFCM ?? _tokenFCM;
   }
 
   factory UserModel.fromJson(Map<String, dynamic> json) {
