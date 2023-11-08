@@ -43,6 +43,7 @@ class ProviderEntity extends Equatable {
   int? _ratingCount;
   bool _isFavorited;
   List<ProviderProfileTypeEntity>? _providerProfileTypes;
+  String? _tokenFCM;
 
   ProviderEntity({
     String? aboutServices,
@@ -82,6 +83,7 @@ class ProviderEntity extends Equatable {
     int? ratingCount,
     bool isFavorited = false,
     List<ProviderProfileTypeEntity>? providerProfileTypes,
+    String? tokenFCM,
   })  : _isFavorited = isFavorited,
         _ratingCount = ratingCount,
         _ratingSum = ratingSum,
@@ -133,6 +135,7 @@ class ProviderEntity extends Equatable {
   double? get ratting => _ratting;
   String? get balloonText => _balloonText;
   AddressEntity? get address => _address;
+  String? get tokenFCM => _tokenFCM;
 
   List<ProviderServiceDayEntity>? get providerServiceDays =>
       _providerServiceDays;
@@ -199,6 +202,7 @@ class ProviderEntity extends Equatable {
   set ratingSum(double? value) => _ratingSum = value;
   set ratingCount(int? value) => _ratingCount = value;
   set isFavorited(bool value) => _isFavorited = value;
+  set tokenFCM(String? value) => _tokenFCM = value;
   // set providerProfileTypes(List<ProviderProfileTypeEntity>? value) =>
   //     _providerProfileTypes = value;
 

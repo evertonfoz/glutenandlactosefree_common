@@ -57,6 +57,7 @@ ProviderModel _$ProviderModelFromJson(Map<String, dynamic> json) =>
               ?.map((e) =>
                   ProviderProfileTypeModel.fromJson(e as Map<String, dynamic>))
               .toList(),
+      tokenFCM: json['tokenFCM'] as String?,
     );
 
 Map<String, dynamic> _$ProviderModelToJson(ProviderModel instance) =>
@@ -74,6 +75,7 @@ Map<String, dynamic> _$ProviderModelToJson(ProviderModel instance) =>
       'ratting': instance.ratting,
       'balloonText': instance.balloonText,
       'address': instance.address?.toJson(),
+      'tokenFCM': instance.tokenFCM,
       'advertiseText': instance.advertiseText,
       'phoneNumber': instance.phoneNumber,
       'observations': instance.observations,

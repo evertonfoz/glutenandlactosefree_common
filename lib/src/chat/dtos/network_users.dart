@@ -6,6 +6,7 @@ class NetworkUserDTO {
   final String? lastMessage;
   final DateTime? lastMessageAt;
   final bool? lastMessageIsRead;
+  final String? tokenFCM;
 
   NetworkUserDTO({
     this.fullName,
@@ -15,6 +16,7 @@ class NetworkUserDTO {
     this.lastMessage,
     this.lastMessageAt,
     this.lastMessageIsRead,
+    this.tokenFCM,
   });
 
   factory NetworkUserDTO.fromJson(Map<String, dynamic> json) {
@@ -26,6 +28,7 @@ class NetworkUserDTO {
       lastMessage: json['lastMessage'],
       lastMessageAt: json['lastMessageAt'],
       lastMessageIsRead: json['lastMessageIsRead'],
+      tokenFCM: json['tokenFCM'],
     );
   }
 
@@ -38,6 +41,7 @@ class NetworkUserDTO {
       'lastMessage': lastMessage,
       'lastMessageAt': lastMessageAt,
       'lastMessageIsRead': lastMessageIsRead,
+      'tokenFCM': tokenFCM,
     };
   }
 }

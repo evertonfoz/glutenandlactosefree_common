@@ -51,6 +51,7 @@ class ProviderModel extends ProviderEntity {
     super.ratingCount,
     super.isFavorited,
     this.providerProfileTypesModel,
+    super.tokenFCM,
   }) : super(
           // address: addressModel,
           providerServiceDays: providerServiceDayModel,
@@ -107,6 +108,7 @@ class ProviderModel extends ProviderEntity {
     ratingSum = providerModel.ratingSum;
     ratingCount = providerModel.ratingCount;
     isFavorited = providerModel.isFavorited;
+    tokenFCM = providerModel.tokenFCM;
     registerProviderProfileTypes(providerModel.providerProfileTypes ?? []);
   }
 
@@ -148,6 +150,7 @@ class ProviderModel extends ProviderEntity {
     int? ratingCount,
     bool? isFavorited,
     List<ProviderProfileTypeModel>? providerProfileTypes,
+    String? tokenFCM,
   }) {
     return ProviderModel(
       providerPlanID: providerPlanID ?? this.providerPlanID,
@@ -188,6 +191,7 @@ class ProviderModel extends ProviderEntity {
       isFavorited: isFavorited ?? this.isFavorited,
       providerProfileTypesModel:
           providerProfileTypes ?? providerProfileTypesModel,
+      tokenFCM: tokenFCM ?? this.tokenFCM,
     );
   }
 
