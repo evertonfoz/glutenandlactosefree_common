@@ -15,7 +15,7 @@ class UserModel extends UserEntity {
   ProviderModel? _providerModel;
   String? _email;
   String? _token;
-  String _tokenFCM = '';
+  String? _tokenFCM;
 
   UserModel({
     email,
@@ -45,7 +45,7 @@ class UserModel extends UserEntity {
   ProviderModel? get providerModel => _providerModel;
   String? get email => _email;
   String? get token => _token;
-  String get tokenFCM => _tokenFCM;
+  String? get tokenFCM => _tokenFCM;
 
   void registerData({
     UserProfileTypeModel? userProfileTypeModel,
