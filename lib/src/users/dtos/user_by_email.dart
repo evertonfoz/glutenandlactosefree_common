@@ -15,6 +15,7 @@ class UserByEmailDTO {
   final String number;
   final String complement;
   final String district;
+  final String fcmToken;
 
   UserByEmailDTO({
     required this.email,
@@ -33,6 +34,7 @@ class UserByEmailDTO {
     required this.number,
     required this.complement,
     required this.district,
+    required this.fcmToken,
   });
 
   factory UserByEmailDTO.fromJson(Map<String, dynamic> json) {
@@ -53,6 +55,7 @@ class UserByEmailDTO {
       number: json['number'],
       complement: json['complement'],
       district: json['district'],
+      fcmToken: json['fcmToken'],
     );
   }
 
@@ -74,6 +77,7 @@ class UserByEmailDTO {
       'number': number,
       'complement': complement,
       'district': district,
+      'fcmToken': fcmToken,
     };
   }
 }
