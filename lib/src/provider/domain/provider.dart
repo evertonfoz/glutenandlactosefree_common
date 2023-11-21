@@ -120,7 +120,8 @@ class ProviderEntity extends Equatable {
         _brandName = brandName,
         _email = email,
         _providerID = providerID,
-        _providerProfileTypes = providerProfileTypes;
+        _providerProfileTypes = providerProfileTypes,
+        _tokenFCM = tokenFCM;
 
   int? get providerID => _providerID;
   String? get email => _email;

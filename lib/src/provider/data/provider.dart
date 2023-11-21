@@ -196,6 +196,7 @@ class ProviderModel extends ProviderEntity {
   }
 
   factory ProviderModel.fromJson(Map<String, dynamic> json) {
+    print(json['tokenFCM']);
     final addressModel = AddressModel(
       street: json['street'] ?? '',
       number: json['number'] ?? '',
